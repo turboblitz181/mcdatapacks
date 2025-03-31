@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+      "aba",
+      "bcb",
+      "aba"
+    ],
+    "key": {
+      "a": [
+        "minecraft:terracotta"
+      ],
+      "b": [
+        "minecraft:netherite_ingot"
+      ],
+      "c": [
+        "minecraft:nether_star"
+      ]
+    },
+    "result": {
+      "id": "minecraft:command_block",
+      "components": {
+        "minecraft:item_model": "template:custom_item"
+      },
+      "count": 1
+    },
+    "show_notification": false
+  }
