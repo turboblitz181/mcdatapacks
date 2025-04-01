@@ -5,4 +5,4 @@ scoreboard players enable Monkeysking reqreload
 
 # run reload
 execute as @a[scores={reqreload=1..}] run function main:requestreload
-execute unless entity @a[scores={reload=0}] run function main:reload
+execute unless entity @a[scores={reload=0}] if entity @a run function main:reload
