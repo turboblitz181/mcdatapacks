@@ -10,25 +10,25 @@ commands (can change):
 if you think there should be an exeption to a command ask the owner turboblitz181.
 
 commands that are not allowed:
-- /ban
-- /ban-ip
-- /banlist
-- /pardon
-- /pardon-ip
-- /op
-- /deop 
-- /whitelist
-- /kick
-- /reload 
-- /worldborder
-- /stop
-- /difficulty
-- /gamerule
-- /list
+- ban
+- ban-ip
+- banlist
+- pardon
+- pardon-ip
+- op
+- deop 
+- whitelist
+- kick
+- reload 
+- worldborder
+- stop
+- difficulty
+- gamerule
+- list
 
 commands that are allowed (below are some rules for some commands):
-- /advancement
-- /attribute
+- advancement
+- attribute
 - bossbar
 - clear
 - clone
