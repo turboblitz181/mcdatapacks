@@ -4,14 +4,14 @@
     "weight": 1,
     "max_level": 3,
     "min_cost": {
-      "base": 0,
-      "per_level_above_first": 0
+      "base": 5,
+      "per_level_above_first": 8
     },
     "max_cost": {
-      "base": 0,
-      "per_level_above_first": 0
+      "base": 13,
+      "per_level_above_first": 8
     },
-    "anvil_cost": 0,
+    "anvil_cost": 4,
     "slots": [
       "chest"
     ]
