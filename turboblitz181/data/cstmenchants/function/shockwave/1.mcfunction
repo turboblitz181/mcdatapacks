@@ -1,7 +1,3 @@
-execute as @a if items entity @s armor.chest  *[minecraft:enchantments~[{enchantments:"cstmenchants:shockwave",levels:1}]] run function cstmenchants:shockwave/1
-execute as @a if items entity @s armor.chest  *[minecraft:enchantments~[{enchantments:"cstmenchants:shockwave",levels:2}]] run function cstmenchants:shockwave/2
-execute as @a if items entity @s armor.chest  *[minecraft:enchantments~[{enchantments:"cstmenchants:shockwave",levels:3}]] run function cstmenchants:shockwave/3
-
 execute at @s as @e[type=!minecraft:player,distance=..5] store result score @s tur_distance_x run data get entity @s Pos[0]
 execute at @s as @e[type=!minecraft:player,distance=..5] store result score @s tur_distance_z run data get entity @s Pos[2]
 execute as @s store result score @s tur_distance_x run data get entity @s Pos[0]
