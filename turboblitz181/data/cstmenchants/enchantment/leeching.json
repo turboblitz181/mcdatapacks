@@ -1,28 +1,30 @@
 {
-    "description": "leeching",
-    "supported_items": "#minecraft:enchantable/weapon",
-    "weight": 1,
-    "max_level": 3,
-    "min_cost": {
-      "base": 0,
-      "per_level_above_first": 0
-    },
-    "max_cost": {
-      "base": 0,
-      "per_level_above_first": 0
-    },
-    "anvil_cost": 0,
-    "slots": [],
-    "effects": {
-      "minecraft:post_attack": [
-        {
-          "effect": {
-            "type": "minecraft:run_function",
-            "function": "tmain:saytest"
-          },
-          "enchanted": "attacker",
-          "affected": "attacker"
-        }
-      ]
-    }
+  "description": "leeching",
+  "supported_items": "#minecraft:enchantable/weapon",
+  "weight": 1,
+  "max_level": 3,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "anvil_cost": 0,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "tmain:saytest"
+        },
+        "enchanted": "attacker",
+        "affected": "attacker"
+      }
+    ]
   }
+}
