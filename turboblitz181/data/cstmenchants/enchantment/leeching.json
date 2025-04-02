@@ -23,7 +23,7 @@
           "function": "cstmenchants:leeching/leech"
         },
         "enchanted": "attacker",
-        "affected": "attacker"
+        "affected": "victim"
       }
     ]
   }
