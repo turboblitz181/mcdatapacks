@@ -1,5 +1,5 @@
 {
 	"values": [
-		"pokespawner:tick"
+		"main:main_tick"
 	]
 }
