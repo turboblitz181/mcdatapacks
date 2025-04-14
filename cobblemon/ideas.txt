@@ -1,7 +1,7 @@
 ideas:
 - pokefinder - done
 - fossil locator 
-- shiny notifications
-- legendary notifications
+- shiny notifications - done
+- legendary notifications - done
 - egg data 
 - pokeball changer 
