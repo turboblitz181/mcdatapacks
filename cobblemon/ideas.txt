@@ -1,7 +1,8 @@
 ideas:
 - pokefinder - done
 - fossil locator - turbo working on it
-- global shiny notifications
-- global legendary notifications
+- global shiny notifications - kehan working on it
+- global legendary notifications - kehan working on it
 - egg data 
 - pokeball changer - turbo working on it
+- admin to main folder - kehan working on it
