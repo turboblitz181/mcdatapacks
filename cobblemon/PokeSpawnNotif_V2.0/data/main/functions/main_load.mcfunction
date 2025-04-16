@@ -1,5 +1,14 @@
+##
+# load.mcfunction for admin module
+##
 scoreboard objectives add enabled dummy
 scoreboard objectives add toggled dummy
+
+# Initialize admin trigger
+scoreboard objectives add admin trigger "Admin Menu"
+
+# Admin loading message
+tellraw @a[tag=admin] ["",{"text":"[Admin Panel]","color":"gold"},{"text":" Module initialized!","color":"green"}]
 
 # setting default values
 execute unless score pokeball_changer enabled = pokeball_changer enabled run scoreboard players set pokeball_changer enabled 0
@@ -14,3 +23,4 @@ function egg_data:load
 function glbl_notify:load
 function fossil_locator:load
 function pokeball_changer:load
+function main:admin/load

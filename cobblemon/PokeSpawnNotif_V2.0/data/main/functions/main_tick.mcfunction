@@ -1,3 +1,10 @@
+# Enable admin menu
+scoreboard players enable @a[tag=admin] admin
+
+# Process admin menu trigger
+execute as @a[scores={admin=1..}] run function main:admin/admin
+execute as @a[scores={admin=1..}] run scoreboard players set @s admin 0
+
 # running other main functions if feature is enabled
 execute if score pokefinder enabled matches 1 run function pokefinder:tick
 execute if score egg_data enabled matches 1 run function egg_data:tick
