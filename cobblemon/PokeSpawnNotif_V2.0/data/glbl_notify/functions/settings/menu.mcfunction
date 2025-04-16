@@ -1,19 +1,25 @@
 ##
 # menu.mcfunction
 #
-# Created by KnightKehan.
+# Player settings menu for Global Notify
+#
+# Created by KnightKehan
 ##
 
-tellraw @s ["",{"text":"=== Global Notify Settings ===","color":"gold","bold":true}]
+tellraw @s ["",{"text":"\n=== Global Notify Settings ===","color":"gold","bold":true}]
+tellraw @s ["",{"text":"Customize your notification preferences:","color":"yellow"}]
 
-# Chat notifications - dynamic display
-execute if score #chat_enabled gn_settings matches 1 run tellraw @s ["",{"text":"[✉]","color":"aqua","clickEvent":{"action":"run_command","value":"/function glbl_notify:settings/toggle_chat"}},{"text":" Chat notifications: ","color":"gray"},{"text":"ENABLED","color":"green","clickEvent":{"action":"run_command","value":"/function glbl_notify:settings/toggle_chat"},"hoverEvent":{"action":"show_text","contents":["Click to toggle chat notifications"]}}]
-execute if score #chat_enabled gn_settings matches 0 run tellraw @s ["",{"text":"[✉]","color":"aqua","clickEvent":{"action":"run_command","value":"/function glbl_notify:settings/toggle_chat"}},{"text":" Chat notifications: ","color":"gray"},{"text":"DISABLED","color":"red","clickEvent":{"action":"run_command","value":"/function glbl_notify:settings/toggle_chat"},"hoverEvent":{"action":"show_text","contents":["Click to toggle chat notifications"]}}]
+# Chat notifications toggle
+execute if score @s gn_chat matches 1 run tellraw @s ["",{"text":"[✉] ","color":"green","bold":true},{"text":"Chat Notifications: ","color":"white"},{"text":"ON","color":"green"},{"text":" [Disable]","color":"red","clickEvent":{"action":"run_command","value":"/trigger gn_menu set -1"}}]
+execute if score @s gn_chat matches 0 run tellraw @s ["",{"text":"[✉] ","color":"gray"},{"text":"Chat Notifications: ","color":"gray"},{"text":"OFF","color":"red"},{"text":" [Enable]","color":"green","clickEvent":{"action":"run_command","value":"/trigger gn_menu set -2"}}]
 
-# Title notifications - dynamic display
-execute if score #title_enabled gn_settings matches 1 run tellraw @s ["",{"text":"[⬆]","color":"aqua","clickEvent":{"action":"run_command","value":"/function glbl_notify:settings/toggle_title"}},{"text":" Title notifications: ","color":"gray"},{"text":"ENABLED","color":"green","clickEvent":{"action":"run_command","value":"/function glbl_notify:settings/toggle_title"},"hoverEvent":{"action":"show_text","contents":["Click to toggle title notifications"]}}]
-execute if score #title_enabled gn_settings matches 0 run tellraw @s ["",{"text":"[⬆]","color":"aqua","clickEvent":{"action":"run_command","value":"/function glbl_notify:settings/toggle_title"}},{"text":" Title notifications: ","color":"gray"},{"text":"DISABLED","color":"red","clickEvent":{"action":"run_command","value":"/function glbl_notify:settings/toggle_title"},"hoverEvent":{"action":"show_text","contents":["Click to toggle title notifications"]}}]
+# Title notifications toggle
+execute if score @s gn_title matches 1 run tellraw @s ["",{"text":"[⬆] ","color":"green","bold":true},{"text":"Title Notifications: ","color":"white"},{"text":"ON","color":"green"},{"text":" [Disable]","color":"red","clickEvent":{"action":"run_command","value":"/trigger gn_menu set -3"}}]
+execute if score @s gn_title matches 0 run tellraw @s ["",{"text":"[⬆] ","color":"gray"},{"text":"Title Notifications: ","color":"gray"},{"text":"OFF","color":"red"},{"text":" [Enable]","color":"green","clickEvent":{"action":"run_command","value":"/trigger gn_menu set -4"}}]
 
-# Actionbar notifications - dynamic display
-execute if score #actionbar_enabled gn_settings matches 1 run tellraw @s ["",{"text":"[⬇]","color":"aqua","clickEvent":{"action":"run_command","value":"/function glbl_notify:settings/toggle_actionbar"}},{"text":" Actionbar notifications: ","color":"gray"},{"text":"ENABLED","color":"green","clickEvent":{"action":"run_command","value":"/function glbl_notify:settings/toggle_actionbar"},"hoverEvent":{"action":"show_text","contents":["Click to toggle actionbar notifications"]}}]
-execute if score #actionbar_enabled gn_settings matches 0 run tellraw @s ["",{"text":"[⬇]","color":"aqua","clickEvent":{"action":"run_command","value":"/function glbl_notify:settings/toggle_actionbar"}},{"text":" Actionbar notifications: ","color":"gray"},{"text":"DISABLED","color":"red","clickEvent":{"action":"run_command","value":"/function glbl_notify:settings/toggle_actionbar"},"hoverEvent":{"action":"show_text","contents":["Click to toggle actionbar notifications"]}}]
+# Actionbar notifications toggle
+execute if score @s gn_actionbar matches 1 run tellraw @s ["",{"text":"[⬇] ","color":"green","bold":true},{"text":"Actionbar Notifications: ","color":"white"},{"text":"ON","color":"green"},{"text":" [Disable]","color":"red","clickEvent":{"action":"run_command","value":"/trigger gn_menu set -5"}}]
+execute if score @s gn_actionbar matches 0 run tellraw @s ["",{"text":"[⬇] ","color":"gray"},{"text":"Actionbar Notifications: ","color":"gray"},{"text":"OFF","color":"red"},{"text":" [Enable]","color":"green","clickEvent":{"action":"run_command","value":"/trigger gn_menu set -6"}}]
+
+# Return/info section
+tellraw @s ["",{"text":"\nTip: ","color":"gray"},{"text":"/trigger gn_menu","color":"white","clickEvent":{"action":"suggest_command","value":"/trigger gn_menu"}},{"text":" to access this menu anytime","color":"gray"}]
