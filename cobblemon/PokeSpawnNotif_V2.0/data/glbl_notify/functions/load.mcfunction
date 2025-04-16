@@ -17,7 +17,9 @@ scoreboard players set #actionbar_enabled gn_settings 0
 scoreboard players set #cooldown gn_settings 100
 scoreboard players set #notify_cooldown gn_timer 0
 
-tellraw @a ["",{"text":"[Global Notify]","color":"gold"},{"text":" System initialized","color":"green"}]
+# Module initialization message
+tellraw @a[gamemode=creative,tag=!admin] ["",{"text":"[Global Notify]","color":"gold"},{"text":" Module initialized!","color":"green"}]
+tellraw @a[tag=admin] ["",{"text":"[Global Notify]","color":"gold"},{"text":" Module initialized!","color":"green"}]
 
 # Version
 scoreboard players set #version gn_settings 10

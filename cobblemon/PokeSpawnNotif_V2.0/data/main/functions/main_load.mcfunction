@@ -1,6 +1,9 @@
 scoreboard objectives add enabled dummy
 scoreboard objectives add toggled dummy
 
+# Admin menu trigger
+scoreboard objectives add admin trigger "Admin Menu"
+
 # setting default values
 execute unless score pokefinder enabled = pokefinder enabled run scoreboard players set pokefinder enabled 0
 execute unless score fossil_locator enabled = fossil_locator enabled run scoreboard players set fossil_locator enabled 0

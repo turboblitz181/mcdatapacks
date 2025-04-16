@@ -5,7 +5,7 @@ ideas:
 - global legendary notifications - done
 - egg data 
 - pokeball changer - turbo working on it
-- admin for main folder - kehan working on it
+- admin for main folder - done
 - pokemon (list) - done
-- update main toggles - kehan working on it
+- update main toggles for admin - done
 - update find - kehan working on it

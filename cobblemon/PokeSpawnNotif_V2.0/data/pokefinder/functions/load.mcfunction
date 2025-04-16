@@ -16,7 +16,6 @@ scoreboard objectives add found_pokemon dummy "Pokémon Found Status"
 # === PLAYER INTERACTIONS ===
 # Triggers voor speler commando's
 scoreboard objectives add pokespawnnotif trigger "Pokémon Spawn Notifier"
-scoreboard objectives add toggle_notifs trigger "Toggle Notifications"
 scoreboard objectives add pokemenu trigger "Pokémon Menu"
 
 # === DETECTION METRICS ===
@@ -60,6 +59,7 @@ execute as @a unless score @s notifs_enabled matches 0..1 run scoreboard players
 data modify storage pokespawner:temp CurrentPokemon set value "None"
 data modify storage pokespawner:data PokemonList set value []
 
-# === OPSTART BERICHTEN ===
-tellraw @a ["",{"text":"Pokémon Spawn Notifier ","bold":true,"color":"aqua"},{"text":"has been loaded!","color":"green"}]
-tellraw @a ["",{"text":"Pokémon Scan System ","bold":true,"color":"light_purple"},{"text":"initialized!","color":"green"}]
+# === START UP MESSAGE ===
+# Module initialization message
+tellraw @a[gamemode=creative,tag=!admin] ["",{"text":"[PokéFinder]","color":"light_purple"},{"text":" Module initialized!","color":"green"}]
+tellraw @a[tag=admin] ["",{"text":"[PokéFinder]","color":"light_purple"},{"text":" Module initialized!","color":"green"}]

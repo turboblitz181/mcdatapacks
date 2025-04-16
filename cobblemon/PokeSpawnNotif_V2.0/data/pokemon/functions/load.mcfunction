@@ -7,5 +7,6 @@
 # Initialize shared Pokemon library
 scoreboard objectives add pokemon.temp dummy
 
-# Notify admins on load
-tellraw @a[gamemode=creative] ["",{"text":"[Pokemon Library]","color":"aqua"},{"text":" Initialized","color":"green"}]
+# Module initialization message
+tellraw @a[gamemode=creative,tag=!admin] ["",{"text":"[Pokémon Library]","color":"dark_green"},{"text":" Module initialized!","color":"green"}]
+tellraw @a[tag=admin] ["",{"text":"[Pokémon Library]","color":"dark_green"},{"text":" Module initialized!","color":"green"}]

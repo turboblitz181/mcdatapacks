@@ -10,13 +10,7 @@
 # === TRIGGER ACTIVATIE ===
 # Zorgt dat alle triggers beschikbaar zijn voor spelers
 scoreboard players enable @a pokespawnnotif
-scoreboard players enable @a toggle_notifs
 scoreboard players enable @a pokemenu
-
-# === NOTIFICATIE INSTELLINGEN ===
-# Verwerk toggle_notifs trigger
-execute as @a[scores={toggle_notifs=1..}] run function pokefinder:tracking/toggle_notification
-execute as @a[scores={toggle_notifs=1..}] run scoreboard players set @s toggle_notifs 0
 
 # === POKÉMON TRACKING ===
 # Verwerk pokespawnnotif trigger voor nieuwe tracking requests
@@ -24,11 +18,22 @@ execute as @a[scores={pokespawnnotif=1..}] run function pokefinder:handle/handle
 execute as @a[scores={pokespawnnotif=1..}] run scoreboard players set @s pokespawnnotif 0
 
 # === MENU SYSTEEM ===
-# Verwerk menu navigatie (zowel positieve als negatieve waarden)
-execute as @a[scores={pokemenu=..-1}] run function pokefinder:handle/handle_menu
+# Process all menu interactions (both positive and negative values)
 execute as @a[scores={pokemenu=1..}] run function pokefinder:handle/handle_menu
+execute as @a[scores={pokemenu=..-1}] run function pokefinder:handle/handle_menu
+
+# Reset menu values after processing
 execute as @a[scores={pokemenu=..-1}] run scoreboard players set @s pokemenu 0
 execute as @a[scores={pokemenu=1..}] run scoreboard players set @s pokemenu 0
+
+# Make sure tracking mode handlers exist
+execute as @a[scores={pokemenu=-19}] run function pokefinder:settings/tracking_mode
+execute as @a[scores={pokemenu=-20}] run scoreboard players set @s track_mode 0
+execute as @a[scores={pokemenu=-20}] run function pokefinder:settings/tracking_mode
+execute as @a[scores={pokemenu=-21}] run scoreboard players set @s track_mode 1
+execute as @a[scores={pokemenu=-21}] run function pokefinder:settings/tracking_mode
+execute as @a[scores={pokemenu=-22}] run scoreboard players set @s track_mode 2
+execute as @a[scores={pokemenu=-22}] run function pokefinder:settings/tracking_mode
 
 # === SCAN PROCES ===
 # Voer scans uit voor alle spelers die actief tracken
