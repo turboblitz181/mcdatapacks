@@ -16,6 +16,6 @@ execute as @a[distance=..20,sort=nearest,limit=5] unless entity @s[tag=admin] ru
 
 # Revoke admin from player
 tellraw @s ["",{"text":"\nRevoke admin from player:","color":"yellow"}]
-execute as @a[tag=admin,distance=..20,sort=nearest,limit=5] unless entity @s[gamemode=creative] run tellraw @s[tag=admin] ["",{"text":"• ","color":"gray"},{"selector":"@s","color":"white"},{"text":" [Revoke]","color":"red","clickEvent":{"action":"run_command","value":"/execute as @s run function main:admin/core/revoke_admin"}}]
+execute as @a[tag=admin,distance=..20,sort=nearest,limit=5] run tellraw @s[tag=admin] ["",{"text":"• ","color":"gray"},{"selector":"@s","color":"white"},{"text":" [Revoke]","color":"red","clickEvent":{"action":"run_command","value":"/execute as @s run function main:admin/core/revoke_admin"}}]
 
 tellraw @s ["",{"text":"\n[Return to Admin Panel]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin"}}]

@@ -5,8 +5,8 @@
 ##
 
 # Check if player has admin rights
-execute unless entity @s[tag=admin] unless entity @s[gamemode=creative] run tellraw @s ["",{"text":"You don't have permission to use admin commands!","color":"red"}]
-execute unless entity @s[tag=admin] unless entity @s[gamemode=creative] run return 0
+execute unless entity @s[tag=admin] run tellraw @s ["",{"text":"You don't have permission to use admin commands!","color":"red"}]
+execute unless entity @s[tag=admin] run return 0
 
 # Menu if player has rights
 tellraw @s ["",{"text":"\n=== Admin Panel ===","color":"gold","bold":true}]

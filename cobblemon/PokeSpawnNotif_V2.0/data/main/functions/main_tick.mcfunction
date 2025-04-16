@@ -1,6 +1,5 @@
 # Enable admin trigger for qualified players
 scoreboard players enable @a[tag=admin] admin
-scoreboard players enable @a[gamemode=creative] admin
 
 # Process admin menu trigger
 execute as @a[scores={admin=1..}] run function main:admin/admin
