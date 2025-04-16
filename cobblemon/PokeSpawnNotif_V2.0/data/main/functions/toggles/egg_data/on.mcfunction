@@ -8,4 +8,4 @@ function egg_data:load
 tellraw @s ["",{"text":"[Egg Data]","color":"yellow"},{"text":" has been ","color":"gray"},{"text":"enabled","color":"green"},{"text":"!","color":"gray"}]
 
 # Auto-return to toggles menu
-function main:admin/module_menu
+function main:admin/core/module_menu
