@@ -10,7 +10,7 @@ scoreboard objectives add gn_timer dummy
 
 # Settings flags
 scoreboard players set #chat_enabled gn_settings 1
-scoreboard players set #title_enabled gn_settings 1
+scoreboard players set #title_enabled gn_settings 0
 scoreboard players set #actionbar_enabled gn_settings 0
 
 # Cooldown to prevent spam notifications
