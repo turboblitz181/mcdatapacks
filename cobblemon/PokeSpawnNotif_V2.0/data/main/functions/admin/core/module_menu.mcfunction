@@ -30,5 +30,9 @@ execute if score egg_data enabled matches 0 run tellraw @s ["",{"text":"[✗] ",
 execute if score fossil_locator enabled matches 1 run tellraw @s ["",{"text":"[✓] ","color":"green"},{"text":"Fossil Locator","color":"aqua"},{"text":" - ","color":"gray"},{"text":"[DISABLE]","color":"red","clickEvent":{"action":"run_command","value":"/function main:toggles/fossil_locator/off"}}]
 execute if score fossil_locator enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red"},{"text":"Fossil Locator","color":"gray"},{"text":" - ","color":"gray"},{"text":"[ENABLE]","color":"green","clickEvent":{"action":"run_command","value":"/function main:toggles/fossil_locator/on"}}]
 
+# Pokeball Changer module
+execute if score pokeball_changer enabled matches 1 run tellraw @s ["",{"text":"[✓] ","color":"green"},{"text":"Pokeball Changer","color":"red"},{"text":" - ","color":"gray"},{"text":"[DISABLE]","color":"red","clickEvent":{"action":"run_command","value":"/function main:toggles/pokeball_changer/off"}}]
+execute if score pokeball_changer enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red"},{"text":"Pokeball Changer","color":"gray"},{"text":" - ","color":"gray"},{"text":"[ENABLE]","color":"green","clickEvent":{"action":"run_command","value":"/function main:toggles/pokeball_changer/on"}}]
+
 # Footer with return button
 tellraw @s ["",{"text":"\n[Return to Admin Panel]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger admin"}}]

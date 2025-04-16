@@ -74,7 +74,14 @@ scoreboard objectives remove pokemon.temp
 # ==========================================
 # FOSSIL LOCATOR MODULE SCOREBOARDS
 # ==========================================
-# Add any fossil locator specific objectives here
+scoreboard objectives remove locator_used
+scoreboard objectives remove fossil_distance
+
+# ==========================================
+# POKEBALL CHANGER MODULE SCOREBOARDS
+# ==========================================
+scoreboard objectives remove poke_slot
+scoreboard objectives remove ball_type
 
 # Confirmation 
 title @a title {"text":"RESET INITIATED","color":"dark_red","bold":true}
