@@ -1,0 +1,1 @@
+give @s paper{display:{Name:'["",{"text":"Proof of Changing","italic":false,"color":"light_purple"}]',Lore:['["",{"text":"Allows you to change the pokeball","italic":false,"color":"aqua"}]','["",{"text":"of one of your party members","italic":false,"color":"aqua"}]']},Enchantments:[{}]}
