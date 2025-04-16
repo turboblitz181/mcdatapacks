@@ -4,25 +4,16 @@
 # Created by KnightKehan.
 ##
 
-# Reset detection counters for this check cycle
-scoreboard players set #shiny_found gn_settings 0
-scoreboard players set #legend_found gn_settings 0
+# Minimalist and reliable approach
 
-# Identify new Pokémon - add debug message
-execute as @e[type=cobblemon:pokemon,tag=!gn_processed] run scoreboard players add #new_pokemon gn_settings 1
-execute if score #new_pokemon gn_settings matches 1.. run tellraw @a[tag=debug] ["Found ",{"score":{"name":"#new_pokemon","objective":"gn_settings"}}," new Pokémon"]
-scoreboard players set #new_pokemon gn_settings 0
+# Only run if module is enabled
+execute unless score glbl_notify enabled matches 1 run return 0
 
-# Tag new Pokémon to check
-tag @e[type=cobblemon:pokemon,tag=!gn_processed] add gn_check
+# Important: Check cooldown first to prevent repeated notifications
+execute if score #notify_cooldown gn_timer matches 1.. run return 0
 
-# Process each Pokémon individually
-execute as @e[type=cobblemon:pokemon,tag=gn_check] at @s run function glbl_notify:notifications/process_pokemon
+# COMPLETELY ignore ALL previously processed Pokémon
+execute as @e[type=cobblemon:pokemon,tag=!gn_seen] at @s run function glbl_notify:notifications/verify_wild
 
-# Mark all checked Pokémon as processed
-tag @e[type=cobblemon:pokemon,tag=gn_check] add gn_processed
-tag @e[type=cobblemon:pokemon,tag=gn_check] remove gn_check
-
-# Set cooldown if any notifications were sent
-execute if score #shiny_detected gn_shiny_detect matches 1.. run scoreboard players operation #notify_cooldown gn_timer = #cooldown gn_settings
-execute if score #legend_detected gn_legend_detect matches 1.. run scoreboard players operation #notify_cooldown gn_timer = #cooldown gn_settings
+# Mark ALL Pokémon as seen (only process new spawns from now on)
+tag @e[type=cobblemon:pokemon] add gn_seen
