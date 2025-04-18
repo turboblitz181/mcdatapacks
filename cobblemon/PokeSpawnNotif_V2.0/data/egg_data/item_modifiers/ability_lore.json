@@ -1,0 +1,27 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "Ability: ",
+        "extra": [
+          {
+            "nbt": "ability",
+            "storage": "egg_data:data",
+            "color": "#00b3ff"
+          }
+        ],
+        "color": "#007bff",
+        "bold": true
+      }
+    ],
+    "replace": false,
+    "conditions": []
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{ability_set:1b}",
+    "conditions": []
+  }
+]
