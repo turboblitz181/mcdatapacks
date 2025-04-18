@@ -1,0 +1,1 @@
+execute as @a[tag=check_eggs] run function egg_data:convert_lore

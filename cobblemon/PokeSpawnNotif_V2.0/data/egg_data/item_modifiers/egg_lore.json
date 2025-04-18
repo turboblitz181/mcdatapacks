@@ -1,0 +1,105 @@
+[
+    {
+      "function": "minecraft:set_lore",
+      "entity": "this",
+      "lore": [
+        {
+          "text": "IVS: ",
+          "color": "#93fe62"
+        },
+        {
+          "text": " - HP: ",
+          "extra": [
+            {
+              "storage": "egg_data:data",
+              "nbt": "ivs[0]"
+            }
+          ],
+          "color": "#732121",
+          "bold": true
+        },
+        {
+          "text": " - Atk: ",
+          "extra": [
+            {
+              "nbt": "ivs[1]",
+              "storage": "egg_data:data"
+            }
+          ],
+          "color": "#2b692c",
+          "bold": true
+        },
+        {
+          "text": " - Def: ",
+          "extra": [
+            {
+              "storage": "egg_data:data",
+              "nbt": "ivs[2]"
+            }
+          ],
+          "color": "#ab5f07",
+          "bold": true
+        },
+        {
+          "text": " - Speed: ",
+          "extra": [
+            {
+              "storage": "egg_data:data",
+              "nbt": "ivs[3]"
+            }
+          ],
+          "color": "#0c686a",
+          "bold": true
+        },
+        {
+          "text": " - Sp.Def: ",
+          "extra": [
+            {
+              "storage": "egg_data:data",
+              "nbt": "ivs[4]"
+            }
+          ],
+          "color": "#e18c3d",
+          "bold": true
+        },
+        {
+          "text": " - Sp.Atk: ",
+          "extra": [
+            {
+              "storage": "egg_data:data",
+              "nbt": "ivs[5]"
+            }
+          ],
+          "color": "#157417",
+          "bold": true
+        },
+        {
+          "text": "Ability: ",
+          "extra": [
+            {
+              "nbt": "ability",
+              "storage": "egg_data:data",
+              "color": "#00c8fa"
+            }
+          ],
+          "color": "#006cfa"
+        },
+        {
+          "text": "Nature: ",
+          "extra": [
+            {
+              "nbt": "nature",
+              "storage": "egg_data:data",
+              "color": "#73fe01"
+            }
+          ],
+          "color": "#38bf1d"
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{checked:1b}"
+    }
+  ]
