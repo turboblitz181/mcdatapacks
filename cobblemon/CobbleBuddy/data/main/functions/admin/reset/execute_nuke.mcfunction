@@ -66,8 +66,10 @@ scoreboard objectives remove gn_chat
 scoreboard objectives remove gn_title  
 scoreboard objectives remove gn_actionbar
 scoreboard objectives remove gn_menu
+scoreboard objectives remove gn_nearest_player
+scoreboard objectives remove gn_distance
 scoreboard players reset glbl_notify enabled
-tag @e remove gn_seen
+execute as @e[tag=gn_seen] run tag @s remove gn_seen
 tag @e remove gn_processed
 tag @e remove gn_wild
 data remove storage glbl_notify:temp
@@ -124,3 +126,4 @@ title @a subtitle {"text":"Run /reload to reinstall","color":"gold"}
 
 # Confirmation message
 tellraw @a ["",{"text":"All datapacks scoreboards, tags and datas have been reset!","color":"dark_red","bold":true}]
+tellraw @s ["",{"text":"Reset complete! ","color":"green"},{"text":"Run /reload to reinstall all modules.","color":"gold"}]

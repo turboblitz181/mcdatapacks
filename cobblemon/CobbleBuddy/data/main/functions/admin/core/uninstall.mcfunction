@@ -19,7 +19,7 @@ tellraw @a ["",{"text":"===========================","color":"red"}]
 tag @a remove admin
 tag @e remove found
 tag @e remove match
-tag @e remove gn_seen
+execute as @e[tag=gn_seen] run tag @s remove gn_seen
 tag @e remove gn_processed
 tag @e remove gn_wild
 
@@ -79,6 +79,8 @@ scoreboard objectives remove gn_chat
 scoreboard objectives remove gn_title  
 scoreboard objectives remove gn_actionbar
 scoreboard objectives remove gn_menu
+scoreboard objectives remove gn_nearest_player
+scoreboard objectives remove gn_distance
 
 # Debug settings
 scoreboard players reset #debug_check_spawns gn_settings
