@@ -15,3 +15,6 @@ kill @e[type=!player]
 title @a title {"text":"⚠ TOTAL RESET ⚠","color":"dark_red","bold":true}
 title @a subtitle {"text":"All entities have been removed","color":"red"}
 tellraw @a ["",{"text":"WARNING: A total entity reset has been performed. All non-player entities have been removed!","color":"dark_red","bold":true}]
+
+# Kill all items on the ground
+schedule function main:admin/cleanup/killitems 5s

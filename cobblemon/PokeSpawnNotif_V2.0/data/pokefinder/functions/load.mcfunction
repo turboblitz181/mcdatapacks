@@ -61,4 +61,4 @@ data modify storage pokespawner:data PokemonList set value []
 
 # === START UP MESSAGE ===
 # Module initialization message
-tellraw @a[tag=admin] ["",{"text":"[PokéFinder]","color":"light_purple"},{"text":" Module initialized!","color":"green"}]
+tellraw @a[tag=admin] ["",{"text":"[Pokémon Finder]","color":"light_purple"},{"text":" Module initialized!","color":"green"}]

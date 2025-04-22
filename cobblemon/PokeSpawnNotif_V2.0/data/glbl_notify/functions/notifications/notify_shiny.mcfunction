@@ -21,6 +21,3 @@ execute as @a[scores={gn_actionbar=1}] run title @s actionbar ["",{"text":"✨ S
 
 # Sound effect
 execute as @a at @s run playsound minecraft:block.note_block.chime master @s ~ ~ ~ 1 1.5
-
-# Reset cooldown
-scoreboard players operation #notify_cooldown gn_timer = #cooldown gn_settings

@@ -6,8 +6,11 @@
 # Created by KnightKehan.
 ##
 
+# Debug for verify_wild
+execute if score #debug_verify_wild gn_settings matches 1 run function glbl_notify:debug/debug_verify_wild
+
 # Check if wild using shared function
-function pokemon:check_wild
+function pokemon:checks/check_wild
 execute if score #is_wild pokemon.temp matches 0 run return 0
 
 # Ensure name exists before continuing
@@ -23,6 +26,9 @@ execute if score #has_name gn_settings matches 1.. run data modify storage glbl_
 # Remove the "cobblemon:" prefix if it exists
 execute if data storage glbl_notify:temp PokemonName run data modify storage glbl_notify:temp PokemonName set string storage glbl_notify:temp PokemonName 10
 
+# In verify_wild.mcfunction - after processing a Pokémon
+data modify storage glbl_notify:temp LastProcessed set from storage glbl_notify:temp PokemonName
+
 # Find nearest player
 tag @a remove gn_nearest
 tag @p add gn_nearest
@@ -33,10 +39,10 @@ execute store result score #pos_y gn_settings run data get entity @s Pos[1]
 execute store result score #pos_z gn_settings run data get entity @s Pos[2]
 
 # Check properties (shiny/legendary)
-function pokemon:check_shiny
+function pokemon:checks/check_shiny
 scoreboard players operation #is_shiny gn_settings = #is_shiny pokemon.temp
 
-function pokemon:check_legendary  
+function pokemon:checks/check_legendary  
 scoreboard players operation #is_legendary gn_settings = #is_legendary pokemon.temp
 
 # Send appropriate notification

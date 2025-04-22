@@ -1,7 +1,7 @@
 ##
 # execute_nuke.mcfunction
 #
-# Complete scoreboard reset - organized by module
+# Complete scoreboard and tag reset - organized by module
 #
 # Created by KnightKehan.
 ##
@@ -64,11 +64,40 @@ scoreboard objectives remove gn_chat
 scoreboard objectives remove gn_title  
 scoreboard objectives remove gn_actionbar
 scoreboard objectives remove gn_menu
+scoreboard players reset glbl_notify enabled
+tag @e remove gn_seen
+tag @e remove gn_processed
+tag @e remove gn_wild
+data remove storage glbl_notify:temp
+data remove storage pokemon:temp
+
+# Reset debug settings
+scoreboard players set #debug_check_spawns gn_settings 0
+scoreboard players set #debug_verify_wild gn_settings 0
+scoreboard players set #debug_cooldown gn_timer 0
+scoreboard players set #debug_enabled gn_settings 0
 
 # ==========================================
 # POKEMON LIBRARY SCOREBOARDS
 # ==========================================
 scoreboard objectives remove pokemon.temp
+data remove storage pokemon:temp
+
+# Reset Pokemon specific scores
+scoreboard players reset #iv_hp pokemon.temp
+scoreboard players reset #iv_attack pokemon.temp
+scoreboard players reset #iv_defense pokemon.temp
+scoreboard players reset #iv_sp_attack pokemon.temp
+scoreboard players reset #iv_sp_defense pokemon.temp
+scoreboard players reset #iv_speed pokemon.temp
+scoreboard players reset #level pokemon.temp
+scoreboard players reset #is_wild pokemon.temp
+scoreboard players reset #is_shiny pokemon.temp
+scoreboard players reset #is_legendary pokemon.temp
+scoreboard players reset #dex_id pokemon.temp
+scoreboard players reset #base_total pokemon.temp
+scoreboard players reset #has_prefix pokemon.temp
+scoreboard players reset #modified pokemon.temp
 
 # ==========================================
 # EGG DATA MODULE SCOREBOARDS
@@ -92,4 +121,4 @@ title @a title {"text":"RESET INITIATED","color":"dark_red","bold":true}
 title @a subtitle {"text":"Run /reload to reinstall","color":"gold"}
 
 # Confirmation message
-tellraw @a ["",{"text":"All datapacks scoreboards have been reset!","color":"dark_red","bold":true}]
+tellraw @a ["",{"text":"All datapacks scoreboards, tags and datas have been reset!","color":"dark_red","bold":true}]

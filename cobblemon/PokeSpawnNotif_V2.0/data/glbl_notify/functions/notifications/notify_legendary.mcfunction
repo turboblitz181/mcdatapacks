@@ -18,6 +18,3 @@ execute as @a[scores={gn_actionbar=1}] run title @s actionbar ["",{"text":"👑 
 
 # Sound effect
 execute as @a at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 1
-
-# Reset cooldown
-scoreboard players operation #notify_cooldown gn_timer = #cooldown gn_settings

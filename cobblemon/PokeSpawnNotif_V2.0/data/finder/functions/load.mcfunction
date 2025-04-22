@@ -26,4 +26,4 @@ execute as @a unless score @s notifs_enabled matches 0..1 run scoreboard players
 execute as @a unless score @s track_mode matches 0..2 run scoreboard players set @s track_mode 0
 
 # Module initialization message
-tellraw @a[tag=admin] ["",{"text":"[Pokémon Finder]","color":"light_purple"},{"text":" Module initialized!","color":"green"}]
+tellraw @a[tag=admin] ["",{"text":"[Finder]","color":"light_purple"},{"text":" Module initialized!","color":"green"}]

@@ -3,9 +3,12 @@ ideas:
 - fossil locator - turbo working on it
 - global shiny notifications - done
 - global legendary notifications - done
-- egg data 
+- egg data - 
 - pokeball changer - turbo working on it
 - admin for main folder - done
 - pokemon (list) - done
 - update main toggles for admin - done
 - update find - kehan working on it
+- update pokefinder - kehan working on it
+- pokemon library - done
+- debug menu - kehan working on it

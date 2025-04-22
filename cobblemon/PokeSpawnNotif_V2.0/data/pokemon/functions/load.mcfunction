@@ -4,8 +4,11 @@
 # Created by KnightKehan.
 ##
 
-# Initialize shared Pokemon library
+# Initialize shared pokemon library
 scoreboard objectives add pokemon.temp dummy
+
+# Voeg pokedex storage toe
+data modify storage pokemon:database {}
 
 # Module initialization message
 tellraw @a[tag=admin] ["",{"text":"[Pokémon Library]","color":"dark_green"},{"text":" Module initialized!","color":"green"}]

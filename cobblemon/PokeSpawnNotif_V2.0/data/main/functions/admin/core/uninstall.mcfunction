@@ -12,37 +12,50 @@ execute unless entity @s[tag=admin] run return 0
 
 # Announce uninstall
 tellraw @a ["",{"text":"===========================","color":"red"}]
-tellraw @a ["",{"text":"UNINSTALLING PokeSpawnNotif","color":"red","bold":true}]
+tellraw @a ["",{"text":"UNINSTALLING CobbleBuddy","color":"red","bold":true}]
 tellraw @a ["",{"text":"===========================","color":"red"}]
 
 # Remove all tracking tags
 tag @a remove admin
-tag @a remove found
-tag @a remove match
+tag @e remove found
+tag @e remove match
+tag @e remove gn_seen
+tag @e remove gn_processed
+tag @e remove gn_wild
 
-# Remove all scoreboards
-# Core tracking system
+# ==========================================
+# MAIN SYSTEM SCOREBOARDS
+# ==========================================
+scoreboard objectives remove enabled
+scoreboard objectives remove toggled
+scoreboard objectives remove admin
+scoreboard objectives remove constants
+
+# ==========================================
+# POKEFINDER MODULE SCOREBOARDS
+# ==========================================
+# Core system
 scoreboard objectives remove tracking
-scoreboard objectives remove notifs_enabled
 scoreboard objectives remove found_pokemon
-
-# Player interactions
-scoreboard objectives remove pokespawnnotif
-scoreboard objectives remove toggle_notifs
-scoreboard objectives remove pokemenu
-
-# Detection metrics
-scoreboard objectives remove nearest_distance
-scoreboard objectives remove pokemon_count
-scoreboard objectives remove distance
-scoreboard objectives remove player_x
-scoreboard objectives remove player_z
-
-# Finder core system
 scoreboard objectives remove find
 scoreboard objectives remove find_count
+scoreboard objectives remove shiny_count
 scoreboard objectives remove temp
 scoreboard objectives remove pf_pkmnnr
+scoreboard objectives remove ID
+scoreboard objectives remove nearest_distance
+scoreboard objectives remove pokemon_count
+
+# Position tracking
+scoreboard objectives remove player_x
+scoreboard objectives remove player_z
+scoreboard objectives remove distance
+scoreboard objectives remove track_mode
+
+# Player interactions
+scoreboard objectives remove pokemenu
+scoreboard objectives remove notifs_enabled
+scoreboard objectives remove pokespawnnotif
 
 # Favorites system
 scoreboard objectives remove fav1
@@ -52,17 +65,74 @@ scoreboard objectives remove fav4
 scoreboard objectives remove fav5
 scoreboard objectives remove fav_slot
 
-# Utility scores
-scoreboard objectives remove constants
+# ==========================================
+# GLOBAL NOTIFY MODULE SCOREBOARDS
+# ==========================================
+scoreboard objectives remove gn_settings
+scoreboard objectives remove gn_timer
 scoreboard objectives remove notification_cooldown
+scoreboard objectives remove gn_shiny_detect
+scoreboard objectives remove gn_legend_detect
+scoreboard objectives remove gn_chat
+scoreboard objectives remove gn_title  
+scoreboard objectives remove gn_actionbar
+scoreboard objectives remove gn_menu
+
+# Debug settings
+scoreboard players reset #debug_check_spawns gn_settings
+scoreboard players reset #debug_verify_wild gn_settings
+scoreboard players reset #debug_cooldown gn_timer
+scoreboard players reset #debug_enabled gn_settings
+
+# ==========================================
+# POKEMON LIBRARY SCOREBOARDS
+# ==========================================
+scoreboard objectives remove pokemon.temp
+
+# Reset Pokemon specific scores
+scoreboard players reset #iv_hp pokemon.temp
+scoreboard players reset #iv_attack pokemon.temp
+scoreboard players reset #iv_defense pokemon.temp
+scoreboard players reset #iv_sp_attack pokemon.temp
+scoreboard players reset #iv_sp_defense pokemon.temp
+scoreboard players reset #iv_speed pokemon.temp
+scoreboard players reset #level pokemon.temp
+scoreboard players reset #is_wild pokemon.temp
+scoreboard players reset #is_shiny pokemon.temp
+scoreboard players reset #is_legendary pokemon.temp
+scoreboard players reset #dex_id pokemon.temp
+scoreboard players reset #base_total pokemon.temp
+scoreboard players reset #has_prefix pokemon.temp
+scoreboard players reset #modified pokemon.temp
+
+# ==========================================
+# EGG DATA MODULE SCOREBOARDS
+# ==========================================
+# Add any egg data specific objectives here
+
+# ==========================================
+# FOSSIL LOCATOR MODULE SCOREBOARDS
+# ==========================================
+scoreboard objectives remove locator_used
+scoreboard objectives remove fossil_distance
+
+# ==========================================
+# POKEBALL CHANGER MODULE SCOREBOARDS
+# ==========================================
+scoreboard objectives remove poke_slot
+scoreboard objectives remove ball_type
 
 # Clear data storage
+data remove storage glbl_notify:temp
+data remove storage pokemon:temp
 data remove storage pokefinder:temp CurrentPokemon
 data remove storage pokefinder:data PokemonList
 
 # Final notification
-tellraw @a ["",{"text":"PokeSpawnNotif has been completely removed.","color":"gold"}]
+tellraw @a ["",{"text":"CobbleBuddy has been completely removed.","color":"gold"}]
 tellraw @a ["",{"text":"You can now safely disable the datapack.","color":"yellow"}]
 
 # Self-disable instruction (must be manual in Minecraft)
-tellraw @a ["",{"text":"Run this command to disable: ","color":"gray"},{"text":"/datapack disable \"file/PokeSpawnNotif_V2.0.zip\"","color":"white","clickEvent":{"action":"suggest_command","value":"/datapack disable \"file/PokeSpawnNotif_V2.0.zip\""}}]
+tellraw @a ["",{"text":"Run one of these commands to disable:","color":"gray"}]
+tellraw @a ["",{"text":"If folder: ","color":"gray"},{"text":"/datapack disable \"file/CobbleBuddy\"","color":"white","clickEvent":{"action":"suggest_command","value":"/datapack disable \"file/CobbleBuddy\""}}]
+tellraw @a ["",{"text":"If ZIP: ","color":"gray"},{"text":"/datapack disable \"file/CobbleBuddy.zip\"","color":"white","clickEvent":{"action":"suggest_command","value":"/datapack disable \"file/CobbleBuddy.zip\""}}]

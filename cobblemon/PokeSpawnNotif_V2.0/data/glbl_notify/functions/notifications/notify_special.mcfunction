@@ -21,5 +21,3 @@ execute as @a at @s run playsound minecraft:ui.toast.challenge_complete master @
 execute as @a at @s run playsound minecraft:block.note_block.chime master @s ~ ~ ~ 1 2
 execute as @a at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 0.7 1.5
 
-# Reset cooldown
-scoreboard players operation #notify_cooldown gn_timer = #cooldown gn_settings
