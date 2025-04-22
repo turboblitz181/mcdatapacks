@@ -7559,14 +7559,14 @@ execute if data storage pokemon:temp {clean_species:"overqwil", form:"normal"} r
 execute if data storage pokemon:temp {clean_species:"enamorus", form:"incarnate_forme"} run data modify storage pokemon:temp types set value ["fairy", "flying"]
 execute if data storage pokemon:temp {clean_species:"enamorus", form:"incarnate_forme"} run data modify storage pokemon:temp base_stats set value {hp:74,attack:115,defense:70,special_attack:135,special_defense:80,speed:106}
 execute if data storage pokemon:temp {clean_species:"enamorus", form:"incarnate_forme"} run data modify storage pokemon:temp dex_id set value 905
-execute if data storage pokemon:temp {clean_species:"enamorus", form:"incarnate_forme"} run data modify storage pokemon:temp is_legendary set value 0
+execute if data storage pokemon:temp {clean_species:"enamorus", form:"incarnate_forme"} run data modify storage pokemon:temp is_legendary set value 1
 execute if data storage pokemon:temp {clean_species:"enamorus", form:"incarnate_forme"} run data modify storage pokemon:temp form_type set value "normal"
 
 # Enamorus (Therian Forme) - ID: 905
 execute if data storage pokemon:temp {clean_species:"enamorus", form:"therian_forme"} run data modify storage pokemon:temp types set value ["fairy", "flying"]
 execute if data storage pokemon:temp {clean_species:"enamorus", form:"therian_forme"} run data modify storage pokemon:temp base_stats set value {hp:74,attack:115,defense:110,special_attack:135,special_defense:100,speed:46}
 execute if data storage pokemon:temp {clean_species:"enamorus", form:"therian_forme"} run data modify storage pokemon:temp dex_id set value 905
-execute if data storage pokemon:temp {clean_species:"enamorus", form:"therian_forme"} run data modify storage pokemon:temp is_legendary set value 0
+execute if data storage pokemon:temp {clean_species:"enamorus", form:"therian_forme"} run data modify storage pokemon:temp is_legendary set value 1
 execute if data storage pokemon:temp {clean_species:"enamorus", form:"therian_forme"} run data modify storage pokemon:temp form_type set value "normal"
 
 # Sprigatito - ID: 906
@@ -8399,49 +8399,49 @@ execute if data storage pokemon:temp {clean_species:"sinistcha", form:"normal"} 
 execute if data storage pokemon:temp {clean_species:"okidogi", form:"normal"} run data modify storage pokemon:temp types set value ["poison", "fighting"]
 execute if data storage pokemon:temp {clean_species:"okidogi", form:"normal"} run data modify storage pokemon:temp base_stats set value {hp:88,attack:128,defense:115,special_attack:58,special_defense:86,speed:80}
 execute if data storage pokemon:temp {clean_species:"okidogi", form:"normal"} run data modify storage pokemon:temp dex_id set value 1014
-execute if data storage pokemon:temp {clean_species:"okidogi", form:"normal"} run data modify storage pokemon:temp is_legendary set value 0
+execute if data storage pokemon:temp {clean_species:"okidogi", form:"normal"} run data modify storage pokemon:temp is_legendary set value 1
 execute if data storage pokemon:temp {clean_species:"okidogi", form:"normal"} run data modify storage pokemon:temp form_type set value "normal"
 
 # Munkidori - ID: 1015
 execute if data storage pokemon:temp {clean_species:"munkidori", form:"normal"} run data modify storage pokemon:temp types set value ["poison", "psychic"]
 execute if data storage pokemon:temp {clean_species:"munkidori", form:"normal"} run data modify storage pokemon:temp base_stats set value {hp:88,attack:75,defense:66,special_attack:130,special_defense:90,speed:106}
 execute if data storage pokemon:temp {clean_species:"munkidori", form:"normal"} run data modify storage pokemon:temp dex_id set value 1015
-execute if data storage pokemon:temp {clean_species:"munkidori", form:"normal"} run data modify storage pokemon:temp is_legendary set value 0
+execute if data storage pokemon:temp {clean_species:"munkidori", form:"normal"} run data modify storage pokemon:temp is_legendary set value 1
 execute if data storage pokemon:temp {clean_species:"munkidori", form:"normal"} run data modify storage pokemon:temp form_type set value "normal"
 
 # Fezandipiti - ID: 1016
 execute if data storage pokemon:temp {clean_species:"fezandipiti", form:"normal"} run data modify storage pokemon:temp types set value ["poison", "fairy"]
 execute if data storage pokemon:temp {clean_species:"fezandipiti", form:"normal"} run data modify storage pokemon:temp base_stats set value {hp:88,attack:91,defense:82,special_attack:70,special_defense:125,speed:99}
 execute if data storage pokemon:temp {clean_species:"fezandipiti", form:"normal"} run data modify storage pokemon:temp dex_id set value 1016
-execute if data storage pokemon:temp {clean_species:"fezandipiti", form:"normal"} run data modify storage pokemon:temp is_legendary set value 0
+execute if data storage pokemon:temp {clean_species:"fezandipiti", form:"normal"} run data modify storage pokemon:temp is_legendary set value 1
 execute if data storage pokemon:temp {clean_species:"fezandipiti", form:"normal"} run data modify storage pokemon:temp form_type set value "normal"
 
 # Ogerpon (Teal Mask) - ID: 1017
 execute if data storage pokemon:temp {clean_species:"ogerpon", form:"teal_mask"} run data modify storage pokemon:temp types set value ["grass"]
 execute if data storage pokemon:temp {clean_species:"ogerpon", form:"teal_mask"} run data modify storage pokemon:temp base_stats set value {hp:80,attack:120,defense:84,special_attack:60,special_defense:96,speed:110}
 execute if data storage pokemon:temp {clean_species:"ogerpon", form:"teal_mask"} run data modify storage pokemon:temp dex_id set value 1017
-execute if data storage pokemon:temp {clean_species:"ogerpon", form:"teal_mask"} run data modify storage pokemon:temp is_legendary set value 0
+execute if data storage pokemon:temp {clean_species:"ogerpon", form:"teal_mask"} run data modify storage pokemon:temp is_legendary set value 1
 execute if data storage pokemon:temp {clean_species:"ogerpon", form:"teal_mask"} run data modify storage pokemon:temp form_type set value "normal"
 
 # Ogerpon (Wellspring Mask) - ID: 1017
 execute if data storage pokemon:temp {clean_species:"ogerpon", form:"wellspring_mask"} run data modify storage pokemon:temp types set value ["grass", "water"]
 execute if data storage pokemon:temp {clean_species:"ogerpon", form:"wellspring_mask"} run data modify storage pokemon:temp base_stats set value {hp:80,attack:120,defense:84,special_attack:60,special_defense:96,speed:110}
 execute if data storage pokemon:temp {clean_species:"ogerpon", form:"wellspring_mask"} run data modify storage pokemon:temp dex_id set value 1017
-execute if data storage pokemon:temp {clean_species:"ogerpon", form:"wellspring_mask"} run data modify storage pokemon:temp is_legendary set value 0
+execute if data storage pokemon:temp {clean_species:"ogerpon", form:"wellspring_mask"} run data modify storage pokemon:temp is_legendary set value 1
 execute if data storage pokemon:temp {clean_species:"ogerpon", form:"wellspring_mask"} run data modify storage pokemon:temp form_type set value "normal"
 
 # Ogerpon (Hearthflame Mask) - ID: 1017
 execute if data storage pokemon:temp {clean_species:"ogerpon", form:"hearthflame_mask"} run data modify storage pokemon:temp types set value ["grass", "fire"]
 execute if data storage pokemon:temp {clean_species:"ogerpon", form:"hearthflame_mask"} run data modify storage pokemon:temp base_stats set value {hp:80,attack:120,defense:84,special_attack:60,special_defense:96,speed:110}
 execute if data storage pokemon:temp {clean_species:"ogerpon", form:"hearthflame_mask"} run data modify storage pokemon:temp dex_id set value 1017
-execute if data storage pokemon:temp {clean_species:"ogerpon", form:"hearthflame_mask"} run data modify storage pokemon:temp is_legendary set value 0
+execute if data storage pokemon:temp {clean_species:"ogerpon", form:"hearthflame_mask"} run data modify storage pokemon:temp is_legendary set value 1
 execute if data storage pokemon:temp {clean_species:"ogerpon", form:"hearthflame_mask"} run data modify storage pokemon:temp form_type set value "normal"
 
 # Ogerpon (Cornerstone Mask) - ID: 1017
 execute if data storage pokemon:temp {clean_species:"ogerpon", form:"cornerstone_mask"} run data modify storage pokemon:temp types set value ["grass", "rock"]
 execute if data storage pokemon:temp {clean_species:"ogerpon", form:"cornerstone_mask"} run data modify storage pokemon:temp base_stats set value {hp:80,attack:120,defense:84,special_attack:60,special_defense:96,speed:110}
 execute if data storage pokemon:temp {clean_species:"ogerpon", form:"cornerstone_mask"} run data modify storage pokemon:temp dex_id set value 1017
-execute if data storage pokemon:temp {clean_species:"ogerpon", form:"cornerstone_mask"} run data modify storage pokemon:temp is_legendary set value 0
+execute if data storage pokemon:temp {clean_species:"ogerpon", form:"cornerstone_mask"} run data modify storage pokemon:temp is_legendary set value 1
 execute if data storage pokemon:temp {clean_species:"ogerpon", form:"cornerstone_mask"} run data modify storage pokemon:temp form_type set value "normal"
 
 # Archaludon - ID: 1018
