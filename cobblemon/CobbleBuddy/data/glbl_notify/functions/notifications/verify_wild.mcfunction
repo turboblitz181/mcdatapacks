@@ -25,7 +25,7 @@ execute if data storage glbl_notify:temp PokemonName run data modify storage glb
 # In verify_wild.mcfunction - after processing a Pokémon
 data modify storage glbl_notify:temp LastProcessed set from storage glbl_notify:temp PokemonName
 
-# Store the nearest player properly - FIXED FOR SERVER
+# Store the nearest player properly
 # This command runs from the Pokémon's position, so @p is the closest player
 scoreboard players set @p gn_nearest_player 1
 execute as @a[scores={gn_nearest_player=1}] at @s run scoreboard players set @s gn_distance 0
@@ -43,7 +43,7 @@ scoreboard players operation #is_shiny gn_settings = #is_shiny pokemon.temp
 function pokemon:checks/check_legendary  
 scoreboard players operation #is_legendary gn_settings = #is_legendary pokemon.temp
 
-# Send notification to the nearest player - FIXED FOR SERVER
+# Send notification to the nearest player
 execute if score #is_legendary gn_settings matches 1 if score #is_shiny gn_settings matches 1 as @a[tag=gn_nearest,limit=1] at @s run function glbl_notify:notifications/notify_special
 execute if score #is_legendary gn_settings matches 1 if score #is_shiny gn_settings matches 0 as @a[tag=gn_nearest,limit=1] at @s run function glbl_notify:notifications/notify_legendary
 execute if score #is_legendary gn_settings matches 0 if score #is_shiny gn_settings matches 1 as @a[tag=gn_nearest,limit=1] at @s run function glbl_notify:notifications/notify_shiny
