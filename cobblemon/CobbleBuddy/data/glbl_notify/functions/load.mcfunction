@@ -16,6 +16,8 @@ tag @e remove gn_wild
 scoreboard objectives add gn_settings dummy
 scoreboard objectives add gn_timer dummy
 scoreboard objectives add gn_menu trigger "Global Notify Menu"
+scoreboard objectives add gn_nearest_player dummy
+scoreboard objectives add gn_distance dummy
 
 # PLAYER-SPECIFIC notification preferences
 scoreboard objectives add gn_chat dummy "Chat Notifications"
