@@ -9,13 +9,13 @@
 
 # === TRIGGER ACTIVATIE ===
 # Zorgt dat alle triggers beschikbaar zijn voor spelers
-scoreboard players enable @a pokespawnnotif
+scoreboard players enable @a poketrack
 scoreboard players enable @a pokemenu
 
 # === POKÉMON TRACKING ===
-# Verwerk pokespawnnotif trigger voor nieuwe tracking requests
-execute as @a[scores={pokespawnnotif=1..}] run function pokefinder:handle/handle_normal_trigger
-execute as @a[scores={pokespawnnotif=1..}] run scoreboard players set @s pokespawnnotif 0
+# Verwerk poketrack trigger voor nieuwe tracking requests
+execute as @a[scores={poketrack=1..}] run function pokefinder:handle/handle_normal_trigger
+execute as @a[scores={poketrack=1..}] run scoreboard players set @s poketrack 0
 
 # === MENU SYSTEEM ===
 # Process all menu interactions (both positive and negative values)

@@ -15,7 +15,7 @@ scoreboard objectives add found_pokemon dummy "Pokémon Found Status"
 
 # === PLAYER INTERACTIONS ===
 # Triggers voor speler commando's
-scoreboard objectives add pokespawnnotif trigger "Pokémon Spawn Notifier"
+scoreboard objectives add poketrack trigger "Pokémon Tracking"
 scoreboard objectives add pokemenu trigger "Pokémon Menu"
 
 # === DETECTION METRICS ===
