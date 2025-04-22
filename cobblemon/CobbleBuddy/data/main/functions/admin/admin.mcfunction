@@ -19,6 +19,7 @@ tellraw @s ["",{"text":"\n=== Danger Zone ===","color":"dark_red"}]
 tellraw @s ["",{"text":"Reset All Entities","color":"dark_red","clickEvent":{"action":"run_command","value":"/function main:admin/reset/confirm_remove_all"}}]
 tellraw @s ["",{"text":"Reset All World Entities","color":"dark_red","clickEvent":{"action":"run_command","value":"/function main:admin/reset/confirm_total_reset"}}]
 tellraw @s ["",{"text":"Reset All Scoreboards, Tags, Datas","color":"dark_red","clickEvent":{"action":"run_command","value":"/function main:admin/reset/confirm_nuke"}}]
+tellraw @s ["",{"text":"Reset Pokémon Database","color":"dark_red","clickEvent":{"action":"run_command","value":"/function main:admin/reset/confirm_pokemon_db_reset"}}]
 
 # Module management
 tellraw @s ["",{"text":"\n=== Module Management ===","color":"green"}]

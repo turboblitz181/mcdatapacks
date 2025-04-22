@@ -8,7 +8,7 @@
 scoreboard objectives add pokemon.temp dummy
 
 # Voeg pokedex storage toe
-data modify storage pokemon:database {}
+data modify storage pokemon:database {} merge value {}
 
 # Module initialization message
 tellraw @a[tag=admin] ["",{"text":"[Pokémon Library]","color":"dark_green"},{"text":" Module initialized!","color":"green"}]
