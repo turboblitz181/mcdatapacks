@@ -3,16 +3,23 @@
 # 
 # Created by KnightKehan.
 ##
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 78) ===","bold":true,"color":"aqua"}] 
-tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}] 
-tellraw @s ["",{"text":"[pyukumuku]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: water","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 771"}}] 
-tellraw @s ["",{"text":"[type-null]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: normal","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 772"}}] 
-tellraw @s ["",{"text":"[silvally]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: normal","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 773"}}] 
-tellraw @s ["",{"text":"[minior-red-meteor]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: rock/flying","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 774"}}] 
-tellraw @s ["",{"text":"[komala]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: normal","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 775"}}] 
-tellraw @s ["",{"text":"[turtonator]","color":"red","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: fire/dragon","color":"red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 776"}}] 
-tellraw @s ["",{"text":"[togedemaru]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: electric/steel","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 777"}}] 
-tellraw @s ["",{"text":"[mimikyu-disguised]","color":"dark_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: ghost/fairy","color":"dark_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 778"}}] 
-tellraw @s ["",{"text":"[bruxish]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: water/psychic","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 779"}}] 
-tellraw @s ["",{"text":"[drampa]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: normal/dragon","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 780"}}] 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 177"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 179"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}] 
+
+# Reset om spam te voorkomen
+scoreboard players set @s pokemenu 0
+scoreboard players set #page pokefinder.temp 78
+
+tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 78) ===","bold":true,"color":"aqua"}]
+tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
+
+tellraw @s ["",{"text":"[Pyukumuku]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Water","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 771"}}]
+tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[Type: Null]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: Normal","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 772"}}]
+tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[Silvally]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: Normal","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 773"}}]
+tellraw @s ["",{"text":"[Minior]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Rock/Flying","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 774"}}]
+tellraw @s ["",{"text":"[Komala]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Normal","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 775"}}]
+tellraw @s ["",{"text":"[Turtonator]","color":"red","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Fire/Dragon","color":"red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 776"}}]
+tellraw @s ["",{"text":"[Togedemaru]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Electric/Steel","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 777"}}]
+tellraw @s ["",{"text":"[Mimikyu]","color":"dark_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Ghost/Fairy","color":"dark_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 778"}}]
+tellraw @s ["",{"text":"[Bruxish]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Water/Psychic","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 779"}}]
+tellraw @s ["",{"text":"[Drampa]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Normal/Dragon","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 780"}}]
+
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page77"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page79"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]

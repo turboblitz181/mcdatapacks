@@ -2,4 +2,4 @@ scoreboard objectives add locator_used minecraft.used:minecraft.warped_fungus_on
 scoreboard objectives add fossil_distance dummy
 
 # Module initialization message
-tellraw @a[tag=admin] ["",{"text":"[Fossil Locator]","color":"aqua"},{"text":" Module initialized!","color":"green"}]
+tellraw @a[tag=admin] ["",{"text":"[Fossil Locator]","color":"gray"},{"text":" Module initialized!","color":"green"}]

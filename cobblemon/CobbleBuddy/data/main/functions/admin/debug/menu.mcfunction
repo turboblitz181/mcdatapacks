@@ -20,5 +20,9 @@ tellraw @s ["",{"text":"• [Fossil Locator]","color":"yellow","clickEvent":{"ac
 tellraw @s ["",{"text":"• [Egg Tracker]","color":"yellow","clickEvent":{"action":"run_command","value":"/function egg_data:debug/menu"},"hoverEvent":{"action":"show_text","contents":"Debug Egg Tracker module"}}]
 tellraw @s ["",{"text":"• [Pokeball Changer]","color":"yellow","clickEvent":{"action":"run_command","value":"/function pokeball_changer:debug/menu"},"hoverEvent":{"action":"show_text","contents":"Debug Pokeball changer module"}}]
 
+tellraw @s ["",{"text":"\n=== Show Entity Data Cobblemon ===","color":"aqua","bold":true}]
+tellraw @s ["",{"text":"Click to run: ","color":"yellow"},{"text":"[Show here data]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/data get entity @e[type=cobblemon:pokemon,sort=nearest,limit=1]"},"hoverEvent":{"action":"show_text","contents":"Click to load full entity data command"}}]
+
+
 # Navigation
 tellraw @s ["",{"text":"\n[Back to Admin Menu]","color":"gray","clickEvent":{"action":"run_command","value":"/function main:admin/admin"},"hoverEvent":{"action":"show_text","contents":"Return to admin menu"}}]

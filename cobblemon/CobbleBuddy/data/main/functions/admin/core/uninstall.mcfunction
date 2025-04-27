@@ -102,8 +102,8 @@ scoreboard players reset #iv_sp_defense pokemon.temp
 scoreboard players reset #iv_speed pokemon.temp
 scoreboard players reset #level pokemon.temp
 scoreboard players reset #is_wild pokemon.temp
-scoreboard players reset #is_shiny pokemon.temp
-scoreboard players reset #is_legendary pokemon.temp
+scoreboard players reset #temp_shiny pokemon.temp
+scoreboard players reset #temp_legendary pokemon.temp
 scoreboard players reset #dex_id pokemon.temp
 scoreboard players reset #base_total pokemon.temp
 scoreboard players reset #has_prefix pokemon.temp

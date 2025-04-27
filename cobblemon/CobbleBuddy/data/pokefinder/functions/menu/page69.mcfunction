@@ -3,16 +3,23 @@
 # 
 # Created by KnightKehan.
 ##
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 69) ===","bold":true,"color":"aqua"}] 
-tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}] 
-tellraw @s ["",{"text":"[aegislash-shield]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: steel/ghost","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 681"}}] 
-tellraw @s ["",{"text":"[spritzee]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: fairy","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 682"}}] 
-tellraw @s ["",{"text":"[aromatisse]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: fairy","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 683"}}] 
-tellraw @s ["",{"text":"[swirlix]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: fairy","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 684"}}] 
-tellraw @s ["",{"text":"[slurpuff]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: fairy","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 685"}}] 
-tellraw @s ["",{"text":"[inkay]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: dark/psychic","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 686"}}] 
-tellraw @s ["",{"text":"[malamar]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: dark/psychic","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 687"}}] 
-tellraw @s ["",{"text":"[binacle]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: rock/water","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 688"}}] 
-tellraw @s ["",{"text":"[barbaracle]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: rock/water","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 689"}}] 
-tellraw @s ["",{"text":"[skrelp]","color":"dark_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: poison/water","color":"dark_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 690"}}] 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 168"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 170"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}] 
+
+# Reset om spam te voorkomen
+scoreboard players set @s pokemenu 0
+scoreboard players set #page pokefinder.temp 69
+
+tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 69) ===","bold":true,"color":"aqua"}]
+tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
+
+tellraw @s ["",{"text":"[Aegislash]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Steel/Ghost","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 681"}}]
+tellraw @s ["",{"text":"[Spritzee]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Fairy","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 682"}}]
+tellraw @s ["",{"text":"[Aromatisse]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Fairy","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 683"}}]
+tellraw @s ["",{"text":"[Swirlix]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Fairy","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 684"}}]
+tellraw @s ["",{"text":"[Slurpuff]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Fairy","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 685"}}]
+tellraw @s ["",{"text":"[Inkay]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Dark/Psychic","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 686"}}]
+tellraw @s ["",{"text":"[Malamar]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Dark/Psychic","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 687"}}]
+tellraw @s ["",{"text":"[Binacle]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Rock/Water","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 688"}}]
+tellraw @s ["",{"text":"[Barbaracle]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Rock/Water","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 689"}}]
+tellraw @s ["",{"text":"[Skrelp]","color":"dark_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Poison/Water","color":"dark_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 690"}}]
+
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page68"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page70"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]

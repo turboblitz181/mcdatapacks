@@ -30,6 +30,7 @@ execute if score fossil_locator enabled matches 1 run scoreboard players set fos
 execute if score egg_data enabled matches 1 run scoreboard players set egg_data toggled 1
 
 
+
 # running other load functions
 function main:admin/load
 function glbl_notify:load

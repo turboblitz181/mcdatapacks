@@ -38,15 +38,15 @@ execute store result score #pos_z gn_settings run data get entity @s Pos[2]
 
 # Check properties (shiny/legendary)
 function pokemon:checks/check_shiny
-scoreboard players operation #is_shiny gn_settings = #is_shiny pokemon.temp
+scoreboard players operation #temp_shiny gn_settings = #temp_shiny pokemon.temp
 
 function pokemon:checks/check_legendary  
-scoreboard players operation #is_legendary gn_settings = #is_legendary pokemon.temp
+scoreboard players operation #temp_legendary gn_settings = #temp_legendary pokemon.temp
 
 # Send notification to the nearest player
-execute if score #is_legendary gn_settings matches 1 if score #is_shiny gn_settings matches 1 as @a[tag=gn_nearest,limit=1] at @s run function glbl_notify:notifications/notify_special
-execute if score #is_legendary gn_settings matches 1 if score #is_shiny gn_settings matches 0 as @a[tag=gn_nearest,limit=1] at @s run function glbl_notify:notifications/notify_legendary
-execute if score #is_legendary gn_settings matches 0 if score #is_shiny gn_settings matches 1 as @a[tag=gn_nearest,limit=1] at @s run function glbl_notify:notifications/notify_shiny
+execute if score #temp_legendary gn_settings matches 1 if score #temp_shiny gn_settings matches 1 as @a[tag=gn_nearest,limit=1] at @s run function glbl_notify:notifications/notify_special
+execute if score #temp_legendary gn_settings matches 1 if score #temp_shiny gn_settings matches 0 as @a[tag=gn_nearest,limit=1] at @s run function glbl_notify:notifications/notify_legendary
+execute if score #temp_legendary gn_settings matches 0 if score #temp_shiny gn_settings matches 1 as @a[tag=gn_nearest,limit=1] at @s run function glbl_notify:notifications/notify_shiny
 
 # Cleanup tags and scores
 tag @a remove gn_nearest

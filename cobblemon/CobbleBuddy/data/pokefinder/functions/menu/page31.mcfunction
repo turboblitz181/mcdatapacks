@@ -3,16 +3,23 @@
 # 
 # Created by KnightKehan.
 ##
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 31) ===","bold":true,"color":"aqua"}] 
-tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}] 
-tellraw @s ["",{"text":"[delcatty]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: normal","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 301"}}] 
-tellraw @s ["",{"text":"[sableye]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: dark/ghost","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 302"}}] 
-tellraw @s ["",{"text":"[mawile]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: steel/fairy","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 303"}}] 
-tellraw @s ["",{"text":"[aron]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: steel/rock","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 304"}}] 
-tellraw @s ["",{"text":"[lairon]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: steel/rock","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 305"}}] 
-tellraw @s ["",{"text":"[aggron]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: steel/rock","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 306"}}] 
-tellraw @s ["",{"text":"[meditite]","color":"dark_red","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: fighting/psychic","color":"dark_red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 307"}}] 
-tellraw @s ["",{"text":"[medicham]","color":"dark_red","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: fighting/psychic","color":"dark_red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 308"}}] 
-tellraw @s ["",{"text":"[electrike]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: electric","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 309"}}] 
-tellraw @s ["",{"text":"[manectric]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: electric","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 310"}}] 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 130"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 132"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}] 
+
+# Reset om spam te voorkomen
+scoreboard players set @s pokemenu 0
+scoreboard players set #page pokefinder.temp 31
+
+tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 31) ===","bold":true,"color":"aqua"}]
+tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
+
+tellraw @s ["",{"text":"[Delcatty]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Normal","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 301"}}]
+tellraw @s ["",{"text":"[Sableye]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Dark/Ghost","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 302"}}]
+tellraw @s ["",{"text":"[Mawile]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Steel/Fairy","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 303"}}]
+tellraw @s ["",{"text":"[Aron]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Steel/Rock","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 304"}}]
+tellraw @s ["",{"text":"[Lairon]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Steel/Rock","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 305"}}]
+tellraw @s ["",{"text":"[Aggron]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Steel/Rock","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 306"}}]
+tellraw @s ["",{"text":"[Meditite]","color":"dark_red","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Fighting/Psychic","color":"dark_red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 307"}}]
+tellraw @s ["",{"text":"[Medicham]","color":"dark_red","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Fighting/Psychic","color":"dark_red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 308"}}]
+tellraw @s ["",{"text":"[Electrike]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Electric","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 309"}}]
+tellraw @s ["",{"text":"[Manectric]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Electric","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 310"}}]
+
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page30"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page32"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]

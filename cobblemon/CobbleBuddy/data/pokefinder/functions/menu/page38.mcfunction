@@ -3,16 +3,23 @@
 # 
 # Created by KnightKehan.
 ##
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 38) ===","bold":true,"color":"aqua"}] 
-tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}] 
-tellraw @s ["",{"text":"[bagon]","color":"dark_blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: dragon","color":"dark_blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 371"}}] 
-tellraw @s ["",{"text":"[shelgon]","color":"dark_blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: dragon","color":"dark_blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 372"}}] 
-tellraw @s ["",{"text":"[salamence]","color":"dark_blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: dragon/flying","color":"dark_blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 373"}}] 
-tellraw @s ["",{"text":"[beldum]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: steel/psychic","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 374"}}] 
-tellraw @s ["",{"text":"[metang]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: steel/psychic","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 375"}}] 
-tellraw @s ["",{"text":"[metagross]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: steel/psychic","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 376"}}] 
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[regirock]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: rock","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 377"}}] 
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[regice]","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: ice","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 378"}}] 
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[registeel]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: steel","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 379"}}] 
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[latias]","color":"dark_blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nTypes: dragon/psychic","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 380"}}] 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 137"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 139"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}] 
+
+# Reset om spam te voorkomen
+scoreboard players set @s pokemenu 0
+scoreboard players set #page pokefinder.temp 38
+
+tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 38) ===","bold":true,"color":"aqua"}]
+tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
+
+tellraw @s ["",{"text":"[Bagon]","color":"dark_blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Dragon","color":"dark_blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 371"}}]
+tellraw @s ["",{"text":"[Shelgon]","color":"dark_blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Dragon","color":"dark_blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 372"}}]
+tellraw @s ["",{"text":"[Salamence]","color":"dark_blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Dragon/Flying","color":"dark_blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 373"}}]
+tellraw @s ["",{"text":"[Beldum]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Steel/Psychic","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 374"}}]
+tellraw @s ["",{"text":"[Metang]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Steel/Psychic","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 375"}}]
+tellraw @s ["",{"text":"[Metagross]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Steel/Psychic","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 376"}}]
+tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[Regirock]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: Rock","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 377"}}]
+tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[Regice]","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: Ice","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 378"}}]
+tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[Registeel]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: Steel","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 379"}}]
+tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[Latias]","color":"dark_blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nTypes: Dragon/Psychic","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 380"}}]
+
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page37"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page39"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]

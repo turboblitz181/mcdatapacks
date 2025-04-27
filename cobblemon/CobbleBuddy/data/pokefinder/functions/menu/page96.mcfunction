@@ -3,16 +3,23 @@
 # 
 # Created by KnightKehan.
 ##
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 96) ===","bold":true,"color":"aqua"}] 
-tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}] 
-tellraw @s ["",{"text":"[aggron-mega]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: steel","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 951"}}] 
-tellraw @s ["",{"text":"[medicham-mega]","color":"dark_red","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: fighting/psychic","color":"dark_red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 952"}}] 
-tellraw @s ["",{"text":"[manectric-mega]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: electric","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 953"}}] 
-tellraw @s ["",{"text":"[banette-mega]","color":"dark_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: ghost","color":"dark_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 954"}}] 
-tellraw @s ["",{"text":"[absol-mega]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: dark","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 955"}}] 
-tellraw @s ["",{"text":"[garchomp-mega]","color":"dark_blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: dragon/ground","color":"dark_blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 956"}}] 
-tellraw @s ["",{"text":"[lucario-mega]","color":"dark_red","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: fighting/steel","color":"dark_red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 957"}}] 
-tellraw @s ["",{"text":"[abomasnow-mega]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: grass/ice","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 958"}}] 
-tellraw @s ["",{"text":"[floette-eternal]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: fairy","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 959"}}] 
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[latias-mega]","color":"dark_blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nTypes: dragon/psychic","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 960"}}] 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 195"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 197"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}] 
+
+# Reset om spam te voorkomen
+scoreboard players set @s pokemenu 0
+scoreboard players set #page pokefinder.temp 96
+
+tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 96) ===","bold":true,"color":"aqua"}]
+tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
+
+tellraw @s ["",{"text":"[Capsakid]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Grass","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 951"}}]
+tellraw @s ["",{"text":"[Scovillain]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Grass/Fire","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 952"}}]
+tellraw @s ["",{"text":"[Rellor]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Bug","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 953"}}]
+tellraw @s ["",{"text":"[Rabsca]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Bug/Psychic","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 954"}}]
+tellraw @s ["",{"text":"[Flittle]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Psychic","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 955"}}]
+tellraw @s ["",{"text":"[Espathra]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Psychic","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 956"}}]
+tellraw @s ["",{"text":"[Tinkatink]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Fairy/Steel","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 957"}}]
+tellraw @s ["",{"text":"[Tinkatuff]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Fairy/Steel","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 958"}}]
+tellraw @s ["",{"text":"[Tinkaton]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Fairy/Steel","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 959"}}]
+tellraw @s ["",{"text":"[Wiglett]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Water","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 960"}}]
+
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page95"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page97"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]

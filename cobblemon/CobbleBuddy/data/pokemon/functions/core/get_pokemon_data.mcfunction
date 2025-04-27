@@ -5,7 +5,7 @@
 # Reset data
 data modify storage pokemon:temp types set value []
 data modify storage pokemon:temp base_stats set value {}
-data modify storage pokemon:temp is_legendary set value 0
+data modify storage pokemon:temp temp_legendary set value 0
 data modify storage pokemon:temp dex_id set value 0
 
 # Haal species en form op

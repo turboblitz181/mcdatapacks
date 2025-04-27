@@ -3,16 +3,23 @@
 # 
 # Created by KnightKehan.
 ##
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 92) ===","bold":true,"color":"aqua"}] 
-tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}] 
-tellraw @s ["",{"text":"[castform-sunny]","color":"red","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: fire","color":"red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 911"}}] 
-tellraw @s ["",{"text":"[castform-rainy]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: water","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 912"}}] 
-tellraw @s ["",{"text":"[castform-snowy]","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: ice","color":"aqua"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 913"}}] 
-tellraw @s ["",{"text":"[basculin-blue-striped]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: water","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 914"}}] 
-tellraw @s ["",{"text":"[darmanitan-zen]","color":"red","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: fire/psychic","color":"red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 915"}}] 
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[meloetta-pirouette]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nTypes: normal/fighting","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 916"}}] 
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[tornadus-therian]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: flying","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 917"}}] 
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[thundurus-therian]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nTypes: electric/flying","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 918"}}] 
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[landorus-therian]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nTypes: ground/flying","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 919"}}] 
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[kyurem-black]","color":"dark_blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nTypes: dragon/ice","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 920"}}] 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 191"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 193"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}] 
+
+# Reset om spam te voorkomen
+scoreboard players set @s pokemenu 0
+scoreboard players set #page pokefinder.temp 92
+
+tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 92) ===","bold":true,"color":"aqua"}]
+tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
+
+tellraw @s ["",{"text":"[Skeledirge]","color":"red","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Fire/Ghost","color":"red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 911"}}]
+tellraw @s ["",{"text":"[Quaxly]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Water","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 912"}}]
+tellraw @s ["",{"text":"[Quaxwell]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Water","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 913"}}]
+tellraw @s ["",{"text":"[Quaquaval]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Water/Fighting","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 914"}}]
+tellraw @s ["",{"text":"[Lechonk]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Normal","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 915"}}]
+tellraw @s ["",{"text":"[Oinkologne]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Normal","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 916"}}]
+tellraw @s ["",{"text":"[Tarountula]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Bug","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 917"}}]
+tellraw @s ["",{"text":"[Spidops]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Bug","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 918"}}]
+tellraw @s ["",{"text":"[Nymble]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Bug","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 919"}}]
+tellraw @s ["",{"text":"[Lokix]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Bug/Dark","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 920"}}]
+
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page91"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page93"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]

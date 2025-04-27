@@ -3,16 +3,23 @@
 # 
 # Created by KnightKehan.
 ##
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 88) ===","bold":true,"color":"aqua"}] 
-tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}] 
-tellraw @s ["",{"text":"[pincurchin]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: electric","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 871"}}] 
-tellraw @s ["",{"text":"[snom]","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: ice/bug","color":"aqua"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 872"}}] 
-tellraw @s ["",{"text":"[frosmoth]","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: ice/bug","color":"aqua"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 873"}}] 
-tellraw @s ["",{"text":"[stonjourner]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: rock","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 874"}}] 
-tellraw @s ["",{"text":"[eiscue-ice]","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: ice","color":"aqua"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 875"}}] 
-tellraw @s ["",{"text":"[indeedee-male]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: psychic/normal","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 876"}}] 
-tellraw @s ["",{"text":"[morpeko-full-belly]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: electric/dark","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 877"}}] 
-tellraw @s ["",{"text":"[cufant]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: steel","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 878"}}] 
-tellraw @s ["",{"text":"[copperajah]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: steel","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 879"}}] 
-tellraw @s ["",{"text":"[dracozolt]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: electric/dragon","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 880"}}] 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 187"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 189"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}] 
+
+# Reset om spam te voorkomen
+scoreboard players set @s pokemenu 0
+scoreboard players set #page pokefinder.temp 88
+
+tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 88) ===","bold":true,"color":"aqua"}]
+tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
+
+tellraw @s ["",{"text":"[Pincurchin]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Electric","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 871"}}]
+tellraw @s ["",{"text":"[Snom]","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Ice/Bug","color":"aqua"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 872"}}]
+tellraw @s ["",{"text":"[Frosmoth]","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Ice/Bug","color":"aqua"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 873"}}]
+tellraw @s ["",{"text":"[Stonjourner]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Rock","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 874"}}]
+tellraw @s ["",{"text":"[Eiscue]","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Ice","color":"aqua"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 875"}}]
+tellraw @s ["",{"text":"[Indeedee]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Psychic/Normal","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 876"}}]
+tellraw @s ["",{"text":"[Morpeko]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Electric/Dark","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 877"}}]
+tellraw @s ["",{"text":"[Cufant]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Steel","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 878"}}]
+tellraw @s ["",{"text":"[Copperajah]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Steel","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 879"}}]
+tellraw @s ["",{"text":"[Dracozolt]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Electric/Dragon","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 880"}}]
+
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page87"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page89"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]

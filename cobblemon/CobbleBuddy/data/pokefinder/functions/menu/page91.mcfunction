@@ -3,16 +3,23 @@
 # 
 # Created by KnightKehan.
 ##
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 91) ===","bold":true,"color":"aqua"}] 
-tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}] 
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[deoxys-speed]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: psychic","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 901"}}] 
-tellraw @s ["",{"text":"[wormadam-sandy]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: bug/ground","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 902"}}] 
-tellraw @s ["",{"text":"[wormadam-trash]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: bug/steel","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 903"}}] 
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[shaymin-sky]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nTypes: grass/flying","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 904"}}] 
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[giratina-origin]","color":"dark_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nTypes: ghost/dragon","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 905"}}] 
-tellraw @s ["",{"text":"[rotom-heat]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: electric/fire","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 906"}}] 
-tellraw @s ["",{"text":"[rotom-wash]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: electric/water","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 907"}}] 
-tellraw @s ["",{"text":"[rotom-frost]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: electric/ice","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 908"}}] 
-tellraw @s ["",{"text":"[rotom-fan]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: electric/flying","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 909"}}] 
-tellraw @s ["",{"text":"[rotom-mow]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: electric/grass","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 910"}}] 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 190"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 192"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}] 
+
+# Reset om spam te voorkomen
+scoreboard players set @s pokemenu 0
+scoreboard players set #page pokefinder.temp 91
+
+tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 91) ===","bold":true,"color":"aqua"}]
+tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
+
+tellraw @s ["",{"text":"[Ursaluna]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Ground/Normal","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 901"}}]
+tellraw @s ["",{"text":"[Basculegion]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Water/Ghost","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 902"}}]
+tellraw @s ["",{"text":"[Sneasler]","color":"dark_red","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Fighting/Poison","color":"dark_red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 903"}}]
+tellraw @s ["",{"text":"[Overqwil]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Dark/Poison","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 904"}}]
+tellraw @s ["",{"text":"[Enamorus]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Fairy/Flying","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 905"}}]
+tellraw @s ["",{"text":"[Sprigatito]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Grass","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 906"}}]
+tellraw @s ["",{"text":"[Floragato]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Grass","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 907"}}]
+tellraw @s ["",{"text":"[Meowscarada]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Grass/Dark","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 908"}}]
+tellraw @s ["",{"text":"[Fuecoco]","color":"red","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Fire","color":"red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 909"}}]
+tellraw @s ["",{"text":"[Crocalor]","color":"red","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Fire","color":"red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 910"}}]
+
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page90"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page92"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]

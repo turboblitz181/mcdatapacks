@@ -35,4 +35,4 @@ tellraw @s ["",{"text":"  - You can track only one Pokémon at a time","color":"
 tellraw @s ["",{"text":"  - Use /trigger pokemenu to open the menu anytime","color":"white"}]
 
 # Navigatie
-tellraw @s ["",{"text":"\n[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}]
+tellraw @s ["",{"text":"\n[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]

@@ -56,13 +56,13 @@ execute if score #is_wild pokemon.temp matches 0 run tellraw @s ["",{"text":"Sta
 
 # Check shiny test
 execute as @e[type=cobblemon:pokemon,sort=nearest,limit=1] run function pokemon:checks/check_shiny
-execute if score #is_shiny pokemon.temp matches 1 run tellraw @s ["",{"text":"Appearance: ","color":"gold"},{"text":"✨ SHINY ✨","color":"yellow","bold":true}]
-execute if score #is_shiny pokemon.temp matches 0 run tellraw @s ["",{"text":"Appearance: ","color":"gold"},{"text":"Normal","color":"white"}]
+execute if score #temp_shiny pokemon.temp matches 1 run tellraw @s ["",{"text":"Appearance: ","color":"gold"},{"text":"✨ SHINY ✨","color":"yellow","bold":true}]
+execute if score #temp_shiny pokemon.temp matches 0 run tellraw @s ["",{"text":"Appearance: ","color":"gold"},{"text":"Normal","color":"white"}]
 
 # Check legendary test
 execute as @e[type=cobblemon:pokemon,sort=nearest,limit=1] run function pokemon:checks/check_legendary
-execute if score #is_legendary pokemon.temp matches 1 run tellraw @s ["",{"text":"Classification: ","color":"gold"},{"text":"★ LEGENDARY ★","color":"light_purple","bold":true}]
-execute if score #is_legendary pokemon.temp matches 0 run tellraw @s ["",{"text":"Classification: ","color":"gold"},{"text":"Regular","color":"white"}]
+execute if score #temp_legendary pokemon.temp matches 1 run tellraw @s ["",{"text":"Classification: ","color":"gold"},{"text":"★ LEGENDARY ★","color":"light_purple","bold":true}]
+execute if score #temp_legendary pokemon.temp matches 0 run tellraw @s ["",{"text":"Classification: ","color":"gold"},{"text":"Regular","color":"white"}]
 
 tellraw @s ["",{"text":"==============================","color":"yellow"}]
 function pokemon:debug/menu

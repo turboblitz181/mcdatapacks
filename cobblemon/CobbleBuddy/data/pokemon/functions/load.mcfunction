@@ -11,4 +11,4 @@ scoreboard objectives add pokemon.temp dummy
 data modify storage pokemon:database {} merge value {}
 
 # Module initialization message
-tellraw @a[tag=admin] ["",{"text":"[Pokémon Library]","color":"dark_green"},{"text":" Module initialized!","color":"green"}]
+tellraw @a[tag=admin] ["",{"text":"[Pokémon Library]","color":"blue"},{"text":" Module initialized!","color":"green"}]

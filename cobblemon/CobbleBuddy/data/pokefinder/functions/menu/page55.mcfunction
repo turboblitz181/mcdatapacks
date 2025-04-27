@@ -3,16 +3,23 @@
 # 
 # Created by KnightKehan.
 ##
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 55) ===","bold":true,"color":"aqua"}] 
-tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}] 
-tellraw @s ["",{"text":"[swadloon]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: bug/grass","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 541"}}] 
-tellraw @s ["",{"text":"[leavanny]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: bug/grass","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 542"}}] 
-tellraw @s ["",{"text":"[venipede]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: bug/poison","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 543"}}] 
-tellraw @s ["",{"text":"[whirlipede]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: bug/poison","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 544"}}] 
-tellraw @s ["",{"text":"[scolipede]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: bug/poison","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 545"}}] 
-tellraw @s ["",{"text":"[cottonee]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: grass/fairy","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 546"}}] 
-tellraw @s ["",{"text":"[whimsicott]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: grass/fairy","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 547"}}] 
-tellraw @s ["",{"text":"[petilil]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: grass","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 548"}}] 
-tellraw @s ["",{"text":"[lilligant]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: grass","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 549"}}] 
-tellraw @s ["",{"text":"[basculin-red-striped]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: water","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 550"}}] 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 154"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 156"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}] 
+
+# Reset om spam te voorkomen
+scoreboard players set @s pokemenu 0
+scoreboard players set #page pokefinder.temp 55
+
+tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 55) ===","bold":true,"color":"aqua"}]
+tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
+
+tellraw @s ["",{"text":"[Swadloon]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Bug/Grass","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 541"}}]
+tellraw @s ["",{"text":"[Leavanny]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Bug/Grass","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 542"}}]
+tellraw @s ["",{"text":"[Venipede]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Bug/Poison","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 543"}}]
+tellraw @s ["",{"text":"[Whirlipede]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Bug/Poison","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 544"}}]
+tellraw @s ["",{"text":"[Scolipede]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Bug/Poison","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 545"}}]
+tellraw @s ["",{"text":"[Cottonee]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Grass/Fairy","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 546"}}]
+tellraw @s ["",{"text":"[Whimsicott]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Grass/Fairy","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 547"}}]
+tellraw @s ["",{"text":"[Petilil]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Grass","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 548"}}]
+tellraw @s ["",{"text":"[Lilligant]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Grass","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 549"}}]
+tellraw @s ["",{"text":"[Basculin]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Water","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 550"}}]
+
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page54"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page56"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]

@@ -3,16 +3,23 @@
 # 
 # Created by KnightKehan.
 ##
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 90) ===","bold":true,"color":"aqua"}] 
-tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}] 
-tellraw @s ["",{"text":"[kubfu]","color":"dark_red","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: fighting","color":"dark_red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 891"}}] 
-tellraw @s ["",{"text":"[urshifu-single-strike]","color":"dark_red","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: fighting/dark","color":"dark_red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 892"}}] 
-tellraw @s ["",{"text":"[zarude]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: dark/grass","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 893"}}] 
-tellraw @s ["",{"text":"[regieleki]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: electric","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 894"}}] 
-tellraw @s ["",{"text":"[regidrago]","color":"dark_blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: dragon","color":"dark_blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 895"}}] 
-tellraw @s ["",{"text":"[glastrier]","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: ice","color":"aqua"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 896"}}] 
-tellraw @s ["",{"text":"[spectrier]","color":"dark_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: ghost","color":"dark_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 897"}}] 
-tellraw @s ["",{"text":"[calyrex]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: psychic/grass","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 898"}}] 
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[deoxys-attack]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: psychic","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 899"}}] 
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[deoxys-defense]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: psychic","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 900"}}] 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 189"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 191"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}] 
+
+# Reset om spam te voorkomen
+scoreboard players set @s pokemenu 0
+scoreboard players set #page pokefinder.temp 90
+
+tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 90) ===","bold":true,"color":"aqua"}]
+tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
+
+tellraw @s ["",{"text":"[Kubfu]","color":"dark_red","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Fighting","color":"dark_red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 891"}}]
+tellraw @s ["",{"text":"[Urshifu]","color":"dark_red","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Fighting/Dark","color":"dark_red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 892"}}]
+tellraw @s ["",{"text":"[Zarude]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Dark/Grass","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 893"}}]
+tellraw @s ["",{"text":"[Regieleki]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Electric","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 894"}}]
+tellraw @s ["",{"text":"[Regidrago]","color":"dark_blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Dragon","color":"dark_blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 895"}}]
+tellraw @s ["",{"text":"[Glastrier]","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Ice","color":"aqua"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 896"}}]
+tellraw @s ["",{"text":"[Spectrier]","color":"dark_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Ghost","color":"dark_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 897"}}]
+tellraw @s ["",{"text":"[Calyrex]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Psychic/Grass","color":"light_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 898"}}]
+tellraw @s ["",{"text":"[Wyrdeer]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Normal/Psychic","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 899"}}]
+tellraw @s ["",{"text":"[Kleavor]","color":"dark_green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Bug/Rock","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 900"}}]
+
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page89"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page91"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]

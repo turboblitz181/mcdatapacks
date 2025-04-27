@@ -22,4 +22,4 @@ execute if score @s gn_actionbar matches 1 run tellraw @s ["",{"text":"[⬇] ","
 execute if score @s gn_actionbar matches 0 run tellraw @s ["",{"text":"[⬇] ","color":"gray"},{"text":"Actionbar Notifications: ","color":"gray"},{"text":"OFF","color":"red"},{"text":" [Enable]","color":"green","clickEvent":{"action":"run_command","value":"/trigger gn_menu set -6"}}]
 
 # Return/info section
-tellraw @s ["",{"text":"\nTip: ","color":"gray"},{"text":"/trigger gn_menu","color":"white","clickEvent":{"action":"suggest_command","value":"/trigger gn_menu"}},{"text":" to access this menu anytime","color":"gray"}]
+tellraw @s ["",{"text":"\nNote: ","color":"yellow"},{"text":"Actionbar notifications may interfere with PokeFinder tracking display","color":"gray"}]
