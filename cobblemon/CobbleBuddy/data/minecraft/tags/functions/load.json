@@ -1,7 +1,6 @@
 {
 	"values": [
 		"main:main_load",
-		"pokemon:load",
-		"finder:load"
+		"pokemon:load"
 	]
 }

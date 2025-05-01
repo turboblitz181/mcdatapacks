@@ -29,10 +29,7 @@ execute if score pokeball_changer enabled matches 1 run scoreboard players set p
 execute if score fossil_locator enabled matches 1 run scoreboard players set fossil_locator toggled 1
 execute if score egg_data enabled matches 1 run scoreboard players set egg_data toggled 1
 
-
-
 # running other load functions
-function main:admin/load
 function glbl_notify:load
 function pokefinder:load
 function egg_data:load
