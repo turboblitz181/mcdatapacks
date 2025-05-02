@@ -15,9 +15,14 @@ execute if score #notify_cooldown gn_timer matches 1.. run return 0
 execute if score #first_run gn_timer matches 1 run tag @e[type=cobblemon:pokemon] add gn_seen
 execute if score #first_run gn_timer matches 1 run scoreboard players set #first_run gn_timer 0
 
-# Process Pokémon
-# First, as each player, find nearby unseen Pokémon
-execute as @a[limit=1] at @s as @e[type=cobblemon:pokemon,tag=!gn_seen,distance=..100] at @s run function glbl_notify:notifications/verify_wild
+# Reset checked tags at start of each check
+tag @a remove checked
 
-# Tag Pokémon as seen (do this for each player's area)
-execute as @a[limit=1] at @s run tag @e[type=cobblemon:pokemon,distance=..100] add gn_seen
+# Process one unchecked player at a time
+execute as @a[sort=random,limit=1,tag=!checked] run tag @s add checking
+execute as @a[tag=checking] at @s as @e[type=cobblemon:pokemon,tag=!gn_seen,distance=..100] at @s run function glbl_notify:notifications/verify_wild
+execute as @a[tag=checking] run tag @s add checked
+execute as @a[tag=checking] run tag @s remove checking
+
+# Tag Pokémon as seen in checked players' areas
+execute as @a[tag=checked] at @s run tag @e[type=cobblemon:pokemon,distance=..100] add gn_seen
