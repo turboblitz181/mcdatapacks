@@ -10,14 +10,14 @@
 scoreboard players set #shiny_found gn_settings 1
 
 # Chat message
-execute as @a[scores={gn_chat=1}] run tellraw @s ["",{"text":"✨ ","color":"gold"},{"text":"SHINY ","color":"gold"},{"nbt":"PokemonName","storage":"glbl_notify:temp","color":"yellow"},{"text":" appeared near ","color":"white"},{"selector":"@a[tag=gn_nearest]","color":"aqua"},{"text":" at ","color":"white"},{"score":{"name":"#pos_x","objective":"gn_settings"},"color":"green"},{"text":", ","color":"white"},{"score":{"name":"#pos_y","objective":"gn_settings"},"color":"green"},{"text":", ","color":"white"},{"score":{"name":"#pos_z","objective":"gn_settings"},"color":"green"}]
+tellraw @a[scores={gn_chat=1}] ["",{"text":"✨ ","color":"gold"},{"text":"SHINY ","color":"gold"},{"nbt":"PokemonName","storage":"glbl_notify:temp","color":"yellow"},{"text":" appeared near ","color":"white"},{"selector":"@a[tag=gn_nearest]","color":"aqua"},{"text":" at ","color":"white"},{"score":{"name":"#pos_x","objective":"gn_settings"},"color":"green"},{"text":", ","color":"white"},{"score":{"name":"#pos_y","objective":"gn_settings"},"color":"green"},{"text":", ","color":"white"},{"score":{"name":"#pos_z","objective":"gn_settings"},"color":"green"}]
 
 # Title notification
-execute as @a[scores={gn_title=1}] run title @s title {"text":"✨ SHINY POKÉMON! ✨","color":"gold"}
-execute as @a[scores={gn_title=1}] run title @s subtitle [{"nbt":"PokemonName","storage":"glbl_notify:temp","color":"yellow"},{"text":" found near ","color":"white"},{"selector":"@a[tag=gn_nearest]","color":"aqua"}]
+title @a[scores={gn_title=1}] title {"text":"✨ SHINY POKÉMON! ✨","color":"gold"}
+title @a[scores={gn_title=1}] subtitle [{"nbt":"PokemonName","storage":"glbl_notify:temp","color":"yellow"},{"text":" found near ","color":"white"},{"selector":"@a[tag=gn_nearest]","color":"aqua"}]
 
 # Actionbar notification
-execute as @a[scores={gn_actionbar=1}] run title @s actionbar ["",{"text":"✨ SHINY ","color":"gold"},{"nbt":"PokemonName","storage":"glbl_notify:temp","color":"yellow"},{"text":" at ","color":"white"},{"score":{"name":"#pos_x","objective":"gn_settings"},"color":"green"},{"text":", ","color":"white"},{"score":{"name":"#pos_y","objective":"gn_settings"},"color":"green"},{"text":", ","color":"white"},{"score":{"name":"#pos_z","objective":"gn_settings"},"color":"green"}]
+title @a[scores={gn_actionbar=1}] actionbar ["",{"text":"✨ SHINY ","color":"gold"},{"nbt":"PokemonName","storage":"glbl_notify:temp","color":"yellow"},{"text":" at ","color":"white"},{"score":{"name":"#pos_x","objective":"gn_settings"},"color":"green"},{"text":", ","color":"white"},{"score":{"name":"#pos_y","objective":"gn_settings"},"color":"green"},{"text":", ","color":"white"},{"score":{"name":"#pos_z","objective":"gn_settings"},"color":"green"}]
 
 # Sound effect
-execute as @a at @s run playsound minecraft:block.note_block.chime master @s ~ ~ ~ 1 1.5
+playsound minecraft:block.note_block.chime master @a ~ ~ ~ 1 1.5

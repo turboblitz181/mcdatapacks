@@ -6,7 +6,7 @@
 execute if score #debug_verify_wild gn_settings matches 1 run function glbl_notify:debug/debug_verify_wild
 
 # Check if wild using shared function
-function pokemon:checks/check_wild
+function pokemon:utils/checks/check_wild
 execute if score #is_wild pokemon.temp matches 0 run return 0
 
 # Ensure name exists before continuing
@@ -15,15 +15,9 @@ scoreboard players set #has_name gn_settings 0
 # Clear previous name data
 data remove storage glbl_notify:temp PokemonName
 
-# Try to get the Species name
-execute store result score #has_name gn_settings run data get entity @s Pokemon.Species
-execute if score #has_name gn_settings matches 1.. run data modify storage glbl_notify:temp PokemonName set from entity @s Pokemon.Species
-
-# Remove the "cobblemon:" prefix if it exists
-execute if data storage glbl_notify:temp PokemonName run data modify storage glbl_notify:temp PokemonName set string storage glbl_notify:temp PokemonName 10
-
-# In verify_wild.mcfunction - after processing a Pokémon
-data modify storage glbl_notify:temp LastProcessed set from storage glbl_notify:temp PokemonName
+# Get display name using shared function
+function pokemon:utils/core/get_display_name
+data modify storage glbl_notify:temp PokemonName set from storage pokemon:temp DisplayName
 
 # Store the nearest player properly
 # This command runs from the Pokémon's position, so @p is the closest player
@@ -37,11 +31,16 @@ execute store result score #pos_y gn_settings run data get entity @s Pos[1]
 execute store result score #pos_z gn_settings run data get entity @s Pos[2]
 
 # Check properties (shiny/legendary)
-function pokemon:checks/check_shiny
+function pokemon:utils/checks/check_shiny
 scoreboard players operation #temp_shiny gn_settings = #temp_shiny pokemon.temp
 
-function pokemon:checks/check_legendary  
+function pokemon:utils/checks/check_legendary  
 scoreboard players operation #temp_legendary gn_settings = #temp_legendary pokemon.temp
+
+# Debug toevoegen voor legendary check
+execute store result score #debug_id gn_settings run scoreboard players get #id pokemon.temp
+execute if score #debug_verify_wild gn_settings matches 1 run tellraw @a ["ID: ",{"score":{"name":"#debug_id","objective":"gn_settings"}}]
+execute if score #debug_verify_wild gn_settings matches 1 run tellraw @a ["Legendary: ",{"score":{"name":"#temp_legendary","objective":"pokemon.temp"}}]
 
 # Send notification to the nearest player
 execute if score #temp_legendary gn_settings matches 1 if score #temp_shiny gn_settings matches 1 as @a[tag=gn_nearest,limit=1] at @s run function glbl_notify:notifications/notify_special

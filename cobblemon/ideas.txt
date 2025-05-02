@@ -8,10 +8,9 @@ ideas:
 - admin for main folder - done
 - pokemon (list) - done
 - update main toggles for admin - done
-- update find - kehan working on it
 - update lag-friendly pokefinder - done
 - update pokefinder(connect via pokemon library) - kehan working on it
-- pokemon library - kehan working on it for improve
+- pokemon library - done
 - debug menu - kehan working on it
-- Pokedex database splitting - kehan working on it when server still lag issue
-- fix issue in glbl notify - kehan working on it
+- Pokedex database splitting - done
+- fix issue in glbl notify - done
