@@ -17,7 +17,7 @@ execute if score #first_run gn_timer matches 1 run scoreboard players set #first
 
 # Process Pokémon
 # First, as each player, find nearby unseen Pokémon
-execute as @a at @s as @e[type=cobblemon:pokemon,tag=!gn_seen,distance=..100] at @s run function glbl_notify:notifications/verify_wild
+execute as @a[limit=1] at @s as @e[type=cobblemon:pokemon,tag=!gn_seen,distance=..100] at @s run function glbl_notify:notifications/verify_wild
 
 # Tag Pokémon as seen (do this for each player's area)
-execute as @a at @s run tag @e[type=cobblemon:pokemon,distance=..100] add gn_seen
+execute as @a[limit=1] at @s run tag @e[type=cobblemon:pokemon,distance=..100] add gn_seen
