@@ -121,7 +121,7 @@ execute if score #current_id pf.temp matches 118 run data modify storage pf:temp
 execute if score #current_id pf.temp matches 119 run data modify storage pf:temp DisplayName set value "Seaking" 
 execute if score #current_id pf.temp matches 120 run data modify storage pf:temp DisplayName set value "Staryu" 
 execute if score #current_id pf.temp matches 121 run data modify storage pf:temp DisplayName set value "Starmie" 
-execute if score #current_id pf.temp matches 122 run data modify storage pf:temp DisplayName set value "Mrmime" 
+execute if score #current_id pf.temp matches 122 run data modify storage pf:temp DisplayName set value "Mr. Mime" 
 execute if score #current_id pf.temp matches 123 run data modify storage pf:temp DisplayName set value "Scyther" 
 execute if score #current_id pf.temp matches 124 run data modify storage pf:temp DisplayName set value "Jynx" 
 execute if score #current_id pf.temp matches 125 run data modify storage pf:temp DisplayName set value "Electabuzz" 

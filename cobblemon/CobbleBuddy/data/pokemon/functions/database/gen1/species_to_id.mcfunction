@@ -29,10 +29,10 @@ execute if data storage pokemon:temp {clean_species:"pikachu"} run data modify s
 execute if data storage pokemon:temp {clean_species:"raichu"} run data modify storage pokemon:temp dex_id set value 26 
 execute if data storage pokemon:temp {clean_species:"sandshrew"} run data modify storage pokemon:temp dex_id set value 27 
 execute if data storage pokemon:temp {clean_species:"sandslash"} run data modify storage pokemon:temp dex_id set value 28 
-execute if data storage pokemon:temp {clean_species:"nidoran♀"} run data modify storage pokemon:temp dex_id set value 29 
+execute if data storage pokemon:temp {clean_species:"nidoranf"} run data modify storage pokemon:temp dex_id set value 29 
 execute if data storage pokemon:temp {clean_species:"nidorina"} run data modify storage pokemon:temp dex_id set value 30 
 execute if data storage pokemon:temp {clean_species:"nidoqueen"} run data modify storage pokemon:temp dex_id set value 31 
-execute if data storage pokemon:temp {clean_species:"nidoran♂"} run data modify storage pokemon:temp dex_id set value 32 
+execute if data storage pokemon:temp {clean_species:"nidoranm"} run data modify storage pokemon:temp dex_id set value 32 
 execute if data storage pokemon:temp {clean_species:"nidorino"} run data modify storage pokemon:temp dex_id set value 33 
 execute if data storage pokemon:temp {clean_species:"nidoking"} run data modify storage pokemon:temp dex_id set value 34 
 execute if data storage pokemon:temp {clean_species:"clefairy"} run data modify storage pokemon:temp dex_id set value 35 
@@ -83,7 +83,7 @@ execute if data storage pokemon:temp {clean_species:"slowpoke"} run data modify 
 execute if data storage pokemon:temp {clean_species:"slowbro"} run data modify storage pokemon:temp dex_id set value 80 
 execute if data storage pokemon:temp {clean_species:"magnemite"} run data modify storage pokemon:temp dex_id set value 81 
 execute if data storage pokemon:temp {clean_species:"magneton"} run data modify storage pokemon:temp dex_id set value 82 
-execute if data storage pokemon:temp {clean_species:"farfetch'd"} run data modify storage pokemon:temp dex_id set value 83 
+execute if data storage pokemon:temp {clean_species:"farfetchd"} run data modify storage pokemon:temp dex_id set value 83 
 execute if data storage pokemon:temp {clean_species:"doduo"} run data modify storage pokemon:temp dex_id set value 84 
 execute if data storage pokemon:temp {clean_species:"dodrio"} run data modify storage pokemon:temp dex_id set value 85 
 execute if data storage pokemon:temp {clean_species:"seel"} run data modify storage pokemon:temp dex_id set value 86 

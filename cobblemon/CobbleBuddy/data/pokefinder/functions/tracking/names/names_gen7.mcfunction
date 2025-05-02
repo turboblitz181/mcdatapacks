@@ -50,7 +50,7 @@ execute if score #current_id pf.temp matches 768 run data modify storage pf:temp
 execute if score #current_id pf.temp matches 769 run data modify storage pf:temp DisplayName set value "Sandygast" 
 execute if score #current_id pf.temp matches 770 run data modify storage pf:temp DisplayName set value "Palossand" 
 execute if score #current_id pf.temp matches 771 run data modify storage pf:temp DisplayName set value "Pyukumuku" 
-execute if score #current_id pf.temp matches 772 run data modify storage pf:temp DisplayName set value "Type:null" 
+execute if score #current_id pf.temp matches 772 run data modify storage pf:temp DisplayName set value "Type: Null" 
 execute if score #current_id pf.temp matches 773 run data modify storage pf:temp DisplayName set value "Silvally" 
 execute if score #current_id pf.temp matches 774 run data modify storage pf:temp DisplayName set value "Minior" 
 execute if score #current_id pf.temp matches 775 run data modify storage pf:temp DisplayName set value "Komala" 

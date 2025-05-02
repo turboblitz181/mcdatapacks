@@ -57,7 +57,7 @@ execute if data storage pokemon:temp {clean_species:"obstagoon"} run data modify
 execute if data storage pokemon:temp {clean_species:"perrserker"} run data modify storage pokemon:temp dex_id set value 863 
 execute if data storage pokemon:temp {clean_species:"cursola"} run data modify storage pokemon:temp dex_id set value 864 
 execute if data storage pokemon:temp {clean_species:"sirfetch'd"} run data modify storage pokemon:temp dex_id set value 865 
-execute if data storage pokemon:temp {clean_species:"mr.rime"} run data modify storage pokemon:temp dex_id set value 866 
+execute if data storage pokemon:temp {clean_species:"mrrime"} run data modify storage pokemon:temp dex_id set value 866 
 execute if data storage pokemon:temp {clean_species:"runerigus"} run data modify storage pokemon:temp dex_id set value 867 
 execute if data storage pokemon:temp {clean_species:"milcery"} run data modify storage pokemon:temp dex_id set value 868 
 execute if data storage pokemon:temp {clean_species:"alcremie"} run data modify storage pokemon:temp dex_id set value 869 

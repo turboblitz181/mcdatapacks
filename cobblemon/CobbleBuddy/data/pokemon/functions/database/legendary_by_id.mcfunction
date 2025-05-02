@@ -22,12 +22,18 @@ execute if score #dex_id pokemon.temp matches 638..649 run data modify storage p
 # Gen 6 Legendaries (716-721)
 execute if score #dex_id pokemon.temp matches 716..721 run data modify storage pokemon:temp legendary set value 1
 
-# Gen 7 Legendaries (772-773, 785-809)
+# Gen 7 Legendaries (772-809)
 execute if score #dex_id pokemon.temp matches 772..773 run data modify storage pokemon:temp legendary set value 1
-execute if score #dex_id pokemon.temp matches 785..809 run data modify storage pokemon:temp legendary set value 1
+execute if score #dex_id pokemon.temp matches 785..802 run data modify storage pokemon:temp legendary set value 1
+execute if score #dex_id pokemon.temp matches 807..809 run data modify storage pokemon:temp legendary set value 1
 
-# Gen 8 Legendaries (888-898)
-execute if score #dex_id pokemon.temp matches 888..898 run data modify storage pokemon:temp legendary set value 1
+# Gen 8 Legendaries (888-905)
+execute if score #dex_id pokemon.temp matches 888..892 run data modify storage pokemon:temp legendary set value 1
+execute if score #dex_id pokemon.temp matches 893..898 run data modify storage pokemon:temp legendary set value 1
+execute if score #dex_id pokemon.temp matches 905 run data modify storage pokemon:temp legendary set value 1
 
-# Gen 9 Legendaries (994-1025)
-execute if score #dex_id pokemon.temp matches 994..1025 run data modify storage pokemon:temp legendary set value 1
+# Gen 9 Legendaries (1001-1025)
+execute if score #dex_id pokemon.temp matches 1001..1004 run data modify storage pokemon:temp legendary set value 1
+execute if score #dex_id pokemon.temp matches 1007..1008 run data modify storage pokemon:temp legendary set value 1
+execute if score #dex_id pokemon.temp matches 1014..1017 run data modify storage pokemon:temp legendary set value 1
+execute if score #dex_id pokemon.temp matches 1024..1025 run data modify storage pokemon:temp legendary set value 1

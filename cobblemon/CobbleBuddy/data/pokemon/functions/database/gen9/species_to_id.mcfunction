@@ -96,10 +96,10 @@ execute if data storage pokemon:temp {clean_species:"arctibax"} run data modify 
 execute if data storage pokemon:temp {clean_species:"baxcalibur"} run data modify storage pokemon:temp dex_id set value 998 
 execute if data storage pokemon:temp {clean_species:"gimmighoul"} run data modify storage pokemon:temp dex_id set value 999 
 execute if data storage pokemon:temp {clean_species:"gholdengo"} run data modify storage pokemon:temp dex_id set value 1000 
-execute if data storage pokemon:temp {clean_species:"wo-chien"} run data modify storage pokemon:temp dex_id set value 1001 
-execute if data storage pokemon:temp {clean_species:"chien-pao"} run data modify storage pokemon:temp dex_id set value 1002 
-execute if data storage pokemon:temp {clean_species:"ting-lu"} run data modify storage pokemon:temp dex_id set value 1003 
-execute if data storage pokemon:temp {clean_species:"chi-yu"} run data modify storage pokemon:temp dex_id set value 1004 
+execute if data storage pokemon:temp {clean_species:"wochien"} run data modify storage pokemon:temp dex_id set value 1001 
+execute if data storage pokemon:temp {clean_species:"chienpao"} run data modify storage pokemon:temp dex_id set value 1002 
+execute if data storage pokemon:temp {clean_species:"tinglu"} run data modify storage pokemon:temp dex_id set value 1003 
+execute if data storage pokemon:temp {clean_species:"chiyu"} run data modify storage pokemon:temp dex_id set value 1004 
 execute if data storage pokemon:temp {clean_species:"roaringmoon"} run data modify storage pokemon:temp dex_id set value 1005 
 execute if data storage pokemon:temp {clean_species:"ironvaliant"} run data modify storage pokemon:temp dex_id set value 1006 
 execute if data storage pokemon:temp {clean_species:"koraidon"} run data modify storage pokemon:temp dex_id set value 1007 

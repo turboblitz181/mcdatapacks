@@ -51,7 +51,7 @@ execute if data storage pokemon:temp {clean_species:"golisopod"} run data modify
 execute if data storage pokemon:temp {clean_species:"sandygast"} run data modify storage pokemon:temp dex_id set value 769 
 execute if data storage pokemon:temp {clean_species:"palossand"} run data modify storage pokemon:temp dex_id set value 770 
 execute if data storage pokemon:temp {clean_species:"pyukumuku"} run data modify storage pokemon:temp dex_id set value 771 
-execute if data storage pokemon:temp {clean_species:"type:null"} run data modify storage pokemon:temp dex_id set value 772 
+execute if data storage pokemon:temp {clean_species:"typenull"} run data modify storage pokemon:temp dex_id set value 772 
 execute if data storage pokemon:temp {clean_species:"silvally"} run data modify storage pokemon:temp dex_id set value 773 
 execute if data storage pokemon:temp {clean_species:"minior"} run data modify storage pokemon:temp dex_id set value 774 
 execute if data storage pokemon:temp {clean_species:"komala"} run data modify storage pokemon:temp dex_id set value 775 
@@ -61,9 +61,9 @@ execute if data storage pokemon:temp {clean_species:"mimikyu"} run data modify s
 execute if data storage pokemon:temp {clean_species:"bruxish"} run data modify storage pokemon:temp dex_id set value 779 
 execute if data storage pokemon:temp {clean_species:"drampa"} run data modify storage pokemon:temp dex_id set value 780 
 execute if data storage pokemon:temp {clean_species:"dhelmise"} run data modify storage pokemon:temp dex_id set value 781 
-execute if data storage pokemon:temp {clean_species:"jangmo-o"} run data modify storage pokemon:temp dex_id set value 782 
-execute if data storage pokemon:temp {clean_species:"hakamo-o"} run data modify storage pokemon:temp dex_id set value 783 
-execute if data storage pokemon:temp {clean_species:"kommo-o"} run data modify storage pokemon:temp dex_id set value 784 
+execute if data storage pokemon:temp {clean_species:"jangmoo"} run data modify storage pokemon:temp dex_id set value 782 
+execute if data storage pokemon:temp {clean_species:"hakamoo"} run data modify storage pokemon:temp dex_id set value 783 
+execute if data storage pokemon:temp {clean_species:"kommoo"} run data modify storage pokemon:temp dex_id set value 784 
 execute if data storage pokemon:temp {clean_species:"tapukoko"} run data modify storage pokemon:temp dex_id set value 785 
 execute if data storage pokemon:temp {clean_species:"tapulele"} run data modify storage pokemon:temp dex_id set value 786 
 execute if data storage pokemon:temp {clean_species:"tapubulu"} run data modify storage pokemon:temp dex_id set value 787 

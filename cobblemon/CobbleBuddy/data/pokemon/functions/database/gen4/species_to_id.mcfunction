@@ -88,7 +88,7 @@ execute if data storage pokemon:temp {clean_species:"leafeon"} run data modify s
 execute if data storage pokemon:temp {clean_species:"glaceon"} run data modify storage pokemon:temp dex_id set value 471 
 execute if data storage pokemon:temp {clean_species:"gliscor"} run data modify storage pokemon:temp dex_id set value 472 
 execute if data storage pokemon:temp {clean_species:"mamoswine"} run data modify storage pokemon:temp dex_id set value 473 
-execute if data storage pokemon:temp {clean_species:"porygon-z"} run data modify storage pokemon:temp dex_id set value 474 
+execute if data storage pokemon:temp {clean_species:"porygonz"} run data modify storage pokemon:temp dex_id set value 474 
 execute if data storage pokemon:temp {clean_species:"gallade"} run data modify storage pokemon:temp dex_id set value 475 
 execute if data storage pokemon:temp {clean_species:"probopass"} run data modify storage pokemon:temp dex_id set value 476 
 execute if data storage pokemon:temp {clean_species:"dusknoir"} run data modify storage pokemon:temp dex_id set value 477 

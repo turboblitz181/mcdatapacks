@@ -98,5 +98,5 @@ execute if score #current_id pf.temp matches 246 run data modify storage pf:temp
 execute if score #current_id pf.temp matches 247 run data modify storage pf:temp DisplayName set value "Pupitar" 
 execute if score #current_id pf.temp matches 248 run data modify storage pf:temp DisplayName set value "Tyranitar" 
 execute if score #current_id pf.temp matches 249 run data modify storage pf:temp DisplayName set value "Lugia" 
-execute if score #current_id pf.temp matches 250 run data modify storage pf:temp DisplayName set value "Ho-oh" 
+execute if score #current_id pf.temp matches 250 run data modify storage pf:temp DisplayName set value "Ho-Oh" 
 execute if score #current_id pf.temp matches 251 run data modify storage pf:temp DisplayName set value "Celebi" 

@@ -56,7 +56,7 @@ execute if score #current_id pf.temp matches 862 run data modify storage pf:temp
 execute if score #current_id pf.temp matches 863 run data modify storage pf:temp DisplayName set value "Perrserker" 
 execute if score #current_id pf.temp matches 864 run data modify storage pf:temp DisplayName set value "Cursola" 
 execute if score #current_id pf.temp matches 865 run data modify storage pf:temp DisplayName set value "Sirfetch'd" 
-execute if score #current_id pf.temp matches 866 run data modify storage pf:temp DisplayName set value "Mr.rime" 
+execute if score #current_id pf.temp matches 866 run data modify storage pf:temp DisplayName set value "Mr. Rime" 
 execute if score #current_id pf.temp matches 867 run data modify storage pf:temp DisplayName set value "Runerigus" 
 execute if score #current_id pf.temp matches 868 run data modify storage pf:temp DisplayName set value "Milcery" 
 execute if score #current_id pf.temp matches 869 run data modify storage pf:temp DisplayName set value "Alcremie" 
