@@ -47,14 +47,16 @@ execute if score @s admin matches 52 run function main:toggles/glbl_notify/on
 execute if score @s admin matches 53 run function main:toggles/fossil_locator/on
 execute if score @s admin matches 54 run function main:toggles/egg_data/on
 execute if score @s admin matches 55 run function main:toggles/pokeball_changer/on
+execute if score @s admin matches 56 run function main:toggles/shiny_particles/on
 # Module toggles OFF
 execute if score @s admin matches 61 run function main:toggles/pokefinder/off
 execute if score @s admin matches 62 run function main:toggles/glbl_notify/off
 execute if score @s admin matches 63 run function main:toggles/fossil_locator/off
 execute if score @s admin matches 64 run function main:toggles/egg_data/off
 execute if score @s admin matches 65 run function main:toggles/pokeball_changer/off
+execute if score @s admin matches 66 run function main:toggles/shiny_particles/off
 
-# Debug Menu navigation (7, 71-76)
+# Debug Menu navigation (7, 71-77)
 execute if score @s admin matches 7 run function main:admin/debug/menu
 
 # Global Notify Debug (71, 711-713)
@@ -80,6 +82,9 @@ execute if score @s admin matches 75 run function egg_data:debug/menu
 
 # Pokeball Changer Debug (76)
 execute if score @s admin matches 76 run function pokeball_changer:debug/menu
+
+# Shiny Particles Debug (77, 771-773)
+execute if score @s admin matches 77 run function shiny_particles:debug/menu
 
 # Admin Management (8, 81)
 execute if score @s admin matches 8 run function main:admin/core/admin_manager

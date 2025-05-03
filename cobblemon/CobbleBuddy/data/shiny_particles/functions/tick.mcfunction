@@ -3,7 +3,7 @@ scoreboard players enable @a sp_menu
 
 execute as @a unless score @s sp_particle matches 0..1 run scoreboard players set @s sp_particle 1
 execute as @a unless score @s sp_sound matches 0..1 run scoreboard players set @s sp_sound 0
-execute as @a unless score @s sp_color matches 0..16 run scoreboard players set @s sp_color 0
+execute as @a unless score @s sp_color matches 0..16 run scoreboard players set @s sp_color 1
 execute as @a unless score particle type matches 0..1 run scoreboard players set particle type 0
 
 execute as @a[scores={sp_menu=1..}] run function shiny_particles:settings/menu
@@ -33,6 +33,8 @@ execute as @a[scores={sp_menu=-5}] run function shiny_particles:settings/menu
 
 execute as @a[scores={sp_menu=..-1}] run scoreboard players set @s sp_menu 0
 
+# Check for new shiny Pokemon
+function shiny_particles:checks/check_spawns
 
 execute as @a[scores={sp_particle=1,sp_color=1}] if score particle type matches 0 at @s as @e[tag=shiny,distance=..100] at @s run particle minecraft:dust 1 1 1 1 ~ ~1 ~ 0.5 0.5 0.5 0.1 1
 execute as @a[scores={sp_particle=1,sp_color=2}] if score particle type matches 0 at @s as @e[tag=shiny,distance=..100] at @s run particle minecraft:dust 1 0 0 1 ~ ~1 ~ 0.5 0.5 0.5 0.1 1

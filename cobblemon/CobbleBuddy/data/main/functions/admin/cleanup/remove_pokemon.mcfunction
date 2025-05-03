@@ -12,3 +12,5 @@ execute unless entity @s[tag=admin] run return 0
 
 kill @e[type=cobblemon:pokemon,tag=!owned]
 tellraw @s ["",{"text":"Removed all wild Pokémon!","color":"aqua"}]
+
+function main:admin/cleanup/entity_manager

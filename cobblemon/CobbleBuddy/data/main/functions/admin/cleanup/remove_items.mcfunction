@@ -12,3 +12,5 @@ execute unless entity @s[tag=admin] run return 0
 
 kill @e[type=item]
 tellraw @s ["",{"text":"Removed all dropped items!","color":"green"}]
+
+function main:admin/cleanup/entity_manager

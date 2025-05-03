@@ -12,3 +12,5 @@ execute unless entity @s[tag=admin] run return 0
 
 kill @e[type=#minecraft:hostile]
 tellraw @s ["",{"text":"Removed all hostile mobs!","color":"red"}]
+
+function main:admin/cleanup/entity_manager

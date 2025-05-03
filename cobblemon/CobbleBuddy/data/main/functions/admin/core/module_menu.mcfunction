@@ -29,4 +29,8 @@ execute if score fossil_locator enabled matches 0 run tellraw @s ["",{"text":"[�
 execute if score pokeball_changer enabled matches 1 run tellraw @s ["",{"text":"[✓] ","color":"green"},{"text":"Pokeball Changer","color":"red"},{"text":" - ","color":"gray"},{"text":"[DISABLE]","color":"red","clickEvent":{"action":"run_command","value":"/trigger admin set 65"}}]
 execute if score pokeball_changer enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red"},{"text":"Pokeball Changer","color":"dark_gray"},{"text":" - ","color":"gray"},{"text":"[ENABLE]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 55"}}]
 
+# Shiny Particles module
+execute if score shiny_particles enabled matches 1 run tellraw @s ["",{"text":"[✓] ","color":"green"},{"text":"Shiny Particles","color":"light_purple"},{"text":" - ","color":"gray"},{"text":"[DISABLE]","color":"red","clickEvent":{"action":"run_command","value":"/trigger admin set 66"}}]
+execute if score shiny_particles enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red"},{"text":"Shiny Particles","color":"dark_gray"},{"text":" - ","color":"gray"},{"text":"[ENABLE]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 56"}}]
+
 tellraw @s ["\n",{"text":"[Back to Admin Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 1"}}]
