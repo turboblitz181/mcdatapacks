@@ -8,7 +8,7 @@
 scoreboard players set @s pokemenu 0
 scoreboard players set #page pokefinder.temp 82
 
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 82) ===","bold":true,"color":"aqua"}]
+tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 82) ===","bold":true,"color":"aqua"}]
 tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
 
 tellraw @s ["",{"text":"[Thwackey]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Grass","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 811"}}]
@@ -22,4 +22,4 @@ tellraw @s ["",{"text":"[Inteleon]","color":"blue","hoverEvent":{"action":"show_
 tellraw @s ["",{"text":"[Skwovet]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Normal","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 819"}}]
 tellraw @s ["",{"text":"[Greedent]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Normal","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 820"}}]
 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page81"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page83"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 181"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 183"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}]

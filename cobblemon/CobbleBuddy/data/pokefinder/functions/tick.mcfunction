@@ -11,7 +11,8 @@ scoreboard players enable @a pokemenu
 
 # === MENU SYSTEM === 
 # Process all menu interactions
-execute as @a[scores={pokemenu=1}] at @s run function pokefinder:menu/main
+execute as @a[scores={pokemenu=1..}] at @s run function pokefinder:handle/handle_menu
+execute as @a[scores={pokemenu=..-1}] at @s run function pokefinder:handle/handle_menu
 execute as @a[scores={pokemenu=1..}] run scoreboard players set @s pokemenu 0
 execute as @a[scores={pokemenu=..-1}] run scoreboard players set @s pokemenu 0
 

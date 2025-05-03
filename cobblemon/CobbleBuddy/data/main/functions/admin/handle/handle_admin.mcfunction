@@ -1,0 +1,86 @@
+##
+# handle_admin.mcfunction
+#
+# Process admin menu triggers
+##
+
+# Main Menu (1)
+execute if score @s admin matches 1 run function main:admin/admin
+
+# Entity Management (2)
+execute if score @s admin matches 2 run function main:admin/cleanup/entity_manager
+
+# Remove different entities (21-23)
+execute if score @s admin matches 21 run function main:admin/cleanup/remove_pokemon
+execute if score @s admin matches 22 run function main:admin/cleanup/remove_hostiles
+execute if score @s admin matches 23 run function main:admin/cleanup/remove_items
+
+# Reset System (3, 31-34)
+execute if score @s admin matches 3 run function main:admin/reset/reset_menu
+# Reset Individual Player flow
+execute if score @s admin matches 31 run function main:admin/reset/confirm_reset_player
+execute if score @s admin matches 32 run function main:admin/reset/execute_reset_player
+# Reset ALL Players flow
+execute if score @s admin matches 33 run function main:admin/reset/confirm_reset_all_player
+execute if score @s admin matches 34 run function main:admin/reset/execute_reset_all_player
+
+# Danger Zone (4, 41-48)
+execute if score @s admin matches 4 run function main:admin/reset/danger_menu
+# Total Reset flow
+execute if score @s admin matches 41 run function main:admin/reset/confirm_total_reset
+execute if score @s admin matches 42 run function main:admin/reset/execute_total_reset
+# Nuke flow
+execute if score @s admin matches 43 run function main:admin/reset/confirm_nuke
+execute if score @s admin matches 44 run function main:admin/reset/execute_nuke
+# Remove All flow
+execute if score @s admin matches 45 run function main:admin/reset/confirm_remove_all
+execute if score @s admin matches 46 run function main:admin/reset/execute_remove_all
+# Pokemon DB Reset flow
+execute if score @s admin matches 47 run function main:admin/reset/confirm_pokemon_db_reset
+execute if score @s admin matches 48 run function main:admin/reset/reset_database
+
+# Module toggles (5, 51-55, 61-65)
+execute if score @s admin matches 5 run function main:admin/core/module_menu
+# Module toggles ON
+execute if score @s admin matches 51 run function main:toggles/pokefinder/on
+execute if score @s admin matches 52 run function main:toggles/glbl_notify/on
+execute if score @s admin matches 53 run function main:toggles/fossil_locator/on
+execute if score @s admin matches 54 run function main:toggles/egg_data/on
+execute if score @s admin matches 55 run function main:toggles/pokeball_changer/on
+# Module toggles OFF
+execute if score @s admin matches 61 run function main:toggles/pokefinder/off
+execute if score @s admin matches 62 run function main:toggles/glbl_notify/off
+execute if score @s admin matches 63 run function main:toggles/fossil_locator/off
+execute if score @s admin matches 64 run function main:toggles/egg_data/off
+execute if score @s admin matches 65 run function main:toggles/pokeball_changer/off
+
+# Debug Menu navigation (7, 71-76)
+execute if score @s admin matches 7 run function main:admin/debug/menu
+
+# Global Notify Debug (71, 711-713)
+execute if score @s admin matches 71 run function glbl_notify:debug/menu
+execute if score @s admin matches 711 run function glbl_notify:debug/toggle/check_spawns
+execute if score @s admin matches 712 run function glbl_notify:debug/toggle/verify_wild
+execute if score @s admin matches 713 run function glbl_notify:debug/notify_test
+
+# Pokefinder Debug (72, 721-722)
+execute if score @s admin matches 72 run function pokefinder:debug/menu
+execute if score @s admin matches 721 run function pokefinder:debug/count_unique_pokemon
+execute if score @s admin matches 722 run function pokefinder:debug/reset_distance
+
+# Pokemon Library Debug (73, 731)
+execute if score @s admin matches 73 run function pokemon:debug/menu
+execute if score @s admin matches 731 run function pokemon:debug/debug_stats
+
+# Fossil Locator Debug (74)
+execute if score @s admin matches 74 run function fossil_locator:debug/menu
+
+# Egg Data Debug (75)
+execute if score @s admin matches 75 run function egg_data:debug/menu
+
+# Pokeball Changer Debug (76)
+execute if score @s admin matches 76 run function pokeball_changer:debug/menu
+
+# Admin Management (8, 81)
+execute if score @s admin matches 8 run function main:admin/core/admin_manager
+execute if score @s admin matches 81 run function main:admin/core/revoke_admin

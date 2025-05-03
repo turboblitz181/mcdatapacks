@@ -8,7 +8,7 @@
 scoreboard players set @s pokemenu 0
 scoreboard players set #page pokefinder.temp 3
 
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 3) ===","bold":true,"color":"aqua"}]
+tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 3) ===","bold":true,"color":"aqua"}]
 tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
 
 tellraw @s ["",{"text":"[Spearow]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Normal/Flying","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 21"}}]
@@ -22,4 +22,4 @@ tellraw @s ["",{"text":"[Sandslash]","color":"gold","hoverEvent":{"action":"show
 tellraw @s ["",{"text":"[Nidoran♀]","color":"dark_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Poison","color":"dark_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 29"}}]
 tellraw @s ["",{"text":"[Nidorina]","color":"dark_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Poison","color":"dark_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 30"}}]
 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page2"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page4"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 102"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 104"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}]

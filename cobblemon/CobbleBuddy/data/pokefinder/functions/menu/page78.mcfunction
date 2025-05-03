@@ -8,7 +8,7 @@
 scoreboard players set @s pokemenu 0
 scoreboard players set #page pokefinder.temp 78
 
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 78) ===","bold":true,"color":"aqua"}]
+tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 78) ===","bold":true,"color":"aqua"}]
 tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
 
 tellraw @s ["",{"text":"[Pyukumuku]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Water","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 771"}}]
@@ -22,4 +22,4 @@ tellraw @s ["",{"text":"[Mimikyu]","color":"dark_purple","hoverEvent":{"action":
 tellraw @s ["",{"text":"[Bruxish]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Water/Psychic","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 779"}}]
 tellraw @s ["",{"text":"[Drampa]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Normal/Dragon","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 780"}}]
 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page77"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page79"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 177"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 179"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}]

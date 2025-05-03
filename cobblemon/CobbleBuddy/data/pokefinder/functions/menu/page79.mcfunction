@@ -8,7 +8,7 @@
 scoreboard players set @s pokemenu 0
 scoreboard players set #page pokefinder.temp 79
 
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 79) ===","bold":true,"color":"aqua"}]
+tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 79) ===","bold":true,"color":"aqua"}]
 tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
 
 tellraw @s ["",{"text":"[Dhelmise]","color":"dark_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Ghost/Grass","color":"dark_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 781"}}]
@@ -22,4 +22,4 @@ tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[Tapu Fini]",
 tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[Cosmog]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: Psychic","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 789"}}]
 tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[Cosmoem]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: Psychic","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 790"}}]
 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page78"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page80"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 178"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 180"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}]

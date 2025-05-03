@@ -8,7 +8,7 @@
 scoreboard players set @s pokemenu 0
 scoreboard players set #page pokefinder.temp 103
 
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 103) ===","bold":true,"color":"aqua"}]
+tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 103) ===","bold":true,"color":"aqua"}]
 tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
 
 tellraw @s ["",{"text":"[Raging Bolt]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Electric/Dragon","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 1021"}}]
@@ -17,4 +17,4 @@ tellraw @s ["",{"text":"[Iron Crown]","color":"gray","hoverEvent":{"action":"sho
 tellraw @s ["",{"text":"[Terapagos]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Normal","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 1024"}}]
 tellraw @s ["",{"text":"[Pecharunt]","color":"dark_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Poison/Ghost","color":"dark_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 1025"}}]
 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page102"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 202"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}]

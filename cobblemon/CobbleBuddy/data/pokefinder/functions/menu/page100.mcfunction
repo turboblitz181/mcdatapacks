@@ -8,7 +8,7 @@
 scoreboard players set @s pokemenu 0
 scoreboard players set #page pokefinder.temp 100
 
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 100) ===","bold":true,"color":"aqua"}]
+tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 100) ===","bold":true,"color":"aqua"}]
 tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
 
 tellraw @s ["",{"text":"[Iron Bundle]","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Ice/Water","color":"aqua"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 991"}}]
@@ -22,4 +22,4 @@ tellraw @s ["",{"text":"[Baxcalibur]","color":"dark_blue","hoverEvent":{"action"
 tellraw @s ["",{"text":"[Gimmighoul]","color":"dark_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Ghost","color":"dark_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 999"}}]
 tellraw @s ["",{"text":"[Gholdengo]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Steel/Ghost","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 1000"}}]
 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page99"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page101"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 199"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 201"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}]

@@ -3,7 +3,7 @@
 # 
 # Created by KnightKehan.
 ##
-tellraw @s ["",{"text":"\n=== Search by ID ===","bold":true,"color":"aqua"}]
+tellraw @s ["\n",{"text":"=== Search by ID ===","bold":true,"color":"aqua"}]
 tellraw @s ["",{"text":"Enter a Pokémon ID (1-1025):","color":"yellow"}]
 
 # Populaire Pokémon direct beschikbaar maken
@@ -15,9 +15,9 @@ tellraw @s ["",{"text":"• ","color":"gray"},{"text":"Riolu (447)","color":"dar
 tellraw @s ["",{"text":"• ","color":"gray"},{"text":"Dratini (147)","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger poketrack set 147"}}]
 
 # Direct command suggestion
-tellraw @s ["",{"text":"\nQuick search: ","color":"yellow"},{"text":"[Click here]","color":"green","clickEvent":{"action":"suggest_command","value":"/trigger poketrack set "}}]
+tellraw @s ["\n",{"text":"Quick search: ","color":"yellow"},{"text":"[Click here]","color":"green","clickEvent":{"action":"suggest_command","value":"/trigger poketrack set "}}]
 
 # Tips
-tellraw @s ["",{"text":"\nTip: ","color":"gold"},{"text":"Use the number from the Pokédex, not the menu page number","color":"gray"}]
+tellraw @s ["\n",{"text":"Tip: ","color":"gold"},{"text":"Use the number from the Pokédex, not the menu page number","color":"gray"}]
 
-tellraw @s ["",{"text":"\n[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]
+tellraw @s ["\n",{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}]

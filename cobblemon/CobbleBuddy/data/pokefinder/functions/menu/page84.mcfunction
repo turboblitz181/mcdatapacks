@@ -8,7 +8,7 @@
 scoreboard players set @s pokemenu 0
 scoreboard players set #page pokefinder.temp 84
 
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 84) ===","bold":true,"color":"aqua"}]
+tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 84) ===","bold":true,"color":"aqua"}]
 tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
 
 tellraw @s ["",{"text":"[Wooloo]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Normal","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 831"}}]
@@ -22,4 +22,4 @@ tellraw @s ["",{"text":"[Carkol]","color":"gold","hoverEvent":{"action":"show_te
 tellraw @s ["",{"text":"[Coalossal]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Rock/Fire","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 839"}}]
 tellraw @s ["",{"text":"[Applin]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Grass/Dragon","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 840"}}]
 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page83"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page85"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 183"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 185"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}]

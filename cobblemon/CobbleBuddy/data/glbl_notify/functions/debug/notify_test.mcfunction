@@ -19,4 +19,4 @@ tellraw @s ["",{"text":"• ","color":"gray"},{"text":"[Spawn Shiny Ho-Oh]","col
 tellraw @s ["\n",{"text":"TIP: ","color":"gold"},{"text":"Coordinates are in ~X ~Y ~Z format","color":"gray"}]
 
 # Back button
-tellraw @s ["\n",{"text":"[Back to Global Notify Debug Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function glbl_notify:debug/menu"}}]
+tellraw @s ["\n",{"text":"[Back to Global Notify Debug Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 71"}}]

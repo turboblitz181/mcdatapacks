@@ -6,11 +6,14 @@
 execute unless entity @s[tag=admin] run tellraw @s ["",{"text":"You don't have permission to use admin commands!","color":"red"}]
 execute unless entity @s[tag=admin] run return 0
 
-tellraw @s ["",{"text":"\n=== CONFIRM DATABASE RESET ===","color":"dark_red","bold":true}]
-tellraw @s ["",{"text":"This will reset the entire Pokémon database!","color":"red"}]
-tellraw @s ["",{"text":"• All Pokémon data will be removed","color":"red"}]
-tellraw @s ["",{"text":"• Legendary classifications will reset","color":"red"}]
-tellraw @s ["",{"text":"• This cannot be undone","color":"red"}]
-tellraw @s ["",{"text":"\nAre you sure?","color":"gold"}]
-tellraw @s ["",{"text":"[YES - Reset Database]","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:admin/reset/reset_database"}}]
-tellraw @s ["",{"text":"[NO - Cancel]","color":"green","clickEvent":{"action":"run_command","value":"/function main:admin/admin"}}]
+tellraw @s ["\n",{"text":"=== CONFIRM POKEMON DB RESET ===","color":"dark_red","bold":true}]
+tellraw @s ["",{"text":"⚠ WARNING: ","color":"red","bold":true},{"text":"This will reset the Pokémon database!","color":"red"}]
+tellraw @s ["",{"text":"This includes:","color":"yellow"}]
+tellraw @s ["",{"text":"• Pokémon stats","color":"red"}]
+tellraw @s ["",{"text":"• Type information","color":"red"}]
+tellraw @s ["",{"text":"• Legendary status","color":"red"}]
+tellraw @s ["",{"text":"• Display names","color":"red"}]
+
+tellraw @s ["\n",{"text":"Are you absolutely sure?","color":"red","bold":true}]
+tellraw @s ["",{"text":"[YES - RESET DATABASE]","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/trigger admin set 48"}}]
+tellraw @s ["",{"text":"[NO - Cancel]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 4"}}]

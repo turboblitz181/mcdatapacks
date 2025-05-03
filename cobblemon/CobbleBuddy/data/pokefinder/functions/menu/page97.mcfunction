@@ -8,7 +8,7 @@
 scoreboard players set @s pokemenu 0
 scoreboard players set #page pokefinder.temp 97
 
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 97) ===","bold":true,"color":"aqua"}]
+tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 97) ===","bold":true,"color":"aqua"}]
 tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
 
 tellraw @s ["",{"text":"[Wugtrio]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Water","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 961"}}]
@@ -22,4 +22,4 @@ tellraw @s ["",{"text":"[Orthworm]","color":"gray","hoverEvent":{"action":"show_
 tellraw @s ["",{"text":"[Glimmet]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Rock/Poison","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 969"}}]
 tellraw @s ["",{"text":"[Glimmora]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Rock/Poison","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 970"}}]
 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page96"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page98"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 196"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 198"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}]

@@ -17,4 +17,4 @@ tellraw @s ["",{"text":"Tracking for all players has been reset!","color":"gold"
 tellraw @a ["",{"selector":"@s","color":"yellow"},{"text":" has reset tracking for all players!","color":"gold"}]
 
 # Return to admin menu
-tellraw @s ["",{"text":"\n[Return to Admin Panel]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin"}}]
+tellraw @s ["\n",{"text":"[Return to Admin Panel]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 1"}}]

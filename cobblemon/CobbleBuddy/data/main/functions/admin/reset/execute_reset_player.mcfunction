@@ -16,4 +16,4 @@ scoreboard players set @s pf_pkmnnr 0
 tellraw @s ["",{"text":"Your tracking has been reset!","color":"green"}]
 
 # Return to admin menu
-tellraw @s ["",{"text":"\n[Return to Admin Panel]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin"}}]
+tellraw @s ["\n",{"text":"[Return to Admin Panel]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 1"}}]

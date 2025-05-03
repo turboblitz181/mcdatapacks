@@ -8,7 +8,7 @@
 scoreboard players set @s pokemenu 0
 scoreboard players set #page pokefinder.temp 99
 
-tellraw @s ["",{"text":"\n=== Pokémon Tracker (Page 99) ===","bold":true,"color":"aqua"}]
+tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 99) ===","bold":true,"color":"aqua"}]
 tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
 
 tellraw @s ["",{"text":"[Farigiraf]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Normal/Psychic","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 981"}}]
@@ -22,4 +22,4 @@ tellraw @s ["",{"text":"[Slither Wing]","color":"dark_green","hoverEvent":{"acti
 tellraw @s ["",{"text":"[Sandy Shocks]","color":"yellow","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Electric/Ground","color":"yellow"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 989"}}]
 tellraw @s ["",{"text":"[Iron Treads]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Ground/Steel","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 990"}}]
 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page98"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/page100"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/function pokefinder:menu/main"}}]
+tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 198"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 200"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}]

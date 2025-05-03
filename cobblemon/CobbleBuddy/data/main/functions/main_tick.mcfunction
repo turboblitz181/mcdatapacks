@@ -2,7 +2,7 @@
 scoreboard players enable @a[tag=admin] admin
 
 # Process admin menu trigger
-execute as @a[scores={admin=1..}] run function main:admin/admin
+execute as @a[tag=admin,scores={admin=1..}] run function main:admin/handle/handle_admin
 execute as @a[scores={admin=1..}] run scoreboard players set @s admin 0
 
 # running other main functions if feature is enabled
