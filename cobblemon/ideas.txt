@@ -1,4 +1,4 @@
-ideas:
+ideas/tasks:
 - pokefinder - done
 - fossil locator - turbo working on it
 - global shiny notifications - done
@@ -14,3 +14,4 @@ ideas:
 - debug menu - kehan working on it
 - Pokedex database splitting - done
 - fix issue in glbl notify - done
+- update admin nuke + uninstall list - kehan working on it
