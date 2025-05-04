@@ -1,5 +1,5 @@
 ##
-# get_stats.mcfunction - Verbeterd met nieuwe database maar behoudt scores
+# get_stats.mcfunction
 ##
 
 # Reset scores
@@ -14,8 +14,7 @@ scoreboard players set #base_total pokemon.temp 0
 # Reset base stats storage
 data modify storage pokemon:temp base_stats set value {}
 
-# Get dex_id and stats
-function pokemon:utils/stats/get_dex_id
+# Get stats using existing dex_id
 function pokemon:database/stats
 
 # Zet scores op basis van database waarden
