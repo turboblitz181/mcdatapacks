@@ -10,6 +10,7 @@ execute if score @s sp_sound matches 1 run tellraw @s ["",{"text":"[🔊] ","col
 execute if score @s sp_sound matches 0 run tellraw @s ["",{"text":"[🔇] ","color":"gray"},{"text":"Sound: ","color":"gray"},{"text":"OFF","color":"red"},{"text":" [Enable]","color":"green","clickEvent":{"action":"run_command","value":"/trigger sp_menu set -4"}}]
 
 # particle color
+
 execute if score @s sp_color matches 1 run tellraw @s ["",{"text":"[🟢] ","color":"white","bold":true},{"text":"Particle Color: ","color":"white"},{"text":"White","color":"white"},{"text":" [Click to cycle]","color":"gray","clickEvent":{"action":"run_command","value":"/trigger sp_menu set -5"}}]
 execute if score @s sp_color matches 2 run tellraw @s ["",{"text":"[🟢] ","color":"red","bold":true},{"text":"Particle Color: ","color":"white"},{"text":"Red","color":"red"},{"text":" [Click to cycle]","color":"gray","clickEvent":{"action":"run_command","value":"/trigger sp_menu set -5"}}]
 execute if score @s sp_color matches 3 run tellraw @s ["",{"text":"[🟢] ","color":"gold","bold":true},{"text":"Particle Color: ","color":"white"},{"text":"Orange","color":"gold"},{"text":" [Click to cycle]","color":"gray","clickEvent":{"action":"run_command","value":"/trigger sp_menu set -5"}}]
@@ -20,3 +21,9 @@ execute if score @s sp_color matches 7 run tellraw @s ["",{"text":"[🟢] ","col
 execute if score @s sp_color matches 8 run tellraw @s ["",{"text":"[🟢] ","color":"dark_purple","bold":true},{"text":"Particle Color: ","color":"white"},{"text":"Purple","color":"dark_purple"},{"text":" [Click to cycle]","color":"gray","clickEvent":{"action":"run_command","value":"/trigger sp_menu set -5"}}]
 execute if score @s sp_color matches 9 run tellraw @s ["",{"text":"[🟢] ","color":"light_purple","bold":true},{"text":"Particle Color: ","color":"white"},{"text":"Pink","color":"light_purple"},{"text":" [Click to cycle]","color":"gray","clickEvent":{"action":"run_command","value":"/trigger sp_menu set -5"}}]
 
+execute if score @s sp_type matches 0 run tellraw @s ["",{"text":"[⭐] ","color":"green"},{"text":"Particle Type: ","color":"white"},{"text":"Colored dust","color":"gray"},{"text":" [Click to swap]","color":"gray","clickEvent":{"action":"run_command","value":"/trigger sp_menu set -6"}}]
+execute if score @s sp_type matches 1 run tellraw @s ["",{"text":"[🌟] ","color":"dark_aqua","bold":true},{"text":"Particle Type: ","color":"white"},{"text":"Different Particles","color":"gray"},{"text":" [Click to swap]","color":"gray","clickEvent":{"action":"run_command","value":"/trigger sp_menu set -7"}}]
+
+
+execute if score @s sp_syncball matches 1 run tellraw @s ["",{"text":"[🔶] ","color":"green","bold":true},{"text":"Sync With Ball: ","color":"white"},{"text":"ON","color":"green"},{"text":" [Disable]","color":"red","clickEvent":{"action":"run_command","value":"/trigger sp_menu set -8"}}]
+execute if score @s sp_syncball matches 0 run tellraw @s ["",{"text":"[🔶] ","color":"gray"},{"text":"Sync With Ball: ","color":"gray"},{"text":"OFF","color":"red"},{"text":" [Enable]","color":"green","clickEvent":{"action":"run_command","value":"/trigger sp_menu set -9"}}]
