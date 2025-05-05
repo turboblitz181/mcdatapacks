@@ -2,10 +2,12 @@
     "function": "minecraft:set_name",
     "name": {
       "text": "Pokemon Egg",
+      "italic": false,
       "extra": [
         {
           "text": " ⭐",
-          "color": "#fbff00"
+          "color": "#fbff00",
+          "italic": false
         }
       ]
     }

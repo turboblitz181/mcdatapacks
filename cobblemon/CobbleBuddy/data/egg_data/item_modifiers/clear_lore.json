@@ -1,0 +1,27 @@
+[
+    {
+      "function": "minecraft:set_lore",
+      "entity": "this",
+      "lore": [
+        {
+          "text": "",
+          "color": "#007bff",
+          "bold": true
+        }
+      ],
+      "replace": true,
+      "conditions": []
+    },
+    {
+        "function": "minecraft:set_name",
+        "name": {
+          "text": "Pokemon Egg",
+          "italic": false
+        }
+      },
+      {
+        "function": "minecraft:set_nbt",
+        "tag": "{CustomModelData:0}",
+        "conditions": []
+      }
+  ]
