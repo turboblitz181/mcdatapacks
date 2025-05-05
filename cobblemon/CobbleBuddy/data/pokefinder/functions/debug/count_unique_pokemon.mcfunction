@@ -6,14 +6,13 @@ tellraw @s ["",{"text":"=== Pokémon Species Counts ===","color":"gold","bold":t
 scoreboard players reset * pf.temp
 
 # Count each Pokémon and assign to scoreboard
-execute as @e[type=cobblemon:pokemon,distance=..50] run function pokefinder:debug/count_pokemon
+execute at @s as @e[type=cobblemon:pokemon,distance=..100] run function pokefinder:debug/count_pokemon
 
-# Display the counts
-execute if score #sentret_count pf.temp matches 1.. run tellraw @s ["",{"text":"Sentret: ","color":"yellow"},{"score":{"name":"#sentret_count","objective":"pf.temp"},"color":"white"}]
-execute if score #bulbasaur_count pf.temp matches 1.. run tellraw @s ["",{"text":"Bulbasaur: ","color":"yellow"},{"score":{"name":"#bulbasaur_count","objective":"pf.temp"},"color":"white"}]
-execute if score #fletchling_count pf.temp matches 1.. run tellraw @s ["",{"text":"Fletchling: ","color":"yellow"},{"score":{"name":"#fletchling_count","objective":"pf.temp"},"color":"white"}]
-execute if score #other_count pf.temp matches 1.. run tellraw @s ["",{"text":"Other: ","color":"yellow"},{"score":{"name":"#other_count","objective":"pf.temp"},"color":"white"}]
+# Show no Pokémon found message if total is 0
+execute unless score #total_count pf.temp matches 1.. run tellraw @s ["",{"text":"No Pokémon found nearby!","color":"red"}]
 
-tellraw @s ["",{"text":"Total Pokémon: ","color":"aqua"},{"score":{"name":"#total_count","objective":"pf.temp"},"color":"white"}]
+# Display the counts if found
+execute if score #total_count pf.temp matches 1.. run function pokefinder:debug/display_counts
 
+# Show menu
 function pokefinder:debug/menu
