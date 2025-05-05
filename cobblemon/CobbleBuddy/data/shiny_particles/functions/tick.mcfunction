@@ -50,12 +50,13 @@ execute as @a[scores={sp_menu=..-1}] run scoreboard players set @s sp_menu 0
 # Check for new shiny Pokemon
 function shiny_particles:checks/check_spawns
 
+scoreboard players add timer sp_timer 1
+execute store result score players sp_players run execute if entity @a
+execute if score timer sp_timer matches 5 run function shiny_particles:particles/cycle_players
 
-
-execute as @e[tag=shiny] at @s as @a[distance=..100] run tag @s add sp_p
-function shiny_particles:particles/other
-tag @a remove sp_p
-execute as @e[tag=owned_shiny,limit=1] on owner if entity @s run function shiny_particles:particles/pokeball
+execute if score timer sp_timer matches 5 as @e[tag=owned_shiny] on owner if entity @s run function shiny_particles:particles/pokeball
 
 
 execute as @e[tag=wild_shiny,predicate=shiny_particles:rand] at @s anchored eyes positioned ~ ~-0.25 ~ run playsound minecraft:entity.player.levelup master @a[scores={sp_sound=1},distance=..100] ~ ~ ~ 1 1.7 0.15
+
+execute if score timer sp_timer matches 10.. run scoreboard players set timer sp_timer 0
