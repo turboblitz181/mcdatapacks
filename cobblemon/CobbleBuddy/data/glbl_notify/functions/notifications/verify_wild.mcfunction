@@ -34,11 +34,11 @@ execute store result score #pos_z gn_settings run data get entity @s Pos[2]
 function pokemon:utils/checks/check_shiny
 scoreboard players operation #temp_shiny gn_settings = #temp_shiny pokemon.temp
 
-function pokemon:utils/checks/check_legendary  
+function pokemon:utils/checks/check_legendary
 scoreboard players operation #temp_legendary gn_settings = #temp_legendary pokemon.temp
 
 # Debug toevoegen voor legendary check
-execute store result score #debug_id gn_settings run scoreboard players get #id pokemon.temp
+execute store result score #debug_id gn_settings run scoreboard players get #dex_id pokemon.temp
 execute if score #debug_verify_wild gn_settings matches 1 run tellraw @a ["ID: ",{"score":{"name":"#debug_id","objective":"gn_settings"}}]
 execute if score #debug_verify_wild gn_settings matches 1 run tellraw @a ["Legendary: ",{"score":{"name":"#temp_legendary","objective":"pokemon.temp"}}]
 

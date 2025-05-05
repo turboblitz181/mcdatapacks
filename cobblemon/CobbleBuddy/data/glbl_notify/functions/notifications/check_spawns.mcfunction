@@ -2,8 +2,8 @@
 # check_spawns.mcfunction - SERVER COMPATIBLE VERSION
 ##
 
-# Debug call (if enabled)
-execute if score #debug_check_spawns gn_settings matches 1 run function glbl_notify:debug/debug_check_spawns
+# Debug call (if enabled and cooldown expired)
+execute if score #debug_check_spawns gn_settings matches 1 if score #debug_cooldown gn_timer matches 0 run function glbl_notify:debug/debug_check_spawns
 
 # Only run if module is enabled
 execute unless score glbl_notify enabled matches 1 run return 0
