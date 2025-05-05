@@ -17,6 +17,7 @@ tellraw @s ["",{"text":"• ","color":"gray"},{"text":"[Spawn Shiny Ho-Oh]","col
 
 # Tips
 tellraw @s ["\n",{"text":"TIP: ","color":"gold"},{"text":"Coordinates are in ~X ~Y ~Z format","color":"gray"}]
+tellraw @s ["",{"text":"NOTE: ","color":"red"},{"text":"These commands require OP permissions!","color":"gray"}]
 
 # Back button
 tellraw @s ["\n",{"text":"[Back to Global Notify Debug Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 71"}}]
