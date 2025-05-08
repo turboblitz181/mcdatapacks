@@ -1,6 +1,8 @@
 {
 	"values": [
 		"main:main_load",
-		"pokemon:load"
+		"pokemon:load",
+		"guides:load",
+		"settings:load"
 	]
 }

@@ -14,4 +14,3 @@ execute if score egg_data enabled matches 1 run function egg_data:tick
 execute if score fossil_locator enabled matches 1 run function fossil_locator:tick
 execute if score pokeball_changer enabled matches 1 run function pokeball_changer:tick
 execute if score shiny_particles enabled matches 1 run function shiny_particles:tick
-function guides:tick

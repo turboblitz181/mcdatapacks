@@ -1,3 +1,14 @@
-tellraw @s ["",{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"}]
+tellraw @s ["",{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"}]
 
-tellraw @s ["",{"text":"=== ","bold":true,"color":"gold"},{"text":"Global Notifications","bold":true,"color":"gold"},{"text":" ===","bold":true,"color":"gold"},{"text":"\n"},{"text":"\n"},{"text":"Global Notifications notifies you if a legendary or shiny has spawned.","color":"white"},{"text":"\n"},{"text":"It will show you the coordinates and which player was near it.","color":"white"},{"text":"\n"},{"text":"Where the notifications is displayed can be changed in the settings.","color":"white"},{"text":"\n"},{"text":"\n"},{"text":"[go back]","bold":true,"color":"dark_gray","clickEvent":{"action":"run_command","value":"/trigger guides set 1"}}]
+# Title
+tellraw @s ["\n",{"text":"=== Global Notifications ===","bold":true,"color":"gold"}]
+
+# Main explanation
+tellraw @s ["\n",{"text":"This module helps you track special Pokémon spawns:","color":"yellow"}]
+tellraw @s ["",{"text":"• Notifies you when legendary or shiny Pokémon spawn","color":"white"}]
+tellraw @s ["",{"text":"• Shows exact coordinates of the spawn location","color":"white"}]
+tellraw @s ["",{"text":"• Indicates which player was closest to the spawn","color":"white"}]
+tellraw @s ["\n",{"text":"TIP: ","color":"gold"},{"text":"You can choose between chat, title or actionbar notifications","color":"gray"}]
+
+# Navigation
+tellraw @s ["\n",{"text":"[Back to Guides Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger guides set 1"}}]

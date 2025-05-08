@@ -18,12 +18,8 @@ execute if score @s pokemenu matches 3 run function pokefinder:menu/favorites
 # Settings Menu (4)
 execute if score @s pokemenu matches 4 run function pokefinder:settings/main
 
-# Help Menu (5)
-execute if score @s pokemenu matches 5 run function pokefinder:help/main
-
 # Pages (101-203)
 execute if score @s pokemenu matches 101..203 run function pokefinder:handle/handle_pages
-
 
 # === NEGATIVE VALUES FOR MENU ACTIONS ===
 # Settings toggles

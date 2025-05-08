@@ -39,4 +39,3 @@ function egg_data:load
 function fossil_locator:load
 function pokeball_changer:load
 function shiny_particles:load
-function guides:load

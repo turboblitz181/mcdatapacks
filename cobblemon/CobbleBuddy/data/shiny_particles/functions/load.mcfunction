@@ -14,4 +14,4 @@ scoreboard objectives add sp_menu trigger
 
 
 # Module initialization message
-tellraw @a[tag=admin] ["",{"text":"[Shiny Particles]","color":"light_purple"},{"text":" Module initialized!","color":"green"}]
+tellraw @a[tag=admin] ["",{"text":"[Shiny Particles]","color":"dark_green"},{"text":" Module initialized!","color":"green"}]

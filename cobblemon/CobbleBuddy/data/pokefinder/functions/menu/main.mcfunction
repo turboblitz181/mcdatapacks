@@ -24,4 +24,3 @@ tellraw @s ["",{"text":"➤ ","color":"gray"},{"text":"[Page 101]","color":"gree
 tellraw @s ["",{"text":"➤ ","color":"gray"},{"text":"[Search by ID]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 2"}}]
 tellraw @s ["",{"text":"➤ ","color":"gray"},{"text":"[My Favorites]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 3"}}]
 tellraw @s ["",{"text":"➤ ","color":"gray"},{"text":"[Settings/Status]","color":"dark_aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 4"}}]
-tellraw @s ["",{"text":"➤ ","color":"gray"},{"text":"[Help]","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 5"}}]
