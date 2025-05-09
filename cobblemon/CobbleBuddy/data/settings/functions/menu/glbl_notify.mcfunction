@@ -1,6 +1,5 @@
 tellraw @s ["",{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"}]
 
-
 tellraw @s ["\n",{"text":"=== Global Notify Settings ===","color":"gold","bold":true}]
 tellraw @s ["\n",{"text":"Customize your notification preferences:","color":"yellow"}]
 
