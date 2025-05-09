@@ -15,9 +15,11 @@ tag @e remove gn_wild
 # Core system objectives
 scoreboard objectives add gn_settings dummy
 scoreboard objectives add gn_timer dummy
-scoreboard objectives add gn_menu trigger "Global Notify Menu"
 scoreboard objectives add gn_nearest_player dummy
 scoreboard objectives add gn_distance dummy
+
+# Remove old menu trigger (temporary)
+scoreboard objectives remove gn_menu
 
 # PLAYER-SPECIFIC notification preferences
 scoreboard objectives add gn_chat dummy "Chat Notifications"

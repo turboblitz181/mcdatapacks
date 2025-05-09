@@ -41,10 +41,10 @@ scoreboard objectives remove track_mode
 
 # Player interactions
 scoreboard objectives remove pokemenu
-scoreboard objectives remove notifs_enabled
 scoreboard objectives remove poketrack
 # in future not necessary
 scoreboard objectives remove pokespawnnotif
+scoreboard objectives remove notifs_enabled
 
 # Favorites system
 scoreboard objectives remove fav1

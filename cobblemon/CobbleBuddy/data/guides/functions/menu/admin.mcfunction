@@ -1,10 +1,14 @@
-tellraw @s ["",{"text":"\n"},{"text":"\n"}]
+# tellraw @s ["",{"text":"\n"},{"text":"\n"}]
 
 # Title
 tellraw @s ["\n",{"text":"=== Admin Guide ===","bold":true,"color":"dark_red"}]
 
 # Main Categories
 tellraw @s ["\n",{"text":"Admin Features:","color":"yellow"}]
+
+# Command Access
+tellraw @s ["\n",{"text":"Access Admin Menu:","color":"gold"}]
+tellraw @s ["",{"text":"• Use ","color":"white"},{"text":"/trigger admin","bold":true,"color":"dark_red","clickEvent":{"action":"run_command","value":"/trigger admin"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click to open admin menu","color":"dark_red"}]}}]
 
 # Entity Management
 tellraw @s ["\n",{"text":"Entity Management:","color":"gold"}]

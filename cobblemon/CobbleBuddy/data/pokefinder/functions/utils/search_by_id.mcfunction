@@ -3,11 +3,12 @@
 # 
 # Created by KnightKehan.
 ##
+tellraw @s ["",{"text":"\n"}]
+
 tellraw @s ["\n",{"text":"=== Search by ID ===","bold":true,"color":"aqua"}]
-tellraw @s ["",{"text":"Enter a Pokémon ID (1-1025):","color":"yellow"}]
 
 # Populaire Pokémon direct beschikbaar maken
-tellraw @s ["",{"text":"Popular Pokémon:","color":"gold"}]
+tellraw @s ["\n",{"text":"Popular Pokémon:","color":"gold"}]
 tellraw @s ["",{"text":"• ","color":"gray"},{"text":"Ralts (280)","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger poketrack set 280"}}]
 tellraw @s ["",{"text":"• ","color":"gray"},{"text":"Magikarp (129)","color":"gold","clickEvent":{"action":"run_command","value":"/trigger poketrack set 129"}}]
 tellraw @s ["",{"text":"• ","color":"gray"},{"text":"Shinx (403)","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger poketrack set 403"}}]
@@ -15,6 +16,8 @@ tellraw @s ["",{"text":"• ","color":"gray"},{"text":"Riolu (447)","color":"dar
 tellraw @s ["",{"text":"• ","color":"gray"},{"text":"Dratini (147)","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger poketrack set 147"}}]
 
 # Direct command suggestion
+tellraw @s ["\n",{"text":"Enter a Pokémon ID (1-1025):","color":"yellow"}]
+
 tellraw @s ["\n",{"text":"Quick search: ","color":"yellow"},{"text":"[Click here]","color":"green","clickEvent":{"action":"suggest_command","value":"/trigger poketrack set "}}]
 
 # Tips

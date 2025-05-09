@@ -3,16 +3,17 @@
 # 
 # Created by KnightKehan.
 ##
+tellraw @s ["",{"text":"\n"}]
 
 tellraw @s ["\n",{"text":"=== Your Favorite Pokémon ===","bold":true,"color":"gold"}]
 
 # Show active slot info
-execute if score @s fav_slot matches 1 run tellraw @s ["",{"text":"Current active slot: ","color":"yellow"},{"text":"1","color":"green","bold":true}]
-execute if score @s fav_slot matches 2 run tellraw @s ["",{"text":"Current active slot: ","color":"yellow"},{"text":"2","color":"green","bold":true}]
-execute if score @s fav_slot matches 3 run tellraw @s ["",{"text":"Current active slot: ","color":"yellow"},{"text":"3","color":"green","bold":true}]
-execute if score @s fav_slot matches 4 run tellraw @s ["",{"text":"Current active slot: ","color":"yellow"},{"text":"4","color":"green","bold":true}]
-execute if score @s fav_slot matches 5 run tellraw @s ["",{"text":"Current active slot: ","color":"yellow"},{"text":"5","color":"green","bold":true}]
-execute unless score @s fav_slot matches 1..5 run tellraw @s ["",{"text":"Current active slot: ","color":"yellow"},{"text":"None","color":"red","bold":true}]
+execute if score @s fav_slot matches 1 run tellraw @s ["\n",{"text":"Current active slot: ","color":"yellow"},{"text":"1","color":"green","bold":true}]
+execute if score @s fav_slot matches 2 run tellraw @s ["\n",{"text":"Current active slot: ","color":"yellow"},{"text":"2","color":"green","bold":true}]
+execute if score @s fav_slot matches 3 run tellraw @s ["\n",{"text":"Current active slot: ","color":"yellow"},{"text":"3","color":"green","bold":true}]
+execute if score @s fav_slot matches 4 run tellraw @s ["\n",{"text":"Current active slot: ","color":"yellow"},{"text":"4","color":"green","bold":true}]
+execute if score @s fav_slot matches 5 run tellraw @s ["\n",{"text":"Current active slot: ","color":"yellow"},{"text":"5","color":"green","bold":true}]
+execute unless score @s fav_slot matches 1..5 run tellraw @s ["\n",{"text":"Current active slot: ","color":"yellow"},{"text":"None","color":"red","bold":true}]
 
 # Display slot info
 execute if score @s fav1 matches 1.. run tellraw @s ["",{"text":"Slot 1: ","color":"yellow"},{"text":"★ ","color":"gold"},{"text":"#","color":"gold"},{"score":{"name":"@s","objective":"fav1"},"color":"gold"},{"text":" [Track]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 51"}}]

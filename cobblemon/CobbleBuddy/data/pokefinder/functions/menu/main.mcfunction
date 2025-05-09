@@ -6,8 +6,9 @@
 
 scoreboard players set @s pokemenu 0
 
+tellraw @s [""]
 tellraw @s ["\n",{"text":"=== Pokémon Tracker ===","bold":true,"color":"aqua"}]
-tellraw @s ["",{"text":"Browse pages:","color":"yellow"}]
+tellraw @s ["\n",{"text":"Browse pages:","color":"yellow"}]
 
 tellraw @s ["",{"text":"➤ ","color":"gray"},{"text":"[Page 1]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 101"}}]
 tellraw @s ["",{"text":"➤ ","color":"gray"},{"text":"[Page 11]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 111"}}]
@@ -23,4 +24,5 @@ tellraw @s ["",{"text":"➤ ","color":"gray"},{"text":"[Page 101]","color":"gree
 
 tellraw @s ["",{"text":"➤ ","color":"gray"},{"text":"[Search by ID]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 2"}}]
 tellraw @s ["",{"text":"➤ ","color":"gray"},{"text":"[My Favorites]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 3"}}]
-tellraw @s ["",{"text":"➤ ","color":"gray"},{"text":"[Settings/Status]","color":"dark_aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 4"}}]
+tellraw @s ["",{"text":"➤ ","color":"gray"},{"text":"[Status]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 4"}}]
+tellraw @s ["",{"text":"➤ ","color":"gray"},{"text":"[Settings]","color":"dark_aqua","clickEvent":{"action":"run_command","value":"/trigger settings set -4"}}]
