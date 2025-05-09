@@ -1,4 +1,4 @@
-tellraw @s ["",{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"}]
+tellraw @s ["",{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"}]
 
 
 tellraw @s ["\n",{"text":"=== Global Notify Settings ===","color":"gold","bold":true}]

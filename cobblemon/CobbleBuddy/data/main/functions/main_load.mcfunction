@@ -39,3 +39,7 @@ function egg_data:load
 function fossil_locator:load
 function pokeball_changer:load
 function shiny_particles:load
+
+
+# loaded message
+tellraw @a ["",{"text":"Loaded","color":"green"},{"text":" CobbleBuddy ","bold":true,"color":"dark_aqua"},{"text":"successfully!","color":"green"},{"text":"\n"},{"text":"made by: ","color":"dark_aqua"},{"text":"turboblitz181","bold":true,"color":"#00FF88"},{"text":" & ","color":"dark_aqua"},{"text":"KnightKehan","bold":true,"color":"#1A892D"}]
