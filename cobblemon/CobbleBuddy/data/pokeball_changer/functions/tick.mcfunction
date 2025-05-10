@@ -48,3 +48,6 @@ execute as @a[scores={poke_slot=1..},nbt={SelectedItem:{id:"cobblemon:ancient_gi
 execute as @a[scores={poke_slot=1..},nbt={SelectedItem:{id:"cobblemon:ancient_origin_ball"}}] run scoreboard players set @s ball_type 48
 execute as @a[scores={ball_type=1..,poke_slot=1..}] run function pokeball_changer:change
 scoreboard players enable @a poke_slot
+
+# Check Core/Module Initialization
+scoreboard players set #ball pc_tick 1

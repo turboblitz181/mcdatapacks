@@ -53,6 +53,6 @@ execute as @a unless score @s fav3 matches 0.. run scoreboard players set @s fav
 execute as @a unless score @s fav4 matches 0.. run scoreboard players set @s fav4 0
 execute as @a unless score @s fav5 matches 0.. run scoreboard players set @s fav5 0
 
-# === START UP MESSAGE ===
-# Module initialization message
-tellraw @a[tag=admin] ["",{"text":"[Pokémon Finder]","color":"aqua"},{"text":" Module initialized!","color":"green"}]
+# === DEBUGGING SYSTEM ===
+# Check Core/Module Initialization
+scoreboard players set #finder pf_init 1

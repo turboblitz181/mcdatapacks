@@ -1,4 +1,4 @@
-tellraw @s ["",{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"}]
+tellraw @s ["\n\n\n\n\n\n\n\n"]
 execute if score egg_data enabled matches 0 run tellraw @s {"text":""}
 execute if score pokeball_changer enabled matches 0 run tellraw @s {"text":""}
 execute if score shiny_particles enabled matches 0 run tellraw @s {"text":""}

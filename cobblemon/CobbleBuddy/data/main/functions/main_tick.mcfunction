@@ -1,6 +1,9 @@
 # Enable admin menu
 scoreboard players enable @a[tag=admin] admin
 
+# Count admins
+execute store result score #admin_count admin if entity @a[tag=admin]
+
 # Process admin menu trigger
 execute as @a[tag=admin,scores={admin=1..}] run function main:admin/handle/handle_admin
 execute as @a[scores={admin=1..}] run scoreboard players set @s admin 0
@@ -14,3 +17,6 @@ execute if score egg_data enabled matches 1 run function egg_data:tick
 execute if score fossil_locator enabled matches 1 run function fossil_locator:tick
 execute if score pokeball_changer enabled matches 1 run function pokeball_changer:tick
 execute if score shiny_particles enabled matches 1 run function shiny_particles:tick
+
+# Check Core/Module Initialization
+scoreboard players set #system main.tick 1

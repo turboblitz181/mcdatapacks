@@ -11,6 +11,8 @@ scoreboard objectives add sp_type dummy
 scoreboard objectives add sp_players dummy
 scoreboard objectives add sp_timer dummy
 
+# Remove old menu trigger (temporary)
+scoreboard objectives remove sp_menu
 
-# Module initialization message
-tellraw @a[tag=admin] ["",{"text":"[Shiny Particles]","color":"dark_green"},{"text":" Module initialized!","color":"green"}]
+# Check Core/Module Initialization
+scoreboard players set #shiny sp_init 1

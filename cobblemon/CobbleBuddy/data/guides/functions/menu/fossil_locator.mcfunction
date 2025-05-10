@@ -1,4 +1,4 @@
-tellraw @s ["",{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"}]
+tellraw @s ["\n\n\n\n\n\n\n\n\n\n"]
 
 # Title
 tellraw @s ["\n",{"text":"=== Fossil Locator ===","bold":true,"color":"gray"}]

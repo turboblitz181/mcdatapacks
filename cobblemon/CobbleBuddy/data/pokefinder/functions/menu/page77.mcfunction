@@ -4,13 +4,19 @@
 # Created by KnightKehan.
 ##
 
-# Reset om spam te voorkomen
+# Reset to prevent spam
 scoreboard players set @s pokemenu 0
 scoreboard players set #page pokefinder.temp 77
 
-tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 77) ===","bold":true,"color":"aqua"}]
-tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
+# Clear chat space
+tellraw @s ["\n\n"]
 
+# Title
+tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 77) ===","bold":true,"color":"aqua"}]
+tellraw @s ["\n",{"text":"Click a Pokémon to track it:","color":"yellow"}]
+tellraw @s [""]
+
+# Pokémon List
 tellraw @s ["",{"text":"[Bounsweet]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Grass","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 761"}}]
 tellraw @s ["",{"text":"[Steenee]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Grass","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 762"}}]
 tellraw @s ["",{"text":"[Tsareena]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Grass","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 763"}}]
@@ -22,4 +28,4 @@ tellraw @s ["",{"text":"[Golisopod]","color":"dark_green","hoverEvent":{"action"
 tellraw @s ["",{"text":"[Sandygast]","color":"dark_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Ghost/Ground","color":"dark_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 769"}}]
 tellraw @s ["",{"text":"[Palossand]","color":"dark_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Ghost/Ground","color":"dark_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 770"}}]
 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 176"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 178"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}]
+tellraw @s ["\n",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 176"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 178"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}]

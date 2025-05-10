@@ -12,4 +12,4 @@ execute if score #wurmple_count pf.temp matches 1.. run tellraw @s ["",{"text":"
 execute if score #other_count pf.temp matches 1.. run tellraw @s ["",{"text":"Other: ","color":"yellow"},{"score":{"name":"#other_count","objective":"pf.temp"},"color":"white"}]
 
 # Show total
-tellraw @s ["",{"text":"Total Pokémon: ","color":"aqua"},{"score":{"name":"#total_count","objective":"pf.temp"},"color":"white"}]
+tellraw @s ["\n",{"text":"Total Pokémon: ","color":"aqua"},{"score":{"name":"#total_count","objective":"pf.temp"},"color":"white"}]

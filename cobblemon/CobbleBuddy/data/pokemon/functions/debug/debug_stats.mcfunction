@@ -5,7 +5,7 @@
 # Reset ALL data before checking new Pokemon
 function pokemon:utils/reset_all
 
-tellraw @s ["",{"text":"===== POKEMON FUNCTIES TEST =====","color":"yellow","bold":true}]
+tellraw @s ["\n",{"text":"===== POKEMON FUNCTIES TEST =====","color":"yellow","bold":true}]
 execute unless entity @e[type=cobblemon:pokemon,sort=nearest,limit=1] run tellraw @s ["",{"text":"❌ No found Pokémon!","color":"red"}]
 execute if entity @e[type=cobblemon:pokemon,sort=nearest,limit=1] run tellraw @s ["",{"text":"✅ Found Pokémon!","color":"green"}]
 
@@ -56,14 +56,12 @@ tellraw @s ["",{"text":"Types: ","color":"gold"},{"nbt":"types","storage":"pokem
 
 # Toon Base Stats direct uit storage
 execute at @s as @e[type=cobblemon:pokemon,sort=nearest,limit=1] run function pokemon:utils/stats/get_stats
-tellraw @s ["",{"text":"Base Stats","color":"gold","bold":true}]
-tellraw @s ["",{"text":"HP: ","color":"gold"},{"nbt":"base_stats.hp","storage":"pokemon:temp","color":"aqua"},{"text":", Atk: ","color":"gold"},{"nbt":"base_stats.attack","storage":"pokemon:temp","color":"aqua"},{"text":", Def: ","color":"gold"},{"nbt":"base_stats.defense","storage":"pokemon:temp","color":"aqua"},{"text":", SpA: ","color":"gold"},{"nbt":"base_stats.special_attack","storage":"pokemon:temp","color":"aqua"},{"text":", SpD: ","color":"gold"},{"nbt":"base_stats.special_defense","storage":"pokemon:temp","color":"aqua"},{"text":", Spd: ","color":"gold"},{"nbt":"base_stats.speed","storage":"pokemon:temp","color":"aqua"}]
-tellraw @s ["",{"text":"Total: ","color":"gold"},{"nbt":"basetotalstats","storage":"pokemon:temp","color":"yellow","bold":true}]
+tellraw @s ["",{"text":"Base Stats: ","color":"gold","bold":true},{"text":"HP: ","color":"aqua"},{"nbt":"base_stats.hp","storage":"pokemon:temp","color":"light_purple"},{"text":", Atk: ","color":"aqua"},{"nbt":"base_stats.attack","storage":"pokemon:temp","color":"light_purple"},{"text":", Def: ","color":"aqua"},{"nbt":"base_stats.defense","storage":"pokemon:temp","color":"light_purple"},{"text":", SpA: ","color":"aqua"},{"nbt":"base_stats.special_attack","storage":"pokemon:temp","color":"light_purple"},{"text":", SpD: ","color":"aqua"},{"nbt":"base_stats.special_defense","storage":"pokemon:temp","color":"light_purple"},{"text":", Spd: ","color":"aqua"},{"nbt":"base_stats.speed","storage":"pokemon:temp","color":"light_purple"}]
+tellraw @s ["",{"text":"Total: ","color":"aqua"},{"nbt":"basetotalstats","storage":"pokemon:temp","color":"green","bold":true}]
 
 # Get IVs test
 execute at @s as @e[type=cobblemon:pokemon,sort=nearest,limit=1] run function pokemon:utils/stats/get_ivs
-tellraw @s ["",{"text":"IVs","color":"gold","bold":true}]
-tellraw @s ["",{"text":"HP: ","color":"gold"},{"score":{"name":"#iv_hp","objective":"pokemon.temp"},"color":"light_purple"},{"text":", Atk: ","color":"gold"},{"score":{"name":"#iv_attack","objective":"pokemon.temp"},"color":"light_purple"},{"text":", Def: ","color":"gold"},{"score":{"name":"#iv_defense","objective":"pokemon.temp"},"color":"light_purple"},{"text":", SpA: ","color":"gold"},{"score":{"name":"#iv_sp_attack","objective":"pokemon.temp"},"color":"light_purple"},{"text":", SpD: ","color":"gold"},{"score":{"name":"#iv_sp_defense","objective":"pokemon.temp"},"color":"light_purple"},{"text":", Spd: ","color":"gold"},{"score":{"name":"#iv_speed","objective":"pokemon.temp"},"color":"light_purple"}]
+tellraw @s ["",{"text":"IVs: ","color":"gold","bold":true},{"text":"HP: ","color":"aqua"},{"score":{"name":"#iv_hp","objective":"pokemon.temp"},"color":"light_purple"},{"text":", Atk: ","color":"aqua"},{"score":{"name":"#iv_attack","objective":"pokemon.temp"},"color":"light_purple"},{"text":", Def: ","color":"aqua"},{"score":{"name":"#iv_defense","objective":"pokemon.temp"},"color":"light_purple"},{"text":", SpA: ","color":"aqua"},{"score":{"name":"#iv_sp_attack","objective":"pokemon.temp"},"color":"light_purple"},{"text":", SpD: ","color":"aqua"},{"score":{"name":"#iv_sp_defense","objective":"pokemon.temp"},"color":"light_purple"},{"text":", Spd: ","color":"aqua"},{"score":{"name":"#iv_speed","objective":"pokemon.temp"},"color":"light_purple"}]
 
 # Check wild test
 execute at @s as @e[type=cobblemon:pokemon,sort=nearest,limit=1] run function pokemon:utils/checks/check_wild
@@ -80,5 +78,5 @@ execute at @s as @e[type=cobblemon:pokemon,sort=nearest,limit=1] run function po
 execute if score #temp_legendary pokemon.temp matches 1 run tellraw @s ["",{"text":"Classification: ","color":"gold"},{"text":"★ LEGENDARY ★","color":"light_purple","bold":true}]
 execute if score #temp_legendary pokemon.temp matches 0 run tellraw @s ["",{"text":"Classification: ","color":"gold"},{"text":"Regular","color":"white"}]
 
-tellraw @s ["",{"text":"==============================","color":"yellow"}]
-function pokemon:debug/menu
+# Navigation
+tellraw @s ["\n",{"text":"[Back to Pokemon Library Debug Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 73"}}]

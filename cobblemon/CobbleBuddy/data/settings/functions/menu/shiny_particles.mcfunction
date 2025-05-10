@@ -1,7 +1,7 @@
-tellraw @s ["",{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"}]
+tellraw @s ["\n\n\n\n\n\n\n\n\n"]
 
 
-tellraw @s ["",{"text":"\n=== Shiny Particles Settings ===","color":"gold","bold":true}]
+tellraw @s ["\n",{"text":"=== Shiny Particles Settings ===","color":"gold","bold":true}]
 tellraw @s ["",{"text":"Customize your Shiny preferences:","color":"yellow"}]
 
 # shiny particles toggle

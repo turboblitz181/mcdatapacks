@@ -4,13 +4,19 @@
 # Created by KnightKehan.
 ##
 
-# Reset om spam te voorkomen
+# Reset to prevent spam
 scoreboard players set @s pokemenu 0
 scoreboard players set #page pokefinder.temp 8
 
-tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 8) ===","bold":true,"color":"aqua"}]
-tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
+# Clear chat space
+tellraw @s ["\n\n"]
 
+# Title
+tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 8) ===","bold":true,"color":"aqua"}]
+tellraw @s ["\n",{"text":"Click a Pokémon to track it:","color":"yellow"}]
+tellraw @s [""]
+
+# Pokémon List
 tellraw @s ["",{"text":"[Victreebel]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Grass/Poison","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 71"}}]
 tellraw @s ["",{"text":"[Tentacool]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Water/Poison","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 72"}}]
 tellraw @s ["",{"text":"[Tentacruel]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Water/Poison","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 73"}}]
@@ -22,4 +28,4 @@ tellraw @s ["",{"text":"[Rapidash]","color":"red","hoverEvent":{"action":"show_t
 tellraw @s ["",{"text":"[Slowpoke]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Water/Psychic","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 79"}}]
 tellraw @s ["",{"text":"[Slowbro]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Water/Psychic","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 80"}}]
 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 107"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 109"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}]
+tellraw @s ["\n",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 107"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 109"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}]

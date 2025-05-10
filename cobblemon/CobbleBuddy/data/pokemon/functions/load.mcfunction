@@ -14,5 +14,5 @@ data modify storage pokemon:temp {} merge value {legendary:0,dex_id:0,DisplayNam
 function pokemon:database/stats
 function pokemon:database/types
 
-# Module initialization message
-tellraw @a[tag=admin] ["",{"text":"[Pokémon Library]","color":"blue"},{"text":" Module initialized!","color":"green"}]
+# Check Core/Module Initialization
+scoreboard players set #library pokemon.init 1

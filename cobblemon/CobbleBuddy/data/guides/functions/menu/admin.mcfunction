@@ -1,5 +1,3 @@
-# tellraw @s ["",{"text":"\n"},{"text":"\n"}]
-
 # Title
 tellraw @s ["\n",{"text":"=== Admin Guide ===","bold":true,"color":"dark_red"}]
 

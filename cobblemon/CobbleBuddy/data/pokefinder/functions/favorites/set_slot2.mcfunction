@@ -10,8 +10,5 @@ execute unless score @s pf.tracking matches 1.. run tellraw @s ["",{"text":"Erro
 execute unless score @s pf.tracking matches 1.. run function pokefinder:favorites/manage_slots
 execute unless score @s pf.tracking matches 1.. run return 0
 
-# Confirm the action
-tellraw @s ["",{"text":"✓ ","bold":true,"color":"green"},{"text":"Favorite Slot 2 set to Pokémon #","color":"gold"},{"score":{"name":"@s","objective":"pf.tracking"},"color":"yellow"}]
-
 # Return to manage slots
 function pokefinder:favorites/manage_slots

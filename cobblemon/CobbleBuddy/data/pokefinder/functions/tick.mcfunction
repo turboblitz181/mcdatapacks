@@ -23,3 +23,7 @@ execute as @a[scores={poketrack=1..}] run scoreboard players set @s poketrack 0
 
 # === TRACKING PROCESS ===
 execute as @a[scores={pf.tracking_enabled=1,pf.tracking=1..}] at @s run function pokefinder:tracking/find
+
+# === DEBUGGING SYSTEM ===
+# Check Core/Module Initialization
+scoreboard players set #finder pf_tick 1

@@ -1,6 +1,9 @@
 # Count how many of each Pokémon type is nearby
 
-tellraw @s ["",{"text":"=== Pokémon Species Counts ===","color":"gold","bold":true}]
+# Clear chat space
+tellraw @s ["\n\n\n\n\n\n\n\n"]
+
+tellraw @s ["\n",{"text":"=== Pokémon Species Counts ===","color":"gold","bold":true}]
 
 # Reset counts
 scoreboard players reset * pf.temp
@@ -14,5 +17,5 @@ execute unless score #total_count pf.temp matches 1.. run tellraw @s ["",{"text"
 # Display the counts if found
 execute if score #total_count pf.temp matches 1.. run function pokefinder:debug/display_counts
 
-# Show menu
-function pokefinder:debug/menu
+# Navigation
+tellraw @s ["\n",{"text":"[Back to Pokefinder Debug Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 72"}}]

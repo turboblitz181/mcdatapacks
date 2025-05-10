@@ -1,4 +1,4 @@
-tellraw @s ["",{"text":"\n"},{"text":"\n"}]
+tellraw @s ["\n\n"]
 
 # Title
 tellraw @s ["\n",{"text":"=== Pokeball Changer ===","bold":true,"color":"red"}]

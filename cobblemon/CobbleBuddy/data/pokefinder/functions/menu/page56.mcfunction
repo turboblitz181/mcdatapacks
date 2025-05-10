@@ -4,13 +4,19 @@
 # Created by KnightKehan.
 ##
 
-# Reset om spam te voorkomen
+# Reset to prevent spam
 scoreboard players set @s pokemenu 0
 scoreboard players set #page pokefinder.temp 56
 
-tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 56) ===","bold":true,"color":"aqua"}]
-tellraw @s ["",{"text":"Click a Pokémon to track it:","color":"yellow"}]
+# Clear chat space
+tellraw @s ["\n\n"]
 
+# Title
+tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 56) ===","bold":true,"color":"aqua"}]
+tellraw @s ["\n",{"text":"Click a Pokémon to track it:","color":"yellow"}]
+tellraw @s [""]
+
+# Pokémon List
 tellraw @s ["",{"text":"[Sandile]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Ground/Dark","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 551"}}]
 tellraw @s ["",{"text":"[Krokorok]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Ground/Dark","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 552"}}]
 tellraw @s ["",{"text":"[Krookodile]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Ground/Dark","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 553"}}]
@@ -22,4 +28,4 @@ tellraw @s ["",{"text":"[Crustle]","color":"dark_green","hoverEvent":{"action":"
 tellraw @s ["",{"text":"[Scraggy]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Dark/Fighting","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 559"}}]
 tellraw @s ["",{"text":"[Scrafty]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Dark/Fighting","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 560"}}]
 
-tellraw @s ["",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 155"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 157"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}]
+tellraw @s ["\n",{"text":"[Previous Page]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 155"}},{"text":" | ","color":"gray"},{"text":"[Next Page]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 157"}},{"text":" | ","color":"gray"},{"text":"[Back to Main Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}]

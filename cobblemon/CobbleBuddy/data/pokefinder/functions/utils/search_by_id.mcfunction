@@ -3,7 +3,7 @@
 # 
 # Created by KnightKehan.
 ##
-tellraw @s ["",{"text":"\n"}]
+tellraw @s ["\n"]
 
 tellraw @s ["\n",{"text":"=== Search by ID ===","bold":true,"color":"aqua"}]
 

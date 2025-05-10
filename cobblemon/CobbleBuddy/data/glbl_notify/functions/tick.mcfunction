@@ -19,3 +19,6 @@ execute if score #debug_cooldown gn_timer matches 1.. run scoreboard players rem
 scoreboard players add #tick_counter gn_timer 1
 execute if score #tick_counter gn_timer matches 5.. run function glbl_notify:notifications/check_spawns
 execute if score #tick_counter gn_timer matches 5.. run scoreboard players set #tick_counter gn_timer 0
+
+# Check Core/Module Initialization
+scoreboard players set #notify gn_tick 1

@@ -17,3 +17,6 @@ execute if score timer sp_timer matches 5 as @e[tag=owned_shiny] on owner if ent
 execute as @e[tag=wild_shiny,predicate=shiny_particles:rand] at @s anchored eyes positioned ~ ~-0.25 ~ run playsound minecraft:entity.player.levelup master @a[scores={sp_sound=1},distance=..100] ~ ~ ~ 1 1.7 0.15
 
 execute if score timer sp_timer matches 10.. run scoreboard players set timer sp_timer 0
+
+# Check Core/Module Initialization
+scoreboard players set #shiny sp_tick 1

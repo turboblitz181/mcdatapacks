@@ -1,5 +1,9 @@
+# Clear chat space
+tellraw @s ["\n\n\n\n\n\n\n\n"]
+
+# Title
 tellraw @s ["\n",{"text":"=== DANGER ZONE ===","color":"dark_red","bold":true}]
-tellraw @s ["",{"text":"⚠ These actions are IRREVERSIBLE!","color":"red","bold":true}]
+tellraw @s ["\n",{"text":"⚠ These actions are IRREVERSIBLE!","color":"red","bold":true}]
 
 tellraw @s ["\n",{"text":"[Total Database Reset]","color":"dark_red","clickEvent":{"action":"run_command","value":"/trigger admin set 41"}}]
 tellraw @s ["",{"text":"[Remove All Entities]","color":"dark_red","clickEvent":{"action":"run_command","value":"/trigger admin set 45"}}]

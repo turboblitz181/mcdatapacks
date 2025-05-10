@@ -37,11 +37,6 @@ scoreboard players operation #temp_shiny gn_settings = #temp_shiny pokemon.temp
 function pokemon:utils/checks/check_legendary
 scoreboard players operation #temp_legendary gn_settings = #temp_legendary pokemon.temp
 
-# Debug toevoegen voor legendary check
-execute store result score #debug_id gn_settings run scoreboard players get #dex_id pokemon.temp
-execute if score #debug_verify_wild gn_settings matches 1 run tellraw @a ["ID: ",{"score":{"name":"#debug_id","objective":"gn_settings"}}]
-execute if score #debug_verify_wild gn_settings matches 1 run tellraw @a ["Legendary: ",{"score":{"name":"#temp_legendary","objective":"pokemon.temp"}}]
-
 # Send notification to the nearest player
 execute if score #temp_legendary gn_settings matches 1 if score #temp_shiny gn_settings matches 1 as @a[tag=gn_nearest,limit=1] at @s run function glbl_notify:notifications/notify_special
 execute if score #temp_legendary gn_settings matches 1 if score #temp_shiny gn_settings matches 0 as @a[tag=gn_nearest,limit=1] at @s run function glbl_notify:notifications/notify_legendary

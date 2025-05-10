@@ -39,5 +39,5 @@ scoreboard players set #debug_enabled gn_settings 0
 scoreboard players set #debug_cooldown gn_timer 0
 scoreboard players set #2 gn_settings 2
 
-# Module initialization message
-tellraw @a[tag=admin] ["",{"text":"[Global Notify]","color":"gold"},{"text":" Module initialized!","color":"green"}]
+# Check Core/Module Initialization
+scoreboard players set #notify gn_init 1

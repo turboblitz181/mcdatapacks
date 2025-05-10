@@ -16,3 +16,6 @@ tag @a[tag=egg_data_show] add egg_data_shown
 tag @a remove egg_data_show
 execute if score timer ed_timer matches 20.. run scoreboard players set timer ed_timer 0
 execute unless entity @a[tag=!egg_data_shown] run tag @a remove egg_data_shown
+
+# Check Core/Module Initialization
+scoreboard players set #egg ed_tick 1

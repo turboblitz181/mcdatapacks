@@ -1,4 +1,4 @@
-tellraw @s ["",{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"}]
+tellraw @s ["\n\n\n\n\n\n\n\n\n\n\n\n"]
 
 tellraw @s ["\n",{"text":"=== PokeFinder Status ===","bold":true,"color":"aqua"}]
 

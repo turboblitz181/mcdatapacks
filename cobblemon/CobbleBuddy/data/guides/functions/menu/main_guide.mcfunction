@@ -1,4 +1,4 @@
-tellraw @s ["",{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"},{"text":"\n"}]
+tellraw @s ["\n\n\n\n\n\n"]
 
 # Title
 tellraw @s ["\n",{"text":"=== Main Guide ===","bold":true,"color":"dark_aqua"}]
