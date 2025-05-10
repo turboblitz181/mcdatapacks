@@ -74,14 +74,27 @@ execute if score @s admin matches 722 run function pokefinder:debug/reset_distan
 execute if score @s admin matches 73 run function pokemon:debug/menu
 execute if score @s admin matches 731 run function pokemon:debug/debug_stats
 
-# Fossil Locator Debug (74)
+# Fossil Locator Debug (74, 741-744)
 execute if score @s admin matches 74 run function fossil_locator:debug/menu
+execute if score @s admin matches 741 run function fossil_locator:debug/force_locate
+execute if score @s admin matches 742 run function fossil_locator:debug/check_distance
+execute if score @s admin matches 743 run function fossil_locator:debug/get_locator
+execute if score @s admin matches 744 run function fossil_locator:debug/reset_scores
 
-# Egg Data Debug (75)
+# Egg Data Debug (75, 751-756)
 execute if score @s admin matches 75 run function egg_data:debug/menu
+execute if score @s admin matches 751 run function egg_data:debug/toggle_ability
+execute if score @s admin matches 752 run function egg_data:debug/toggle_ivs
+execute if score @s admin matches 753 run function egg_data:debug/toggle_nature
+execute if score @s admin matches 754 run function egg_data:debug/toggle_shiny
+execute if score @s admin matches 755 run function egg_data:debug/reset_lore
+execute if score @s admin matches 756 run function egg_data:debug/force_update
 
-# Pokeball Changer Debug (76)
+# Pokeball Changer Debug (76, 761-763)
 execute if score @s admin matches 76 run function pokeball_changer:debug/menu
+execute if score @s admin matches 761 run function pokeball_changer:debug/view_pokeballs
+execute if score @s admin matches 762 run function pokeball_changer:debug/get_proof
+execute if score @s admin matches 763 run function pokeball_changer:debug/reset_scores
 
 # Shiny Particles Debug (77, 771-773)
 execute if score @s admin matches 77 run function shiny_particles:debug/menu
