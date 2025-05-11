@@ -9,12 +9,11 @@ scoreboard players set @s pokemenu 0
 scoreboard players set #page pokefinder.temp 46
 
 # Clear chat space
-tellraw @s ["\n\n"]
+tellraw @s ["\n\n\n"]
 
 # Title
 tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 46) ===","bold":true,"color":"aqua"}]
 tellraw @s ["\n",{"text":"Click a Pokémon to track it:","color":"yellow"}]
-tellraw @s [""]
 
 # Pokémon List
 tellraw @s ["",{"text":"[Skorupi]","color":"dark_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Poison/Bug","color":"dark_purple"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 451"}}]

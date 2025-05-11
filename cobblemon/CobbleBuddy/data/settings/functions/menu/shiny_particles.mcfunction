@@ -1,8 +1,8 @@
-tellraw @s ["\n\n\n\n\n\n\n\n\n"]
+tellraw @s ["\n\n\n\n\n\n\n\n"]
 
 
 tellraw @s ["\n",{"text":"=== Shiny Particles Settings ===","color":"gold","bold":true}]
-tellraw @s ["",{"text":"Customize your Shiny preferences:","color":"yellow"}]
+tellraw @s ["\n",{"text":"Customize your Shiny preferences:","color":"yellow"}]
 
 # shiny particles toggle
 execute if score @s sp_particle matches 1 run tellraw @s ["",{"text":"[✨] ","color":"green","bold":true},{"text":"Particles: ","color":"white"},{"text":"ON","color":"green"},{"text":" [Disable]","color":"red","clickEvent":{"action":"run_command","value":"/trigger settings set -21"}}]

@@ -11,10 +11,10 @@ ideas/tasks:
 - update lag-friendly pokefinder - done
 - update pokefinder(connect via pokemon library) - kehan working on it
 - pokemon library - done
-- debug menu - kehan working on it
+- debug menu - done
 - Pokedex database splitting - done
 - fix issue in glbl notify - done
 - update admin nuke + uninstall list - kehan working on it
-- create guides - kehan/turbo working on it
-- create settings - kehan/turbo working on it
-- create admin guides - kehan/turbo working on it
+- create guides - done
+- create settings - done
+- create admin guides - done

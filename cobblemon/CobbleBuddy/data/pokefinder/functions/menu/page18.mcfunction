@@ -9,12 +9,11 @@ scoreboard players set @s pokemenu 0
 scoreboard players set #page pokefinder.temp 18
 
 # Clear chat space
-tellraw @s ["\n\n"]
+tellraw @s ["\n\n\n"]
 
 # Title
 tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 18) ===","bold":true,"color":"aqua"}]
 tellraw @s ["\n",{"text":"Click a Pokémon to track it:","color":"yellow"}]
-tellraw @s [""]
 
 # Pokémon List
 tellraw @s ["",{"text":"[Lanturn]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Water/Electric","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 171"}}]

@@ -1,12 +1,20 @@
-# Enable admin menu
+# Enable admin menu triggers
 scoreboard players enable @a[tag=admin] admin
+scoreboard players enable @a[tag=admin] admin.target
 
 # Count admins
 execute store result score #admin_count admin if entity @a[tag=admin]
 
-# Process admin menu trigger
+# Check admin IDs
+function main:admin/core/check_admin_id
+
+# Process admin menu trigger (voor hoofdmenu en selectiemenu)
 execute as @a[tag=admin,scores={admin=1..}] run function main:admin/handle/handle_admin
 execute as @a[scores={admin=1..}] run scoreboard players set @s admin 0
+
+# Process admin target trigger (voor daadwerkelijke revoke actie)
+execute as @a[tag=admin,scores={admin.target=1..}] run function main:admin/core/revoke_admin_action
+execute as @a[tag=admin,scores={admin.target=1..}] run scoreboard players reset @s admin.target
 
 # running other main functions if feature is enabled
 # Run GLBL first to ensure it processes new spawns before Pokefinder (must first always)

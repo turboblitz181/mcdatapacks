@@ -9,12 +9,11 @@ scoreboard players set @s pokemenu 0
 scoreboard players set #page pokefinder.temp 50
 
 # Clear chat space
-tellraw @s ["\n\n"]
+tellraw @s ["\n\n\n"]
 
 # Title
 tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 50) ===","bold":true,"color":"aqua"}]
 tellraw @s ["\n",{"text":"Click a Pokémon to track it:","color":"yellow"}]
-tellraw @s [""]
 
 # Pokémon List
 tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[Darkrai]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: Dark","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 491"}}]

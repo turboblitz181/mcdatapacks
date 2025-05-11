@@ -6,6 +6,11 @@ scoreboard objectives add toggled dummy
 
 # Initialize admin trigger
 scoreboard objectives add admin trigger "Admin Menu"
+scoreboard objectives add admin.target trigger "Admin Target"
+
+# Create admin ID system
+scoreboard objectives add admin.id dummy
+scoreboard players set #next_id admin.id 0
 
 # Initialize module states properly
 execute unless score glbl_notify enabled matches 0..1 run scoreboard players set glbl_notify enabled 0
@@ -42,11 +47,3 @@ scoreboard players set #system main.init 1
 
 # loaded message
 tellraw @a ["",{"text":"Loaded","color":"green"},{"text":" CobbleBuddy ","bold":true,"color":"dark_aqua"},{"text":"successfully!","color":"green"},{"text":"\n"},{"text":"Made by: ","color":"dark_aqua"},{"text":"turboblitz181","bold":true,"color":"#00FF88"},{"text":" & ","color":"dark_aqua"},{"text":"KnightKehan","bold":true,"color":"#1A892D"}]
-
-# scoreboard objectives add admin.uuid dummy
-# scoreboard objectives add admin.target dummy
-# scoreboard objectives add admin.temp dummy
-
-# Assign unique IDs to players
-# execute as @a unless score @s admin.uuid matches 0.. run scoreboard players add #next admin.uuid 1
-# execute as @a unless score @s admin.uuid matches 0.. run scoreboard players operation @s admin.uuid = #next admin.uuid

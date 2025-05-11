@@ -101,8 +101,10 @@ execute if score @s admin matches 77 run function shiny_particles:debug/menu
 
 # Admin Management (8, 81)
 execute if score @s admin matches 8 run function main:admin/core/admin_manager
-execute if score @s admin matches 81 run function main:admin/core/revoke_admin
+execute if score @s admin matches 81 run function main:admin/core/revoke_selection_menu
+
 
 # Debug System Status (91-92)
 execute if score @s admin matches 91 run function main:admin/debug/debug_load
 execute if score @s admin matches 92 run function main:admin/debug/debug_tick
+execute if score @s admin matches 93 run function main:admin/debug/debug_show_admin_ids

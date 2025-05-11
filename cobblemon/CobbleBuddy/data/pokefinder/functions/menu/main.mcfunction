@@ -8,7 +8,6 @@ scoreboard players set @s pokemenu 0
 
 tellraw @s ["\n",{"text":"=== Pokémon Tracker ===","bold":true,"color":"aqua"}]
 tellraw @s ["\n",{"text":"Browse pages:","color":"yellow"}]
-tellraw @s [""]
 
 tellraw @s ["",{"text":"[Page 1]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 101"}}]
 tellraw @s ["",{"text":"[Page 11]","color":"green","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 111"}}]
