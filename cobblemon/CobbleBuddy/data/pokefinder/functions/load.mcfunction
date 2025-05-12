@@ -52,6 +52,7 @@ execute as @a unless score @s fav2 matches 0.. run scoreboard players set @s fav
 execute as @a unless score @s fav3 matches 0.. run scoreboard players set @s fav3 0
 execute as @a unless score @s fav4 matches 0.. run scoreboard players set @s fav4 0
 execute as @a unless score @s fav5 matches 0.. run scoreboard players set @s fav5 0
+execute as @a unless score @s pf.temp matches 0.. run scoreboard players set @s pf.temp 0
 
 # === DEBUGGING SYSTEM ===
 # Check Core/Module Initialization
