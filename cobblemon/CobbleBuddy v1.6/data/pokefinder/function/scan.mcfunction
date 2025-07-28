@@ -1,0 +1,2 @@
+$execute as $(Name) if entity @s store result score @s find_count run execute at @s if entity @e[type=cobblemon:pokemon,nbt={Pokemon:{Species:"$(Pokemon)"}},distance=..100]
+$execute as $(Name) if entity @s store result score @s find_count run execute at @s as @e[type=cobblemon:pokemon,nbt={Pokemon:{Species:"$(Pokemon)"}},distance=..100] at @s run effect give @s glowing 1 1 true

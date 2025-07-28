@@ -1,0 +1,2 @@
+function pokefinder:setup
+function database:setup

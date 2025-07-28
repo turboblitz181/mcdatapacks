@@ -1,0 +1,1 @@
+execute as @a if data entity @s SelectedItem.components."minecraft:enchantments".levels."pokefinder:pokefinder" if entity @s[nbt={SelectedItem:{id:"minecraft:written_book"}}] run item replace entity @s weapon.mainhand with minecraft:writable_book[minecraft:enchantments={"levels":{"pokefinder:pokefinder":1}}]
