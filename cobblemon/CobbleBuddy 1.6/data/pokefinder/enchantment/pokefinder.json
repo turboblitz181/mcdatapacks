@@ -1,20 +1,21 @@
 {
-  "anvil_cost": 0,
-  "description": "",
+  "primary_items": "minecraft:writable_book",
+  "anvil_cost": 5,
+  "description": "pokefinder",
   "max_cost": {
-    "base": 0,
-    "per_level_above_first": 0
+    "base": 20,
+    "per_level_above_first": 1
   },
   "max_level": 1,
   "min_cost": {
-    "base": 0,
-    "per_level_above_first": 0
+    "base": 15,
+    "per_level_above_first": 1
   },
   "slots": [
     "mainhand"
   ],
   "supported_items": "minecraft:writable_book",
-  "weight": 1,
+  "weight": 10,
   "effects": {
     "minecraft:hit_block": [
       {
