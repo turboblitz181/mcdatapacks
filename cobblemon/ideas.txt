@@ -14,7 +14,7 @@ ideas/tasks:
 - debug menu - done
 - Pokedex database splitting - done
 - fix issue in glbl notify - done
-- update admin nuke + uninstall list - kehan working on it
+- update admin nuke + uninstall list - done
 - create guides - done
 - create settings - done
 - create admin guides - done
