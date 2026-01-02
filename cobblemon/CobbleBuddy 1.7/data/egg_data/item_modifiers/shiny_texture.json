@@ -1,0 +1,11 @@
+[
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{CustomModelData:1}",
+      "conditions": []
+    },
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{shiny_set:1b}"
+    }
+  ]

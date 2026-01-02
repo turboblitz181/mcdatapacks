@@ -9,7 +9,7 @@ ideas/tasks:
 - pokemon (list) - done
 - update main toggles for admin - done
 - update lag-friendly pokefinder - done
-- update pokefinder(connect via pokemon library) - kehan working on it
+- update pokefinder(connect via pokemon library) - done
 - pokemon library - done
 - debug menu - done
 - Pokedex database splitting - done

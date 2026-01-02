@@ -1,0 +1,92 @@
+[
+    {
+        "function": "minecraft:set_lore",
+        "entity": "this",
+        "lore": [
+            {
+                "text": "IVs: ",
+                "color": "#4b3588",
+                "bold": true
+            },
+            {
+                "text": "- HP: ",
+                "extra": [
+                    {
+                        "nbt": "hp",
+                        "storage": "egg_data:data",
+                        "color": "#ba0808"
+                    }
+                ],
+                "color": "#952323",
+                "bold": true
+            },
+            {
+                "text": "- ATK: ",
+                "extra": [
+                    {
+                        "nbt": "atk",
+                        "storage": "egg_data:data",
+                        "color": "#08ba4c"
+                    }
+                ],
+                "color": "#239525",
+                "bold": true
+            },
+            {
+                "text": "- Sp. ATK: ",
+                "extra": [
+                    {
+                        "nbt": "satk",
+                        "storage": "egg_data:data",
+                        "color": "#0bba08"
+                    }
+                ],
+                "color": "#369523",
+                "bold": true
+            },
+            {
+                "text": "- DEF: ",
+                "extra": [
+                    {
+                        "nbt": "def",
+                        "storage": "egg_data:data",
+                        "color": "#088dba"
+                    }
+                ],
+                "color": "#236395",
+                "bold": true
+            },
+            {
+                "text": "- Sp. DEF: ",
+                "extra": [
+                    {
+                        "nbt": "sdef",
+                        "storage": "egg_data:data",
+                        "color": "#08aeba"
+                    }
+                ],
+                "color": "#238795",
+                "bold": true
+            },
+            {
+                "text": "- SPEED: ",
+                "extra": [
+                    {
+                        "nbt": "speed",
+                        "storage": "egg_data:data",
+                        "color": "#ba08b4"
+                    }
+                ],
+                "color": "#95238b",
+                "bold": true
+            }
+        ],
+        "replace": false,
+        "conditions": []
+    },
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{ivs_set:1b}",
+        "conditions": []
+    }
+]

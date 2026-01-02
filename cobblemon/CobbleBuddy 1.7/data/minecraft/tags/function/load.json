@@ -1,5 +1,9 @@
 {
 	"values": [
-		"main:main_load"
+		"main:reset_init",
+		"main:main_load",
+		"pokemon:load",
+		"guides:load",
+		"settings:load"
 	]
 }

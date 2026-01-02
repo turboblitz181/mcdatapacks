@@ -1,5 +1,7 @@
 {
 	"values": [
-		"main:main_tick"
+		"main:main_tick",
+		"guides:tick",
+		"settings:tick"
 	]
 }
