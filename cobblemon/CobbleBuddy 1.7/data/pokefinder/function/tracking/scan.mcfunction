@@ -1,8 +1,3 @@
-##
-# tracking/scan.mcfunction - Main scan function
-# Optimized to use storage and reduce entity checks
-##
-
 # Reset cooldown for next scan
 scoreboard players operation @s pf_cooldown = #scan_interval pf_const
 

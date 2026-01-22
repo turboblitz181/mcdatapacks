@@ -9,8 +9,10 @@ scoreboard players reset #gender pokemon.temp
 scoreboard players reset #nature pokemon.temp
 scoreboard players reset #form pokemon.temp
 scoreboard players reset #is_wild pokemon.temp
-scoreboard players reset #is_shiny pokemon.temp
-scoreboard players reset #is_legendary pokemon.temp
+scoreboard players reset #temp_shiny pokemon.temp
+scoreboard players reset #temp_legendary pokemon.temp
+scoreboard players reset #temp_mythical pokemon.temp
+scoreboard players reset #temp_ultrabeast pokemon.temp
 
 # Reset storage
 data remove storage pokemon:temp {}

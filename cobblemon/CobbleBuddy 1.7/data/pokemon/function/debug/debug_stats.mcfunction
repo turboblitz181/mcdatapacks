@@ -69,8 +69,18 @@ execute unless score #temp_shiny pokemon.temp matches 1 run tellraw @s ["",{"tex
 
 # Get legendary status test
 execute at @s as @e[type=cobblemon:pokemon,sort=nearest,limit=1] run function pokemon:utils/checks/check_legendary
-execute if score #temp_legendary pokemon.temp matches 1 run tellraw @s ["",{"text":"Legendary: ","color":"gold"},{"text":"⭐ YES","color":"light_purple","bold":true}]
+execute if score #temp_legendary pokemon.temp matches 1 run tellraw @s ["",{"text":"Legendary: ","color":"gold"},{"text":"⭐ YES","color":"dark_purple","bold":true}]
 execute unless score #temp_legendary pokemon.temp matches 1 run tellraw @s ["",{"text":"Legendary: ","color":"gold"},{"text":"No","color":"gray"}]
+
+# Get mythical status test
+execute at @s as @e[type=cobblemon:pokemon,sort=nearest,limit=1] run function pokemon:utils/checks/check_mythical
+execute if score #temp_mythical pokemon.temp matches 1 run tellraw @s ["",{"text":"Mythical: ","color":"gold"},{"text":"⭐ YES","color":"light_purple","bold":true}]
+execute unless score #temp_mythical pokemon.temp matches 1 run tellraw @s ["",{"text":"Mythical: ","color":"gold"},{"text":"No","color":"gray"}]
+
+# Get ultra beast status test
+execute at @s as @e[type=cobblemon:pokemon,sort=nearest,limit=1] run function pokemon:utils/checks/check_ultra_beast
+execute if score #temp_ultrabeast pokemon.temp matches 1 run tellraw @s ["",{"text":"Ultra Beast: ","color":"gold"},{"text":"⭐ YES","color":"aqua","bold":true}]
+execute unless score #temp_ultrabeast pokemon.temp matches 1 run tellraw @s ["",{"text":"Ultra Beast: ","color":"gold"},{"text":"No","color":"gray"}]
 
 # Get wild/owned status test
 execute at @s as @e[type=cobblemon:pokemon,sort=nearest,limit=1] run function pokemon:utils/checks/check_wild

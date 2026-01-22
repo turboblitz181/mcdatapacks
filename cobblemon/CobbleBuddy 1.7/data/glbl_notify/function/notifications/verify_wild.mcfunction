@@ -1,8 +1,3 @@
-##
-# verify_wild.mcfunction
-# Using pokemon utils for all checks
-##
-
 # Prevent duplicate notifications
 execute if entity @s[tag=gn_seen] run return 0
 
@@ -27,11 +22,17 @@ tag @p add gn_nearest
 # Check shiny and legendary using utils
 function pokemon:utils/checks/check_shiny
 function pokemon:utils/checks/check_legendary
+function pokemon:utils/checks/check_mythical
+function pokemon:utils/checks/check_ultra_beast
 
 # Send correct notification based on checks
-execute if score #temp_shiny pokemon.temp matches 1 if score #temp_legendary pokemon.temp matches 1 run function glbl_notify:notifications/notify_special with storage gn:temp pokemon
-execute if score #temp_shiny pokemon.temp matches 1 if score #temp_legendary pokemon.temp matches 0 run function glbl_notify:notifications/notify_shiny with storage gn:temp pokemon
-execute if score #temp_shiny pokemon.temp matches 0 if score #temp_legendary pokemon.temp matches 1 run function glbl_notify:notifications/notify_legendary with storage gn:temp pokemon
+execute if score #temp_shiny pokemon.temp matches 1 if score #temp_legendary pokemon.temp matches 0 if score #temp_mythical pokemon.temp matches 0 if score #temp_ultrabeast pokemon.temp matches 0 run function glbl_notify:notifications/notify_shiny with storage gn:temp pokemon
+execute if score #temp_shiny pokemon.temp matches 0 if score #temp_legendary pokemon.temp matches 1 if score #temp_mythical pokemon.temp matches 0 if score #temp_ultrabeast pokemon.temp matches 0 run function glbl_notify:notifications/notify_legendary with storage gn:temp pokemon
+execute if score #temp_shiny pokemon.temp matches 1 if score #temp_legendary pokemon.temp matches 1 if score #temp_mythical pokemon.temp matches 0 if score #temp_ultrabeast pokemon.temp matches 0 run function glbl_notify:notifications/notify_special_legendary with storage gn:temp pokemon
+execute if score #temp_shiny pokemon.temp matches 0 if score #temp_mythical pokemon.temp matches 1 if score #temp_legendary pokemon.temp matches 0 if score #temp_ultrabeast pokemon.temp matches 0 run function glbl_notify:notifications/notify_mythical with storage gn:temp pokemon
+execute if score #temp_shiny pokemon.temp matches 1 if score #temp_mythical pokemon.temp matches 1 if score #temp_legendary pokemon.temp matches 0 if score #temp_ultrabeast pokemon.temp matches 0 run function glbl_notify:notifications/notify_special_mythical with storage gn:temp pokemon
+execute if score #temp_shiny pokemon.temp matches 0 if score #temp_ultrabeast pokemon.temp matches 1 if score #temp_legendary pokemon.temp matches 0 if score #temp_mythical pokemon.temp matches 0 run function glbl_notify:notifications/notify_ultra_beast with storage gn:temp pokemon
+execute if score #temp_shiny pokemon.temp matches 1 if score #temp_ultrabeast pokemon.temp matches 1 if score #temp_legendary pokemon.temp matches 0 if score #temp_mythical pokemon.temp matches 0 run function glbl_notify:notifications/notify_special_ultra_beast with storage gn:temp pokemon
 
 # Tag as seen AFTER checking
 tag @s add gn_seen

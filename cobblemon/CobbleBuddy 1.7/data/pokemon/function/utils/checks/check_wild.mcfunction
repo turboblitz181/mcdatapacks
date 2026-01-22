@@ -1,7 +1,3 @@
-##
-# check_wild.mcfunction
-##
-
 # Reset
 scoreboard players set #is_wild pokemon.temp 0
 

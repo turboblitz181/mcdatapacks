@@ -17,8 +17,8 @@ tellraw @s ["\n",{"text":"Click a Pokémon to track it:","color":"yellow"}]
 
 # Pokémon List
 tellraw @s ["",{"text":"[Pyukumuku]","color":"blue","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Water","color":"blue"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 771"}}]
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[Type: Null]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: Normal","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 772"}}]
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[Silvally]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: Normal","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 773"}}]
+tellraw @s ["",{"text":"♦ ","color":"dark_purple","bold":true},{"text":"[Type: Null]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: Normal","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 772"}}]
+tellraw @s ["",{"text":"♦ ","color":"dark_purple","bold":true},{"text":"[Silvally]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nType: Normal","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 773"}}]
 tellraw @s ["",{"text":"[Minior]","color":"gold","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Rock/Flying","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 774"}}]
 tellraw @s ["",{"text":"[Komala]","color":"gray","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Normal","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 775"}}]
 tellraw @s ["",{"text":"[Turtonator]","color":"red","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Fire/Dragon","color":"red"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 776"}}]

@@ -16,7 +16,7 @@ tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 26) ===","bold":true,"color
 tellraw @s ["\n",{"text":"Click a Pokémon to track it:","color":"yellow"}]
 
 # Pokémon List
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[Celebi]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nTypes: Psychic/Grass","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 251"}}]
+tellraw @s ["",{"text":"👑 ","color":"light_purple","bold":true},{"text":"[Celebi]","color":"light_purple","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nTypes: Psychic/Grass","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 251"}}]
 tellraw @s ["",{"text":"[Treecko]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Grass","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 252"}}]
 tellraw @s ["",{"text":"[Grovyle]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Grass","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 253"}}]
 tellraw @s ["",{"text":"[Sceptile]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Type: Grass","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 254"}}]

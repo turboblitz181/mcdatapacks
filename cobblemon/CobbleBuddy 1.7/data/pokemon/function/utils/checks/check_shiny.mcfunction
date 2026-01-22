@@ -1,7 +1,3 @@
-##
-# check_shiny.mcfunction
-##
-
 # Reset
 scoreboard players set #temp_shiny pokemon.temp 0
 

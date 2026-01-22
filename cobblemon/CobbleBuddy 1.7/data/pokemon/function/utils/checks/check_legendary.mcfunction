@@ -1,7 +1,3 @@
-##
-# check_legendary.mcfunction - Fixed ID passing
-##
-
 # Reset legendary status
 scoreboard players set #temp_legendary pokemon.temp 0
 

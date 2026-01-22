@@ -1,9 +1,3 @@
-##
-# tracking/scan_gen.mcfunction - Macro function for scanning
-# Uses storage to check for specific species
-# $(species) - cobblemon:bulbasaur format
-##
-
 # First, check if there are ANY matching Pokemon
 $execute store result score #temp_count pf_temp run execute if entity @e[type=cobblemon:pokemon,distance=..128,nbt={Pokemon:{Species:"$(species)",PokemonOriginalTrainerType:"NONE"}}]
 

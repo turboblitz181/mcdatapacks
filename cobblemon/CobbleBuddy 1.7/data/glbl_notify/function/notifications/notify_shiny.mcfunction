@@ -1,8 +1,3 @@
-##
-# notify_shiny.mcfunction
-# Send notification for shiny Pokemon
-##
-
 # Chat message
 $tellraw @a[scores={gn_chat=1}] ["",{"text":"✨ ","color":"gold","bold":true},{"text":"SHINY ","color":"gold","bold":true},{"text":"$(species)","color":"yellow","bold":true},{"text":" appeared near ","color":"white"},{"selector":"@a[tag=gn_nearest]","color":"aqua"},{"text":" at ","color":"white"},{"text":"$(x), $(y), $(z)","color":"green"}]
 

@@ -1,7 +1,3 @@
-##
-# tracking/calc_distance.mcfunction - Calculate distance to nearest Pokemon
-##
-
 # Safety check - if no Pokemon tagged, set distance to 999
 execute unless entity @e[type=cobblemon:pokemon,tag=pf_match] run scoreboard players set @s pf_distance 999
 execute unless entity @e[type=cobblemon:pokemon,tag=pf_match] run execute store result storage pf:temp distance int 1 run scoreboard players get @s pf_distance

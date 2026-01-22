@@ -16,7 +16,7 @@ tellraw @s ["\n",{"text":"=== Pokémon Tracker (Page 73) ===","bold":true,"color
 tellraw @s ["\n",{"text":"Click a Pokémon to track it:","color":"yellow"}]
 
 # Pokémon List
-tellraw @s ["",{"text":"★ ","color":"gold","bold":true},{"text":"[Volcanion]","color":"red","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nTypes: Fire/Water","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 721"}}]
+tellraw @s ["",{"text":"👑 ","color":"light_purple","bold":true},{"text":"[Volcanion]","color":"red","hoverEvent":{"action":"show_text","contents":["",{"text":"Legendary Pokémon\nTypes: Fire/Water","color":"gold"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 721"}}]
 tellraw @s ["",{"text":"[Rowlet]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Grass/Flying","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 722"}}]
 tellraw @s ["",{"text":"[Dartrix]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Grass/Flying","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 723"}}]
 tellraw @s ["",{"text":"[Decidueye]","color":"green","hoverEvent":{"action":"show_text","contents":["",{"text":"Types: Grass/Ghost","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger poketrack set 724"}}]

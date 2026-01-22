@@ -1,8 +1,3 @@
-##
-# tick.mcfunction - Main tick handler
-# Optimized with cooldown system to reduce lag
-##
-
 # === TRIGGER ACTIVATION ===
 scoreboard players enable @a poketrack
 scoreboard players enable @a pokemenu
@@ -31,8 +26,6 @@ execute as @a[scores={pokemenu=..-1}] run scoreboard players set @s pokemenu 0
 execute as @a[scores={poketrack=1..}] run scoreboard players set @s poketrack 0
 
 # === OPTIMIZED TRACKING PROCESS ===
-# Only scan when: enabled + tracking something + cooldown expired
-# Cooldown reduces from scanning every tick to every N ticks
 execute as @a[scores={pf_enabled=1,pf_tracking=1..}] run scoreboard players remove @s[scores={pf_cooldown=1..}] pf_cooldown 1
 execute as @a[scores={pf_enabled=1,pf_tracking=1..,pf_cooldown=0}] at @s run function pokefinder:tracking/scan
 

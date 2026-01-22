@@ -1,8 +1,3 @@
-##
-# check_spawns.mcfunction
-# Optimized for Minecraft 1.21.1
-##
-
 # Check cooldown first
 execute if score #notify_cooldown gn_timer matches 1.. run return 0
 

@@ -1,8 +1,3 @@
-##
-# load.mcfunction - Initialize PokeFinder
-# Optimized version with book support
-##
-
 # === CORE SCOREBOARD SYSTEM ===
 scoreboard objectives add pf_tracking dummy "Pokemon Tracking ID"
 scoreboard objectives add pf_enabled dummy "Tracking Enabled"
