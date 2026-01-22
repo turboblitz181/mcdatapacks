@@ -6,7 +6,13 @@
 scoreboard players operation @s pf_tracking = @s poketrack
 
 # Get Pokemon info
-scoreboard players operation #current_id pf_temp = @s pf_tracking
+scoreboard players operation #current_id pf_temp = @s poketrack
+execute store result storage pokemon:temp dex_id int 1 run scoreboard players get @s poketrack
+function pokemon:utils/core/id_to_species
+function pokemon:database/id_to_display
+data modify storage pf:temp species set from storage pokemon:temp species
+data modify storage pf:temp DisplayName set from storage pokemon:temp DisplayName
+scoreboard players operation @s pf_tracking = @s poketrack
 function pokefinder:tracking/get_name
 
 # Display confirmation

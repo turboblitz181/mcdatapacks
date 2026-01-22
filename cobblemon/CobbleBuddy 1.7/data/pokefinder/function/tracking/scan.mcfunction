@@ -17,11 +17,6 @@ data modify storage pf:temp DisplayName set from storage pokemon:temp DisplayNam
 scoreboard players set @s pf_shiny_count 0
 scoreboard players set @s pf_find_count 0
 
-# Get species info using pokefinder's own system (reliable)
-scoreboard players operation #current_id pf_temp = @s pf_tracking
-function pokefinder:tracking/get_name
-function pokefinder:tracking/get_species
-
 # Route to generation-specific scan
 execute if score #current_id pf_temp matches 1..151 run function pokefinder:tracking/scan_gen with storage pf:temp
 execute if score #current_id pf_temp matches 152..251 run function pokefinder:tracking/scan_gen with storage pf:temp
