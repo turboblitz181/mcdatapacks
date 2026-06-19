@@ -98,5 +98,5 @@ execute if score #dex_id pokemon.temp matches 246 run data modify storage pokemo
 execute if score #dex_id pokemon.temp matches 247 run data modify storage pokemon:temp species set value "cobblemon:pupitar"
 execute if score #dex_id pokemon.temp matches 248 run data modify storage pokemon:temp species set value "cobblemon:tyranitar"
 execute if score #dex_id pokemon.temp matches 249 run data modify storage pokemon:temp species set value "cobblemon:lugia"
-execute if score #dex_id pokemon.temp matches 250 run data modify storage pokemon:temp species set value "cobblemon:ho-oh"
+execute if score #dex_id pokemon.temp matches 250 run data modify storage pokemon:temp species set value "cobblemon:hooh"
 execute if score #dex_id pokemon.temp matches 251 run data modify storage pokemon:temp species set value "cobblemon:celebi"

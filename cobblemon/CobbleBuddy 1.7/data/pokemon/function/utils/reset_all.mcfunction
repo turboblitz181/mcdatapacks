@@ -13,6 +13,7 @@ scoreboard players reset #temp_shiny pokemon.temp
 scoreboard players reset #temp_legendary pokemon.temp
 scoreboard players reset #temp_mythical pokemon.temp
 scoreboard players reset #temp_ultrabeast pokemon.temp
+scoreboard players reset #temp_paradoxlegendary pokemon.temp
 
 # Reset storage
 data remove storage pokemon:temp {}

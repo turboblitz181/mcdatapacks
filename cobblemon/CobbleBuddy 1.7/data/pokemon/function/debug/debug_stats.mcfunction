@@ -82,6 +82,11 @@ execute at @s as @e[type=cobblemon:pokemon,sort=nearest,limit=1] run function po
 execute if score #temp_ultrabeast pokemon.temp matches 1 run tellraw @s ["",{"text":"Ultra Beast: ","color":"gold"},{"text":"⭐ YES","color":"aqua","bold":true}]
 execute unless score #temp_ultrabeast pokemon.temp matches 1 run tellraw @s ["",{"text":"Ultra Beast: ","color":"gold"},{"text":"No","color":"gray"}]
 
+# Get paradox legendary status test
+execute at @s as @e[type=cobblemon:pokemon,sort=nearest,limit=1] run function pokemon:utils/checks/check_paradox_legendary
+execute if score #temp_paradoxlegendary pokemon.temp matches 1 run tellraw @s ["",{"text":"Paradox Legendary: ","color":"gold"},{"text":"⭐ YES","color":"dark_green","bold":true}]
+execute unless score #temp_paradoxlegendary pokemon.temp matches 1 run tellraw @s ["",{"text":"Paradox Legendary: ","color":"gold"},{"text":"No","color":"gray"}]
+
 # Get wild/owned status test
 execute at @s as @e[type=cobblemon:pokemon,sort=nearest,limit=1] run function pokemon:utils/checks/check_wild
 execute if score #is_wild pokemon.temp matches 1 run tellraw @s ["",{"text":"Owned: ","color":"gold"},{"text":"Wild","color":"red"}]
