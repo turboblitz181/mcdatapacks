@@ -1,0 +1,29 @@
+{
+  "id": "certus_harverster",
+  "enabled": true,
+  "cooldown": 0,
+  "cooldown_scope": "PER_ENTITY",
+  "requirements": {
+    "types": [
+      "steel"
+    ]
+  },
+  "components": [
+    {
+      "type": "cobbleworkers:navigation",
+      "target": {
+        "block": "ae2:quartz_cluster"
+      }
+    },
+    {
+      "type": "cobbleworkers:loot_generation",
+      "context": "BLOCK_BREAK"
+    },
+    {
+      "type": "cobbleworkers:mutate_block",
+      "replacement": {
+        "block": "minecraft:air"
+      }
+    }
+  ]
+}
