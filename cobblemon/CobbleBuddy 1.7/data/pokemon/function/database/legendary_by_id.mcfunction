@@ -5,7 +5,7 @@ data modify storage pokemon:temp legendary set value 0
 execute if score #dex_id pokemon.temp matches 144..146 run data modify storage pokemon:temp legendary set value 1
 execute if score #dex_id pokemon.temp matches 150 run data modify storage pokemon:temp legendary set value 1
 
-# Gen 2 Legendaries (243-235, 249-250)
+# Gen 2 Legendaries (243-245, 249-250)
 execute if score #dex_id pokemon.temp matches 243..245 run data modify storage pokemon:temp legendary set value 1
 execute if score #dex_id pokemon.temp matches 249..250 run data modify storage pokemon:temp legendary set value 1
 

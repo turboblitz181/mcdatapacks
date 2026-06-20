@@ -19,7 +19,7 @@ execute store result storage gn:temp pokemon.z int 1 run data get entity @s Pos[
 # Find nearest player
 tag @p add gn_nearest
 
-# Check shiny and legendary using utils
+# Check shiny and unique pokemons using utils
 function pokemon:utils/checks/check_shiny
 function pokemon:utils/checks/check_legendary
 function pokemon:utils/checks/check_mythical

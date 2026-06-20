@@ -1,7 +1,7 @@
 # Chat message
 $tellraw @a[scores={gn_chat=1}] ["",{"text":"✨","color":"gold","bold":true},{"text":"👾 ","color":"aqua","bold":true},{"text":"SHINY ","color":"gold","bold":true},{"text":"ULTRA BEAST ","color":"aqua","bold":true},{"text":"$(species)","color":"red","bold":true},{"text":" appeared near ","color":"white"},{"selector":"@a[tag=gn_nearest]","color":"aqua"},{"text":" at ","color":"white"},{"text":"$(x), $(y), $(z)","color":"green"},{"text":"!","color":"gold","bold":true}]
 
-# Title - Mixed purple and gold
+# Title
 title @a[scores={gn_title=1}] title [{"text":"✨","color":"gold","bold":true},{"text":"👾","color":"aqua","bold":true},{"text":" SHINY ","color":"gold","bold":true},{"text":"ULTRA BEAST","color":"aqua","bold":true},{"text":" 👾","color":"aqua","bold":true},{"text":"✨","color":"gold","bold":true}]
 $title @a[scores={gn_title=1}] subtitle {"text":"$(species)","color":"red","bold":true}
 
