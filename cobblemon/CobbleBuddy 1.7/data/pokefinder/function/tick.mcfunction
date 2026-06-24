@@ -3,7 +3,7 @@ scoreboard players enable @a poketrack
 scoreboard players enable @a pokemenu
 
 # === INITIALIZE NEW PLAYERS ===
-execute as @a unless score @s pf_enabled matches 0..1 run scoreboard players set @s pf_enabled 1
+execute as @a unless score @s pf_enabled matches 0..1 run scoreboard players set @s pf_enabled 0
 execute as @a unless score @s pf_tracking matches 0.. run scoreboard players set @s pf_tracking 0
 execute as @a unless score @s pf_cooldown matches 0.. run scoreboard players set @s pf_cooldown 0
 execute as @a unless score @s pf_fav_slot matches 0.. run scoreboard players set @s pf_fav_slot 0
