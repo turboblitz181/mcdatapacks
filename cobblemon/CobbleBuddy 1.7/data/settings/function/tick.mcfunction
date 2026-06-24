@@ -60,5 +60,3 @@ execute as @a[scores={settings=-4011}] run function settings:handlers/pokefinder
 execute as @a[scores={settings=..-1}] run scoreboard players set @s settings 0
 execute as @a[scores={settings=1..}] run scoreboard players set @s settings 0
 
-# Reset trigger
-scoreboard players set @a settings 0
