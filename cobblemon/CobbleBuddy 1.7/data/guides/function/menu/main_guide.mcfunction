@@ -1,4 +1,4 @@
-tellraw @s ["\n\n\n\n\n\n"]
+tellraw @s ["\n\n\n\n"]
 
 # Title
 tellraw @s ["\n",{"text":"=== Main Guide ===","bold":true,"color":"dark_aqua"}]
@@ -7,7 +7,9 @@ tellraw @s ["\n",{"text":"=== Main Guide ===","bold":true,"color":"dark_aqua"}]
 tellraw @s ["\n",{"text":"CobbleBuddy Features:","color":"yellow"}]
 tellraw @s ["",{"text":"• Track and find specific Pokémon","color":"white"}]
 tellraw @s ["",{"text":"• Get notified of special spawns","color":"white"}]
-tellraw @s ["",{"text":"• Manage eggs and poké balls","color":"white"}]
+tellraw @s ["",{"text":"• Read eggs data","color":"white"}]
+tellraw @s ["",{"text":"• Manage poké balls","color":"white"}]
+tellraw @s ["",{"text":"• View your earned gym badges","color":"white"}]
 
 # Settings access
 tellraw @s ["\n",{"text":"Configure Modules:","color":"gold"}]

@@ -1,1 +1,0 @@
-$data modify storage cobblebuddy:tempdata pokemonname set value "cobblemon:$(pokemonname)"

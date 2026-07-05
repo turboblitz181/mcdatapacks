@@ -1,15 +1,16 @@
-tellraw @s ["\n\n\n\n\n\n\n\n\n\n\n"]
+tellraw @s ["\n\n\n\n\n\n\n\n"]
+tellraw @s ["",{"text":"=== PokeFinder Settings ===","color":"dark_aqua","bold":true}]
+tellraw @s [""]
+tellraw @s ["",{"text":"Display Options:","color":"yellow"}]
+tellraw @s [""]
 
-# Title
-tellraw @s ["\n",{"text":"=== PokeFinder Settings ===","bold":true,"color":"aqua"}]
+# Tracking toggle
+execute if score @s pf_enabled matches 1 run tellraw @s ["",{"text":"[✓] ","color":"green","bold":true},{"text":"Tracking Enabled","color":"green","clickEvent":{"action":"run_command","value":"/trigger settings set -11"},"hoverEvent":{"action":"show_text","contents":"Click to disable"}}]
+execute if score @s pf_enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red","bold":true},{"text":"Tracking Disabled","color":"red","clickEvent":{"action":"run_command","value":"/trigger settings set -11"},"hoverEvent":{"action":"show_text","contents":"Click to enable"}}]
 
-# Settings toggles
-tellraw @s ["\n",{"text":"Display Options:","color":"gold"}]
+tellraw @s [""]
+tellraw @s ["",{"text":"� Quick Search: ","color":"aqua"},{"text":"Back to PokeFinder → Quick Search","color":"gray"}]
+tellraw @s ["",{"text":"📋 Direct Command: ","color":"aqua"},{"text":"/trigger poketrack set <ID>","color":"gray"}]
 
-# Tracking Toggle
-execute if score @s pf.tracking_enabled matches 1 run tellraw @s ["",{"text":"Tracking Display: ","color":"yellow"},{"text":"ON ✓","color":"green","bold":true},{"text":" [Click to Disable]","color":"red","clickEvent":{"action":"run_command","value":"/trigger settings set -31"}}]
-execute unless score @s pf.tracking_enabled matches 1 run tellraw @s ["",{"text":"Tracking Display: ","color":"yellow"},{"text":"OFF ✗","color":"red","bold":true},{"text":" [Click to Enable]","color":"green","clickEvent":{"action":"run_command","value":"/trigger settings set -31"}}]
-
-# Navigation buttons
 tellraw @s ["\n",{"text":"[Back to PokeFinder]","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 1"}}]
 tellraw @s ["",{"text":"[Back to Settings]","color":"green","clickEvent":{"action":"run_command","value":"/trigger settings set 1"}}]

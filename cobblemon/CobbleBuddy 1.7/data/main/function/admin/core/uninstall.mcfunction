@@ -115,16 +115,9 @@ scoreboard players reset #modified pokemon.temp
 # Add any egg data specific objectives here
 
 # ==========================================
-# FOSSIL LOCATOR MODULE SCOREBOARDS
+# BADGES MODULE SCOREBOARDS
 # ==========================================
-scoreboard objectives remove locator_used
-scoreboard objectives remove fossil_distance
-
-# ==========================================
-# POKEBALL CHANGER MODULE SCOREBOARDS
-# ==========================================
-scoreboard objectives remove poke_slot
-scoreboard objectives remove ball_type
+# Add any badges specific objectives here
 
 # Clear data storage
 data remove storage glbl_notify:temp

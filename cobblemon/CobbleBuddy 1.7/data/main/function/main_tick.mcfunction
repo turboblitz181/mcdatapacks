@@ -24,16 +24,13 @@ execute as @a[tag=admin,scores={admin.target=1..}] run scoreboard players reset 
 function database:detect_new_player
 function database:database_init_loop
 
-# PokeFinder system
-function pokefinder:pokefinder_item/convert_written_book
-
 # Module ticks (only if enabled)
 execute if score glbl_notify enabled matches 1 run function glbl_notify:tick
 execute if score pokefinder enabled matches 1 run function pokefinder:tick
 execute if score egg_data enabled matches 1 run function egg_data:tick
 execute if score shiny_particles enabled matches 1 run function shiny_particles:tick
+execute if score badges enabled matches 1 run function badges:tick
 
 # Settings and guides
 function settings:tick
 function guides:tick
-

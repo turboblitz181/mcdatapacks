@@ -7,4 +7,4 @@ execute if score @s sp_sync matches 0 run playsound minecraft:ui.button.click pl
 execute if score @s sp_sync matches 1 run playsound minecraft:ui.button.click player @s ~ ~ ~ 0.5 1.2
 
 # Return to settings menu
-function settings:handlers/shiny_particles/main
+function settings:menu/shiny_particles

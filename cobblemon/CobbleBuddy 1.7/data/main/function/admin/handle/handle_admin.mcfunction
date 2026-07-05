@@ -39,22 +39,22 @@ execute if score @s admin matches 46 run function main:admin/reset/execute_remov
 execute if score @s admin matches 47 run function main:admin/reset/confirm_pokemon_db_reset
 execute if score @s admin matches 48 run function main:admin/reset/reset_database
 
-# Module toggles (5, 51-55, 61-65)
+# Module toggles (5, 51-52/54/56, 61-62/64/66)
 execute if score @s admin matches 5 run function main:admin/core/module_menu
+
 # Module toggles ON
 execute if score @s admin matches 51 run function main:toggles/pokefinder/on
 execute if score @s admin matches 52 run function main:toggles/glbl_notify/on
-execute if score @s admin matches 53 run function main:toggles/fossil_locator/on
-execute if score @s admin matches 54 run function main:toggles/egg_data/on
-execute if score @s admin matches 55 run function main:toggles/pokeball_changer/on
-execute if score @s admin matches 56 run function main:toggles/shiny_particles/on
+execute if score @s admin matches 53 run function main:toggles/egg_data/on
+execute if score @s admin matches 54 run function main:toggles/shiny_particles/on
+execute if score @s admin matches 55 run function main:toggles/badges/on
+
 # Module toggles OFF
 execute if score @s admin matches 61 run function main:toggles/pokefinder/off
 execute if score @s admin matches 62 run function main:toggles/glbl_notify/off
-execute if score @s admin matches 63 run function main:toggles/fossil_locator/off
-execute if score @s admin matches 64 run function main:toggles/egg_data/off
-execute if score @s admin matches 65 run function main:toggles/pokeball_changer/off
-execute if score @s admin matches 66 run function main:toggles/shiny_particles/off
+execute if score @s admin matches 63 run function main:toggles/egg_data/off
+execute if score @s admin matches 64 run function main:toggles/shiny_particles/off
+execute if score @s admin matches 65 run function main:toggles/badges/off
 
 # Debug Menu navigation (7, 71-77)
 execute if score @s admin matches 7 run function main:admin/debug/menu
@@ -72,15 +72,6 @@ execute if score @s admin matches 722 run function pokefinder:debug/reset_distan
 execute if score @s admin matches 73 run function pokemon:debug/menu
 execute if score @s admin matches 731 run function pokemon:debug/debug_stats
 
-# Module debug handlers disabled - debug folders don't exist:
-
-# Fossil Locator Debug (74, 741-744)
-# execute if score @s admin matches 74 run function fossil_locator:debug/menu
-# execute if score @s admin matches 741 run function fossil_locator:debug/force_locate
-# execute if score @s admin matches 742 run function fossil_locator:debug/check_distance
-# execute if score @s admin matches 743 run function fossil_locator:debug/get_locator
-# execute if score @s admin matches 744 run function fossil_locator:debug/reset_scores
-
 # Egg Data Debug (75, 751-756)
 # execute if score @s admin matches 75 run function egg_data:debug/menu
 # execute if score @s admin matches 751 run function egg_data:debug/toggle_ability
@@ -90,12 +81,6 @@ execute if score @s admin matches 731 run function pokemon:debug/debug_stats
 # execute if score @s admin matches 755 run function egg_data:debug/reset_lore
 # execute if score @s admin matches 756 run function egg_data:debug/force_update
 
-# Pokeball Changer Debug (76, 761-763)
-# execute if score @s admin matches 76 run function pokeball_changer:debug/menu
-# execute if score @s admin matches 761 run function pokeball_changer:debug/view_pokeballs
-# execute if score @s admin matches 762 run function pokeball_changer:debug/get_proof
-# execute if score @s admin matches 763 run function pokeball_changer:debug/reset_scores
-
 # Shiny Particles Debug (77, 771-773)
 # execute if score @s admin matches 77 run function shiny_particles:debug/menu
 
@@ -103,6 +88,16 @@ execute if score @s admin matches 731 run function pokemon:debug/debug_stats
 execute if score @s admin matches 8 run function main:admin/core/admin_manager
 execute if score @s admin matches 81 run function main:admin/core/revoke_selection_menu
 
+# Gym Leader Management (6, 69, 600-699)
+execute if score @s admin matches 6 run function badges:admin/menu
+execute if score @s admin matches 69 run function badges:admin/handle_action
+execute if score @s admin matches 600..699 run function badges:admin/handle_action
+
+# Badge Removal / Full Reset / Give a Badge
+execute if score @s admin matches 70 run function badges:admin/handle_action
+execute if score @s admin matches 950..953 run function badges:admin/handle_action
+execute if score @s admin matches 800..818 run function badges:admin/handle_action
+execute if score @s admin matches 900..918 run function badges:admin/handle_action
 
 # Debug System Status (91-92)
 execute if score @s admin matches 91 run function main:admin/debug/debug_load

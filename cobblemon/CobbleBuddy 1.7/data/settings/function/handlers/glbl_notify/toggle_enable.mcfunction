@@ -21,4 +21,4 @@ execute if score glbl_notify enabled matches 0 run tellraw @s [{"text":"[Global 
 execute if score glbl_notify enabled matches 0 run playsound minecraft:ui.button.click master @s ~ ~ ~ 0.5 0.8
 
 # Return to menu
-function settings:handlers/glbl_notify/main
+function settings:menu/glbl_notify

@@ -5,4 +5,4 @@ execute as @s[scores={sp_color=9..}] run scoreboard players set @s sp_color 0
 playsound minecraft:ui.button.click player @s ~ ~ ~ 0.5 0.8
 
 # Return to settings menu
-function settings:handlers/shiny_particles/main
+function settings:menu/shiny_particles

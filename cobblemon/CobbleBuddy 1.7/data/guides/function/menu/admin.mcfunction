@@ -20,6 +20,10 @@ tellraw @s ["",{"text":"• Enable/disable modules and test features","color":"w
 tellraw @s ["\n",{"text":"Reset Options:","color":"gold"}]
 tellraw @s ["",{"text":"• Reset player data and Pokémon database","color":"white"}]
 
+# Badge Management
+tellraw @s ["\n",{"text":"Badge Management:","color":"gold"}]
+tellraw @s ["",{"text":"• Assign Gym Leaders and manage player badges","color":"white"}]
+
 # Technical Notes
 tellraw @s ["\n",{"text":"Technical Notes:","color":"gold"}]
 tellraw @s ["",{"text":"• Scoreboard 'admin.target' is for admin revocation - safe to ignore","color":"white"}]

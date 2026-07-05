@@ -22,4 +22,5 @@ tellraw @s ["\n",{"text":"=== Module Management ===","color":"gold"}]
 tellraw @s ["\n",{"text":"[Toggle Modules]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 5"}}]
 tellraw @s ["",{"text":"[Debug Options]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger admin set 7"}}]
 tellraw @s ["",{"text":"[Admin Management]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger admin set 8"}}]
+tellraw @s ["",{"text":"[Gym Leaders]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger admin set 6"}}]
 

@@ -22,21 +22,25 @@ execute unless score egg_data enabled matches 0..1 run scoreboard players set eg
 execute unless score egg_data toggled matches 0..1 run scoreboard players set egg_data toggled 0
 execute unless score shiny_particles enabled matches 0..1 run scoreboard players set shiny_particles enabled 0
 execute unless score shiny_particles toggled matches 0..1 run scoreboard players set shiny_particles toggled 0
+execute unless score badges enabled matches 0..1 run scoreboard players set badges enabled 0
+execute unless score badges toggled matches 0..1 run scoreboard players set badges toggled 0
 
 # Sync toggled and enabled states
 execute if score glbl_notify enabled matches 1 run scoreboard players set glbl_notify toggled 1
 execute if score pokefinder enabled matches 1 run scoreboard players set pokefinder toggled 1
 execute if score egg_data enabled matches 1 run scoreboard players set egg_data toggled 1
 execute if score shiny_particles enabled matches 1 run scoreboard players set shiny_particles toggled 1
+execute if score badges enabled matches 1 run scoreboard players set badges toggled 1
 
 # Load modules
 function pokemon:load
 function pokefinder:load
 function glbl_notify:load
+function egg_data:load
 function shiny_particles:load
+function badges:load
 function settings:load
 function guides:load
-function egg_data:load
 
 # Success message
 tellraw @a ["",{"text":"Loaded ","color":"green"},{"text":"CobbleBuddy 1.7","bold":true,"color":"dark_aqua"},{"text":" successfully!","color":"green"}]

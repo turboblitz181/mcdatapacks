@@ -7,4 +7,4 @@ execute if score @s ed_nature matches 0 run playsound minecraft:ui.button.click 
 execute if score @s ed_nature matches 1 run playsound minecraft:ui.button.click player @s ~ ~ ~ 0.5 1.2
 
 # Return to settings menu
-function settings:handlers/egg_data/main
+function settings:menu/egg_data

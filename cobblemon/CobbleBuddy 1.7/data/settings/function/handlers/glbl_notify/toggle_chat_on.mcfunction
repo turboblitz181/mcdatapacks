@@ -5,4 +5,4 @@ scoreboard players set @s gn_chat 1
 playsound minecraft:ui.button.click master @s ~ ~ ~ 0.5 1.2
 
 # Return to menu
-function settings:handlers/glbl_notify/main
+function settings:menu/glbl_notify

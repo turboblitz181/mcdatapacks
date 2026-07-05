@@ -26,19 +26,15 @@ execute if score glbl_notify enabled matches 1 run tellraw @s ["",{"text":"[✓]
 execute if score glbl_notify enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red"},{"text":"Global Notify","color":"dark_gray"},{"text":" - ","color":"gray"},{"text":"[ENABLE]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 52"}}]
 
 # Egg Data module
-execute if score egg_data enabled matches 1 run tellraw @s ["",{"text":"[✓] ","color":"green"},{"text":"Egg Data","color":"light_purple"},{"text":" - ","color":"gray"},{"text":"[DISABLE]","color":"red","clickEvent":{"action":"run_command","value":"/trigger admin set 64"}}]
-execute if score egg_data enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red"},{"text":"Egg Data","color":"dark_gray"},{"text":" - ","color":"gray"},{"text":"[ENABLE]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 54"}}]
-
-# Fossil Locator module
-execute if score fossil_locator enabled matches 1 run tellraw @s ["",{"text":"[✓] ","color":"green"},{"text":"Fossil Locator","color":"gray"},{"text":" - ","color":"gray"},{"text":"[DISABLE]","color":"red","clickEvent":{"action":"run_command","value":"/trigger admin set 63"}}]
-execute if score fossil_locator enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red"},{"text":"Fossil Locator","color":"dark_gray"},{"text":" - ","color":"gray"},{"text":"[ENABLE]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 53"}}]
-
-# Pokeball Changer module
-execute if score pokeball_changer enabled matches 1 run tellraw @s ["",{"text":"[✓] ","color":"green"},{"text":"Pokeball Changer","color":"red"},{"text":" - ","color":"gray"},{"text":"[DISABLE]","color":"red","clickEvent":{"action":"run_command","value":"/trigger admin set 65"}}]
-execute if score pokeball_changer enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red"},{"text":"Pokeball Changer","color":"dark_gray"},{"text":" - ","color":"gray"},{"text":"[ENABLE]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 55"}}]
+execute if score egg_data enabled matches 1 run tellraw @s ["",{"text":"[✓] ","color":"green"},{"text":"Egg Data","color":"light_purple"},{"text":" - ","color":"gray"},{"text":"[DISABLE]","color":"red","clickEvent":{"action":"run_command","value":"/trigger admin set 63"}}]
+execute if score egg_data enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red"},{"text":"Egg Data","color":"dark_gray"},{"text":" - ","color":"gray"},{"text":"[ENABLE]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 53"}}]
 
 # Shiny Particles module
-execute if score shiny_particles enabled matches 1 run tellraw @s ["",{"text":"[✓] ","color":"green"},{"text":"Shiny Particles","color":"dark_green"},{"text":" - ","color":"gray"},{"text":"[DISABLE]","color":"red","clickEvent":{"action":"run_command","value":"/trigger admin set 66"}}]
-execute if score shiny_particles enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red"},{"text":"Shiny Particles","color":"dark_gray"},{"text":" - ","color":"gray"},{"text":"[ENABLE]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 56"}}]
+execute if score shiny_particles enabled matches 1 run tellraw @s ["",{"text":"[✓] ","color":"green"},{"text":"Shiny Particles","color":"dark_green"},{"text":" - ","color":"gray"},{"text":"[DISABLE]","color":"red","clickEvent":{"action":"run_command","value":"/trigger admin set 64"}}]
+execute if score shiny_particles enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red"},{"text":"Shiny Particles","color":"dark_gray"},{"text":" - ","color":"gray"},{"text":"[ENABLE]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 54"}}]
+
+# Badges module
+execute if score badges enabled matches 1 run tellraw @s ["",{"text":"[✓] ","color":"green"},{"text":"Badges","color":"blue"},{"text":" - ","color":"gray"},{"text":"[DISABLE]","color":"red","clickEvent":{"action":"run_command","value":"/trigger admin set 65"}}]
+execute if score badges enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red"},{"text":"Badges","color":"dark_gray"},{"text":" - ","color":"gray"},{"text":"[ENABLE]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 55"}}]
 
 tellraw @s ["\n",{"text":"[Back to Admin Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 1"}}]

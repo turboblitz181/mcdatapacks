@@ -1,0 +1,20 @@
+# Check if player already has this badge
+execute if score @s badge_poison matches 1 run tellraw @s ["",{"text":"[Badges] ","color":"gold","bold":true},{"text":"You already have the Poison Badge!","color":"yellow"}]
+execute if score @s badge_poison matches 1 run return 0
+
+# Check if gym leader is online
+execute unless entity @a[tag=gym_leader_poison] run function badges:request/no_leader
+execute unless entity @a[tag=gym_leader_poison] run return 0
+
+# Save type in storage for macro
+data modify storage badges:temp request.type set value "poison"
+data modify storage badges:temp request.display set value "Poison"
+data modify storage badges:temp request.emoji set value "☠"
+data modify storage badges:temp request.color set value "dark_purple"
+data modify storage badges:temp request.give_id set value "8"
+
+# Send confirmation to gym leader
+function badges:request/notify_leader with storage badges:temp request
+
+# Confirm to the player
+tellraw @s ["",{"text":"[Badges] ","color":"gold","bold":true},{"text":"Your request for the ☠ Poison Badge has been sent!","color":"green"}]

@@ -1,4 +1,4 @@
-tellraw @s ["\n\n\n\n\n"]
+tellraw @s ["\n\n\n\n\n\n"]
 
 # Title
 tellraw @s ["\n",{"text":"=== PokeFinder ===","bold":true,"color":"aqua"}]

@@ -26,4 +26,4 @@ tellraw @s ["",{"text":"[Page 101]","color":"green","clickEvent":{"action":"run_
 
 tellraw @s ["\n",{"text":"[My Favorites]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 3"}}]
 tellraw @s ["",{"text":"[Status]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 4"}}]
-tellraw @s ["",{"text":"[Settings]","color":"dark_aqua","clickEvent":{"action":"run_command","value":"/trigger pokemenu set 400"}}]
+tellraw @s ["",{"text":"[Settings]","color":"dark_aqua","clickEvent":{"action":"run_command","value":"/trigger settings set -1"}}]

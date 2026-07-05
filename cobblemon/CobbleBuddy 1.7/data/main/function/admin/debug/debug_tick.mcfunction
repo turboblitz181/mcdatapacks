@@ -20,14 +20,11 @@ execute unless score pokefinder toggled matches 1 run tellraw @s ["",{"text":"Po
 execute if score egg_data toggled matches 1 run tellraw @s ["",{"text":"Egg Data: ","color":"light_purple"},{"text":"✓ ON","color":"green"}]
 execute unless score egg_data toggled matches 1 run tellraw @s ["",{"text":"Egg Data: ","color":"light_purple"},{"text":"✗ OFF","color":"red"}]
 
-execute if score fossil_locator toggled matches 1 run tellraw @s ["",{"text":"Fossil Locator: ","color":"gray"},{"text":"✓ ON","color":"green"}]
-execute unless score fossil_locator toggled matches 1 run tellraw @s ["",{"text":"Fossil Locator: ","color":"gray"},{"text":"✗ OFF","color":"red"}]
-
-execute if score pokeball_changer toggled matches 1 run tellraw @s ["",{"text":"Pokeball Changer: ","color":"red"},{"text":"✓ ON","color":"green"}]
-execute unless score pokeball_changer toggled matches 1 run tellraw @s ["",{"text":"Pokeball Changer: ","color":"red"},{"text":"✗ OFF","color":"red"}]
-
 execute if score shiny_particles toggled matches 1 run tellraw @s ["",{"text":"Shiny Particles: ","color":"dark_green"},{"text":"✓ ON","color":"green"}]
 execute unless score shiny_particles toggled matches 1 run tellraw @s ["",{"text":"Shiny Particles: ","color":"dark_green"},{"text":"✗ OFF","color":"red"}]
+
+execute if score badges toggled matches 1 run tellraw @s ["",{"text":"Badges: ","color":"blue"},{"text":"✓ ON","color":"green"}]
+execute unless score badges toggled matches 1 run tellraw @s ["",{"text":"Badges: ","color":"blue"},{"text":"✗ OFF","color":"red"}]
 
 # Navigation
 tellraw @s ["\n",{"text":"[Back to Debug Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 7"}}]

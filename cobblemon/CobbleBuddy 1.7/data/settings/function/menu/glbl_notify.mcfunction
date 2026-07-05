@@ -1,17 +1,20 @@
 tellraw @s ["\n\n\n\n\n\n\n"]
 
 tellraw @s ["\n",{"text":"=== Global Notify Settings ===","color":"gold","bold":true}]
-tellraw @s ["\n",{"text":"Global notification system for shiny and legendary spawns","color":"yellow"}]
+tellraw @s ["\n",{"text":"Customize your notification preferences:","color":"yellow"}]
 
-# Module enable/disable
-execute if score glbl_notify enabled matches 1 run tellraw @s ["",{"text":"[✓] ","color":"green","bold":true},{"text":"Module Status: ","color":"white"},{"text":"ENABLED","color":"green"},{"text":" [Disable]","color":"red","clickEvent":{"action":"run_command","value":"/trigger settings set -41"}}]
-execute if score glbl_notify enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red","bold":true},{"text":"Module Status: ","color":"gray"},{"text":"DISABLED","color":"red"},{"text":" [Enable]","color":"green","clickEvent":{"action":"run_command","value":"/trigger settings set -41"}}]
+# Chat notifications toggle
+execute if score @s gn_chat matches 1 run tellraw @s ["",{"text":"[✉] ","color":"green","bold":true},{"text":"Chat Notifications: ","color":"white"},{"text":"ON","color":"green"},{"text":" [Disable]","color":"red","clickEvent":{"action":"run_command","value":"/trigger settings set -21"}}]
+execute if score @s gn_chat matches 0 run tellraw @s ["",{"text":"[✉] ","color":"gray"},{"text":"Chat Notifications: ","color":"gray"},{"text":"OFF","color":"red"},{"text":" [Enable]","color":"green","clickEvent":{"action":"run_command","value":"/trigger settings set -22"}}]
 
-# Info section
-tellraw @s ["\n",{"text":"Info: ","color":"yellow"},{"text":"This system alerts all players when rare Pokemon spawn nearby.","color":"gray"}]
-tellraw @s ["",{"text":"• ","color":"gray"},{"text":"Shiny Pokemon","color":"gold"}]
-tellraw @s ["",{"text":"• ","color":"gray"},{"text":"Legendary Pokemon","color":"light_purple"}]
-tellraw @s ["",{"text":"• ","color":"gray"},{"text":"Shiny Legendary Pokemon","color":"gold"}]
+# Title notifications toggle  
+execute if score @s gn_title matches 1 run tellraw @s ["",{"text":"[⬆] ","color":"green","bold":true},{"text":"Title Notifications: ","color":"white"},{"text":"ON","color":"green"},{"text":" [Disable]","color":"red","clickEvent":{"action":"run_command","value":"/trigger settings set -23"}}]
+execute if score @s gn_title matches 0 run tellraw @s ["",{"text":"[⬆] ","color":"gray"},{"text":"Title Notifications: ","color":"gray"},{"text":"OFF","color":"red"},{"text":" [Enable]","color":"green","clickEvent":{"action":"run_command","value":"/trigger settings set -24"}}]
 
-# Return
+# Actionbar notifications toggle
+execute if score @s gn_actionbar matches 1 run tellraw @s ["",{"text":"[⬇] ","color":"green","bold":true},{"text":"Actionbar Notifications: ","color":"white"},{"text":"ON","color":"green"},{"text":" [Disable]","color":"red","clickEvent":{"action":"run_command","value":"/trigger settings set -25"}}]
+execute if score @s gn_actionbar matches 0 run tellraw @s ["",{"text":"[⬇] ","color":"gray"},{"text":"Actionbar Notifications: ","color":"gray"},{"text":"OFF","color":"red"},{"text":" [Enable]","color":"green","clickEvent":{"action":"run_command","value":"/trigger settings set -26"}}]
+
+# Return/info section
+tellraw @s ["\n",{"text":"Note: ","color":"yellow"},{"text":"Actionbar notifications may interfere with PokeFinder tracking display","color":"gray"}]
 tellraw @s ["\n",{"text":"[Back to Settings]","color":"green","clickEvent":{"action":"run_command","value":"/trigger settings set 1"}}]

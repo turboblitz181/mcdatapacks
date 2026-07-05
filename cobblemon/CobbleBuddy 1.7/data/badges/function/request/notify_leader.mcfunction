@@ -1,0 +1,2 @@
+# Macro: inform the gym leader that someone requested their badge
+$tellraw @a[tag=gym_leader_$(type)] ["",{"text":"[Badges] ","color":"gold","bold":true},{"text":"$(emoji) ","color":"$(color)"},{"selector":"@s","color":"aqua"},{"text":" requested the $(display) Badge! Open your ","color":"white"},{"text":"[🎖 Give a Badge]","color":"gold","bold":true,"clickEvent":{"action":"run_command","value":"/trigger badge_menu set 4"},"hoverEvent":{"action":"show_text","contents":"Open the Give a Badge menu"}},{"text":" menu to award it.","color":"white"}]

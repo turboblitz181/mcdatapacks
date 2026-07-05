@@ -7,4 +7,4 @@ execute if score @s ed_ivs matches 0 run playsound minecraft:ui.button.click pla
 execute if score @s ed_ivs matches 1 run playsound minecraft:ui.button.click player @s ~ ~ ~ 0.5 1.2
 
 # Return to settings menu
-function settings:handlers/egg_data/main
+function settings:menu/egg_data

@@ -25,12 +25,6 @@ tellraw @s ["",{"text":"• [Global Notify]","color":"aqua","clickEvent":{"actio
 tellraw @s ["",{"text":"• [Pokefinder]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger admin set 72"},"hoverEvent":{"action":"show_text","contents":"Debug Pokefinder module"}}]
 tellraw @s ["",{"text":"• [Pokemon Library]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger admin set 73"},"hoverEvent":{"action":"show_text","contents":"Debug Pokemon Library functions"}}]
 
-# Module debug disabled - folders don't exist:
-# tellraw @s ["",{"text":"• [Fossil Locator]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger admin set 74"},"hoverEvent":{"action":"show_text","contents":"Debug Fossil Locator module"}}]
-# tellraw @s ["",{"text":"• [Egg Tracker]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger admin set 75"},"hoverEvent":{"action":"show_text","contents":"Debug Egg Tracker module"}}]
-# tellraw @s ["",{"text":"• [Pokeball Changer]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger admin set 76"},"hoverEvent":{"action":"show_text","contents":"Debug Pokeball changer module"}}]
-# tellraw @s ["",{"text":"• [Shiny Particles]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger admin set 77"},"hoverEvent":{"action":"show_text","contents":"Debug Shiny Particles module"}}]
-
 # Show Entity Data
 tellraw @s ["\n",{"text":"Show Entity Data Cobblemon:","color":"yellow"}]
 tellraw @s ["",{"text":"• [Show here data]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/data get entity @e[type=cobblemon:pokemon,sort=nearest,limit=1]"},"hoverEvent":{"action":"show_text","contents":"Click to load full entity data command"}}]
