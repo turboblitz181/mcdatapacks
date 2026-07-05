@@ -36,6 +36,7 @@ function glbl_notify:load
 function shiny_particles:load
 function settings:load
 function guides:load
+function egg_data:load
 
 # Success message
 tellraw @a ["",{"text":"Loaded ","color":"green"},{"text":"CobbleBuddy 1.7","bold":true,"color":"dark_aqua"},{"text":" successfully!","color":"green"}]
