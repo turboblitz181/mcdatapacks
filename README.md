@@ -40,3 +40,6 @@ for players:
 - open settings: /trigger settings
 
 for further information use the ingame guide.
+
+
+please credit turboblitz181 and KnightKehan when sharing this datapack.
