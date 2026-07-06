@@ -1,10 +1,8 @@
 ideas/tasks:
 - pokefinder - done
-- fossil locator - turbo working on it
 - global shiny notifications - done
 - global legendary notifications - done
-- egg data - 
-- pokeball changer - turbo working on it
+- egg data - turboblitz181 working on it
 - admin for main folder - done
 - pokemon (list) - done
 - update main toggles for admin - done
