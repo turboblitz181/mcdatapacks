@@ -6,7 +6,7 @@ made for cobblemon 1.7 by turboblitz181 and KnightKehan
 Feature list:
 - badges: a badge system for servers where players are gymleaders.
 - pokefinder: search for a specific pokemon.
-- global notifications: get notified when a legendary/mythical/shiny has spawned.
+- global notifications: get notified when a legendary/mythical/paradox legendary/shiny has spawned.
 - egg data*: get more information from your pokemon eggs. 
 - admin control: assign certain players to manage the datapack options.
 - toggleable modules: turn modules on/off to personalize your experience.
