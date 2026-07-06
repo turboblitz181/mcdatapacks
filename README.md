@@ -13,10 +13,13 @@ Feature list:
 - guides: learn how the datapack works.
 - per player settings: if a player doesnt want to use a specific feature it can be turned off.
 
-* for egg data you need a couple of things:
-  stringlib datapack: https://modrinth.com/datapack/stringlib?loader=datapack
-  cobbreeding mod: https://modrinth.com/mod/cobbreeding
-  goto "/config/cobbreeding/main.json" and change "eggEncryptionEnabled" to false
+
+\* for egg data you need a couple of things:
+1. stringlib datapack: https://modrinth.com/datapack/stringlib?loader=datapack
+2. cobbreeding mod: https://modrinth.com/mod/cobbreeding
+3. goto "/config/cobbreeding/main.json" and change "eggEncryptionEnabled" to false
+
+
   
 
 **how to install:**
@@ -29,8 +32,8 @@ load/restart or /reload the world.
 to assign admin to a player type in chat (needs operator permissions): /tag player_name add admin
 
 for admin users:
-open admin menu: /trigger admin
-open admin guides: /trigger guides
+- open admin menu: /trigger admin
+- open admin guides: /trigger guides
 
 for players:
 - open guides: /trigger guides
