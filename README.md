@@ -9,5 +9,5 @@ Feature list:
 - egg data for cobbreeding: get more information from your pokemon eggs.
 - admin control: assign certain players to manage the datapack options.
 - toggleable modules: turn modules on/off to personalize your experience.
-- guides: learn how the datapack works
+- guides: learn how the datapack works.
 - per player settings: if a player doesnt want to use a specific feature it can be turned off.
