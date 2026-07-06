@@ -1,0 +1,131 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/badge_normal.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": ["\uE101"]
+    },
+	{
+      "type": "bitmap",
+      "file": "minecraft:font/badge_fire.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": ["\uE102"]
+    },
+	{
+      "type": "bitmap",
+      "file": "minecraft:font/badge_water.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": ["\uE103"]
+    },
+	{
+      "type": "bitmap",
+      "file": "minecraft:font/badge_electric.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": ["\uE104"]
+    },
+	{
+      "type": "bitmap",
+      "file": "minecraft:font/badge_grass.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": ["\uE105"]
+    },
+	{
+      "type": "bitmap",
+      "file": "minecraft:font/badge_ice.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": ["\uE106"]
+    },
+	{
+      "type": "bitmap",
+      "file": "minecraft:font/badge_fighting.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": ["\uE107"]
+    },
+	{
+      "type": "bitmap",
+      "file": "minecraft:font/badge_poison.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": ["\uE108"]
+    },
+	{
+      "type": "bitmap",
+      "file": "minecraft:font/badge_ground.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": ["\uE109"]
+    },
+	{
+      "type": "bitmap",
+      "file": "minecraft:font/badge_flying.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": ["\uE10A"]
+    },
+	{
+      "type": "bitmap",
+      "file": "minecraft:font/badge_psychic.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": ["\uE10B"]
+    },
+	{
+      "type": "bitmap",
+      "file": "minecraft:font/badge_bug.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": ["\uE10C"]
+    },
+	{
+      "type": "bitmap",
+      "file": "minecraft:font/badge_rock.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": ["\uE10D"]
+    },
+	{
+      "type": "bitmap",
+      "file": "minecraft:font/badge_ghost.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": ["\uE10E"]
+    },
+	{
+      "type": "bitmap",
+      "file": "minecraft:font/badge_dragon.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": ["\uE10F"]
+    },
+	{
+      "type": "bitmap",
+      "file": "minecraft:font/badge_dark.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": ["\uE110"]
+    },
+	{
+      "type": "bitmap",
+      "file": "minecraft:font/badge_steel.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": ["\uE111"]
+    },
+	{
+      "type": "bitmap",
+      "file": "minecraft:font/badge_fairy.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": ["\uE112"]
+    }
+  ]
+}
+

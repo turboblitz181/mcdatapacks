@@ -45,5 +45,43 @@ scoreboard objectives add badge_fairy dummy "Fairy Badge"
 # === BADGE COUNT PER PLAYER ===
 scoreboard objectives add badge_count dummy "Badge Count"
 
+# === BADGE CREATE TEAM PER PLAYER ===
+team add gym_leader_normal_display
+team modify gym_leader_normal_display suffix {"text":" ","color":"white"}
+team add gym_leader_fire_display
+team modify gym_leader_fire_display suffix {"text":" ","color":"white"}
+team add gym_leader_water_display
+team modify gym_leader_water_display suffix {"text":" ","color":"white"}
+team add gym_leader_electric_display
+team modify gym_leader_electric_display suffix {"text":" ","color":"white"}
+team add gym_leader_grass_display
+team modify gym_leader_grass_display suffix {"text":" ","color":"white"}
+team add gym_leader_ice_display
+team modify gym_leader_ice_display suffix {"text":" ","color":"white"}
+team add gym_leader_fighting_display
+team modify gym_leader_fighting_display suffix {"text":" ","color":"white"}
+team add gym_leader_poison_display
+team modify gym_leader_poison_display suffix {"text":" ","color":"white"}
+team add gym_leader_ground_display
+team modify gym_leader_ground_display suffix {"text":" ","color":"white"}
+team add gym_leader_flying_display
+team modify gym_leader_flying_display suffix {"text":" ","color":"white"}
+team add gym_leader_psychic_display
+team modify gym_leader_psychic_display suffix {"text":" ","color":"white"}
+team add gym_leader_bug_display
+team modify gym_leader_bug_display suffix {"text":" ","color":"white"}
+team add gym_leader_rock_display
+team modify gym_leader_rock_display suffix {"text":" ","color":"white"}
+team add gym_leader_ghost_display
+team modify gym_leader_ghost_display suffix {"text":" ","color":"white"}
+team add gym_leader_dragon_display
+team modify gym_leader_dragon_display suffix {"text":" ","color":"white"}
+team add gym_leader_dark_display
+team modify gym_leader_dark_display suffix {"text":" ","color":"white"}
+team add gym_leader_steel_display
+team modify gym_leader_steel_display suffix {"text":" ","color":"white"}
+team add gym_leader_fairy_display
+team modify gym_leader_fairy_display suffix {"text":" ","color":"white"}
+
 # Check Core/Module Initialization
 scoreboard players set #badges bg_init 1
