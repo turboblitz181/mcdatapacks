@@ -4,6 +4,7 @@
 		"main:main_load",
 		"pokemon:load",
 		"guides:load",
-		"settings:load"
+		"settings:load",
+		"database:load"
 	]
 }
