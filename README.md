@@ -38,4 +38,5 @@ for admin users:
 for players:
 - open guides: /trigger guides
 - open settings: /trigger settings
-- open pokefinder menu: /trigger pokemenu
+
+for further information use the ingame guide.
