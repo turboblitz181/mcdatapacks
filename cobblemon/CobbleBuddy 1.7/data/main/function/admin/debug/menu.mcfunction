@@ -10,6 +10,9 @@
 execute unless entity @s[tag=admin] run tellraw @s ["",{"text":"You don't have permission to use debug commands!","color":"red"}]
 execute unless entity @s[tag=admin] run return 0
 
+# Clear chat space
+tellraw @s ["\n"]
+
 # Main debug menu
 tellraw @s ["\n",{"text":"=== Debug Central ===","color":"gold","bold":true}]
 
@@ -23,7 +26,8 @@ tellraw @s ["",{"text":"• [Check ID admins]","color":"dark_aqua","clickEvent":
 tellraw @s ["\n",{"text":"Module Debug:","color":"yellow"}]
 tellraw @s ["",{"text":"• [Global Notify]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger admin set 71"},"hoverEvent":{"action":"show_text","contents":"Debug Global Notify module"}}]
 tellraw @s ["",{"text":"• [Pokefinder]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger admin set 72"},"hoverEvent":{"action":"show_text","contents":"Debug Pokefinder module"}}]
-tellraw @s ["",{"text":"• [Pokemon Library]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger admin set 73"},"hoverEvent":{"action":"show_text","contents":"Debug Pokemon Library functions"}}]
+tellraw @s ["",{"text":"• [Pokemon Library]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger admin set 73"},"hoverEvent":{"action":"show_text","contents":"Debug Pokemon Library module"}}]
+tellraw @s ["",{"text":"• [Guides]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger admin set 74"},"hoverEvent":{"action":"show_text","contents":"Debug Guides module"}}]
 
 # Show Entity Data
 tellraw @s ["\n",{"text":"Show Entity Data Cobblemon:","color":"yellow"}]

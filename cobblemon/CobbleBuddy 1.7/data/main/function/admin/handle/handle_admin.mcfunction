@@ -49,12 +49,23 @@ execute if score @s admin matches 53 run function main:toggles/egg_data/on
 execute if score @s admin matches 54 run function main:toggles/shiny_particles/on
 execute if score @s admin matches 55 run function main:toggles/badges/on
 
+
+execute if score @s admin matches 58 run function main:toggles/guides/book/on
+execute if score @s admin matches 59 run function main:toggles/guides/admin_book/on
+
+
+
 # Module toggles OFF
 execute if score @s admin matches 61 run function main:toggles/pokefinder/off
 execute if score @s admin matches 62 run function main:toggles/glbl_notify/off
 execute if score @s admin matches 63 run function main:toggles/egg_data/off
 execute if score @s admin matches 64 run function main:toggles/shiny_particles/off
 execute if score @s admin matches 65 run function main:toggles/badges/off
+
+
+execute if score @s admin matches 68 run function main:toggles/guides/book/off
+execute if score @s admin matches 69 run function main:toggles/guides/admin_book/off
+
 
 # Debug Menu navigation (7, 71-77)
 execute if score @s admin matches 7 run function main:admin/debug/menu
@@ -71,6 +82,10 @@ execute if score @s admin matches 722 run function pokefinder:debug/reset_distan
 # Pokemon Library Debug (73, 731)
 execute if score @s admin matches 73 run function pokemon:debug/menu
 execute if score @s admin matches 731 run function pokemon:debug/debug_stats
+
+# Pokemon Library Debug (74, 741)
+execute if score @s admin matches 74 run function guides:debug/menu
+execute if score @s admin matches 741 run function guides:debug/give_book_test
 
 # Egg Data Debug (75, 751-756)
 # execute if score @s admin matches 75 run function egg_data:debug/menu
@@ -90,11 +105,9 @@ execute if score @s admin matches 81 run function main:admin/core/revoke_selecti
 
 # Gym Leader Management (6, 69, 600-699)
 execute if score @s admin matches 6 run function badges:admin/menu
-execute if score @s admin matches 69 run function badges:admin/handle_action
 execute if score @s admin matches 600..699 run function badges:admin/handle_action
 
 # Badge Removal / Full Reset / Give a Badge
-execute if score @s admin matches 70 run function badges:admin/handle_action
 execute if score @s admin matches 950..953 run function badges:admin/handle_action
 execute if score @s admin matches 800..818 run function badges:admin/handle_action
 execute if score @s admin matches 900..918 run function badges:admin/handle_action

@@ -76,7 +76,7 @@ scoreboard objectives remove notification_cooldown
 scoreboard objectives remove gn_shiny_detect
 scoreboard objectives remove gn_legend_detect
 scoreboard objectives remove gn_chat
-scoreboard objectives remove gn_title  
+scoreboard objectives remove gn_title
 scoreboard objectives remove gn_actionbar
 scoreboard objectives remove gn_menu
 scoreboard objectives remove gn_nearest_player

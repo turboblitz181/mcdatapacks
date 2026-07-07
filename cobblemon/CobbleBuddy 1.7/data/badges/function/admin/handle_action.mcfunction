@@ -28,7 +28,7 @@ execute if score @s admin matches 618 run scoreboard players set @s badge_admin_
 execute if score @s admin matches 601..618 run function badges:admin/select_target
 
 # Gym Leader overview (read-only)
-execute if score @s admin matches 69 run function badges:admin/leader_list
+execute if score @s admin matches 619 run function badges:admin/leader_list
 
 # Set up Gym Leaders (assign/remove sub-menu)
 execute if score @s admin matches 952 run function badges:admin/leader_setup_menu
@@ -56,7 +56,7 @@ execute if score @s admin matches 818 run scoreboard players set @s badge_give_c
 execute if score @s admin matches 801..818 run function badges:admin/select_give_target
 
 # Remove a Badge (70, 901-918) - pick type first, then pick a player
-execute if score @s admin matches 70 run function badges:admin/remove_badge_menu
+execute if score @s admin matches 620 run function badges:admin/remove_badge_menu
 execute if score @s admin matches 901 run scoreboard players set @s badge_remove_ctx 1
 execute if score @s admin matches 902 run scoreboard players set @s badge_remove_ctx 2
 execute if score @s admin matches 903 run scoreboard players set @s badge_remove_ctx 3

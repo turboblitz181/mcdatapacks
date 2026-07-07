@@ -1,3 +1,4 @@
+# Guides trigger
 scoreboard objectives add guides trigger
 
 # Check Core/Module Initialization

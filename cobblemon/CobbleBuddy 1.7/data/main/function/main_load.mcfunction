@@ -24,6 +24,10 @@ execute unless score shiny_particles enabled matches 0..1 run scoreboard players
 execute unless score shiny_particles toggled matches 0..1 run scoreboard players set shiny_particles toggled 0
 execute unless score badges enabled matches 0..1 run scoreboard players set badges enabled 0
 execute unless score badges toggled matches 0..1 run scoreboard players set badges toggled 0
+execute unless score guide_book enabled matches 0..1 run scoreboard players set guide_book enabled 1
+execute unless score guide_book toggled matches 0..1 run scoreboard players set guide_book toggled 1
+execute unless score admin_book enabled matches 0..1 run scoreboard players set admin_book enabled 1
+execute unless score admin_book toggled matches 0..1 run scoreboard players set admin_book toggled 1
 
 # Sync toggled and enabled states
 execute if score glbl_notify enabled matches 1 run scoreboard players set glbl_notify toggled 1
@@ -31,6 +35,8 @@ execute if score pokefinder enabled matches 1 run scoreboard players set pokefin
 execute if score egg_data enabled matches 1 run scoreboard players set egg_data toggled 1
 execute if score shiny_particles enabled matches 1 run scoreboard players set shiny_particles toggled 1
 execute if score badges enabled matches 1 run scoreboard players set badges toggled 1
+execute if score guide_book enabled matches 1 run scoreboard players set guide_book toggled 1
+execute if score admin_book enabled matches 1 run scoreboard players set admin_book toggled 1
 
 # Load modules
 function pokemon:load

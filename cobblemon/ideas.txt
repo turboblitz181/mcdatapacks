@@ -16,3 +16,7 @@ ideas/tasks:
 - create guides - done
 - create settings - done
 - create admin guides - done
+- create mythical for glbl notify - done
+- create paradox legendary for glbl notify - done
+- create badges - done
+- update guides for book - done

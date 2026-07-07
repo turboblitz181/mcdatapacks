@@ -11,7 +11,7 @@ execute unless entity @s[tag=admin] run tellraw @s ["",{"text":"You don't have p
 execute unless entity @s[tag=admin] run return 0
 
 # Clear chat space
-tellraw @s ["\n\n\n\n\n\n\n"]
+tellraw @s ["\n\n\n\n"]
 
 # Title
 tellraw @s ["\n",{"text":"=== Module Management ===","color":"gold","bold":true}]
@@ -36,5 +36,17 @@ execute if score shiny_particles enabled matches 0 run tellraw @s ["",{"text":"[
 # Badges module
 execute if score badges enabled matches 1 run tellraw @s ["",{"text":"[✓] ","color":"green"},{"text":"Badges","color":"blue"},{"text":" - ","color":"gray"},{"text":"[DISABLE]","color":"red","clickEvent":{"action":"run_command","value":"/trigger admin set 65"}}]
 execute if score badges enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red"},{"text":"Badges","color":"dark_gray"},{"text":" - ","color":"gray"},{"text":"[ENABLE]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 55"}}]
+
+# Title
+tellraw @s ["\n",{"text":"Toggle modules book guide on/off:","color":"yellow"}]
+
+# Book guide
+execute if score guide_book enabled matches 1 run tellraw @s ["",{"text":"[✓] ","color":"green"},{"text":"Book guide","color":"dark_green"},{"text":" - ","color":"gray"},{"text":"[DISABLE]","color":"red","clickEvent":{"action":"run_command","value":"/trigger admin set 68"}}]
+execute if score guide_book enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red"},{"text":"Book guide","color":"dark_gray"},{"text":" - ","color":"gray"},{"text":"[ENABLE]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 58"}}]
+
+# Admin book guide module
+execute if score admin_book enabled matches 1 run tellraw @s ["",{"text":"[✓] ","color":"green"},{"text":"Admin book guide","color":"dark_aqua"},{"text":" - ","color":"gray"},{"text":"[DISABLE]","color":"red","clickEvent":{"action":"run_command","value":"/trigger admin set 69"}}]
+execute if score admin_book enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red"},{"text":"Admin book guide","color":"dark_gray"},{"text":" - ","color":"gray"},{"text":"[ENABLE]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 59"}}]
+
 
 tellraw @s ["\n",{"text":"[Back to Admin Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 1"}}]

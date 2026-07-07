@@ -48,7 +48,7 @@ scoreboard objectives remove pf_debug_unique
 # ==========================================
 scoreboard objectives remove gn_timer
 scoreboard objectives remove gn_chat
-scoreboard objectives remove gn_title  
+scoreboard objectives remove gn_title
 scoreboard objectives remove gn_actionbar
 scoreboard players reset glbl_notify enabled
 execute as @e[tag=gn_seen] run tag @s remove gn_seen
