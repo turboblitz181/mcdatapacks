@@ -21,3 +21,10 @@ scoreboard objectives add ed_success dummy
 data modify storage stringlib:input replace.Find set value "shiny=true"
 data modify storage stringlib:input replace.Replace set value "X"
 data modify storage stringlib:input replace.n set value 1
+scoreboard objectives add ed_place_scanner trigger
+scoreboard objectives add ed_remove_scanner trigger
+scoreboard objectives add ed_show_scanners trigger
+scoreboard objectives add ed_max_scanners dummy
+scoreboard objectives add ed_scanners dummy
+
+
