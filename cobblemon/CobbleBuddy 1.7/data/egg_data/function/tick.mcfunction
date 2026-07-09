@@ -26,3 +26,8 @@ function egg_data:chest_scanner
 
 # Check Core/Module Initialization
 scoreboard players set #egg ed_tick 1
+
+# admin options trigger
+scoreboard players enable @a[tag=admin] ed_admin
+execute as @a[tag=admin,scores={ed_admin=1..}] run function egg_data:admin/handle_action
+execute as @a[scores={ed_admin=1..}] run scoreboard players set @s ed_admin 0

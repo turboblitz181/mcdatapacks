@@ -26,7 +26,7 @@ execute if score glbl_notify enabled matches 1 run tellraw @s ["",{"text":"[✓]
 execute if score glbl_notify enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red"},{"text":"Global Notify","color":"dark_gray"},{"text":" - ","color":"gray"},{"text":"[ENABLE]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 52"}}]
 
 # Egg Data module
-execute if score egg_data enabled matches 1 run tellraw @s ["",{"text":"[✓] ","color":"green"},{"text":"Egg Data","color":"light_purple"},{"text":" - ","color":"gray"},{"text":"[DISABLE]","color":"red","clickEvent":{"action":"run_command","value":"/trigger admin set 63"}}]
+execute if score egg_data enabled matches 1 run tellraw @s ["",{"text":"[✓] ","color":"green"},{"text":"Egg Data","color":"light_purple"},{"text":" - ","color":"gray"},{"text":"[DISABLE]","color":"red","clickEvent":{"action":"run_command","value":"/trigger admin set 63"}},{"text":"  ","color":"white"},{"text":"[Options]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger admin set 56"}}]
 execute if score egg_data enabled matches 0 run tellraw @s ["",{"text":"[✗] ","color":"red"},{"text":"Egg Data","color":"dark_gray"},{"text":" - ","color":"gray"},{"text":"[ENABLE]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 53"}}]
 
 # Shiny Particles module

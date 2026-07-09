@@ -15,6 +15,7 @@ scoreboard objectives add ed_remove_scanner trigger
 scoreboard objectives add ed_show_scanners trigger
 scoreboard objectives add ed_max_scanners dummy
 scoreboard objectives add ed_scanners dummy
+scoreboard objectives add ed_admin trigger
 
 
 scoreboard players set max ed_distance 20

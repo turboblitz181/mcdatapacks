@@ -48,6 +48,7 @@ execute if score @s admin matches 52 run function main:toggles/glbl_notify/on
 execute if score @s admin matches 53 run function main:toggles/egg_data/on
 execute if score @s admin matches 54 run function main:toggles/shiny_particles/on
 execute if score @s admin matches 55 run function main:toggles/badges/on
+execute if score @s admin matches 56 run function egg_data:admin/options_menu
 
 
 execute if score @s admin matches 58 run function main:toggles/guides/book/on
