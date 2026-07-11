@@ -7,6 +7,7 @@ data modify storage stringlib:input replace.Find set value "true"
 data modify storage stringlib:input replace.Replace set value "X"
 data modify storage stringlib:input replace.n set value 1
 data modify storage stringlib:input find.n set value 1
+data modify storage stringlib:input find.Find set value "="
 scoreboard objectives add ed_place_scanner trigger
 scoreboard objectives add ed_remove_scanner trigger
 scoreboard objectives add ed_show_scanners trigger

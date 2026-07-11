@@ -1,6 +1,8 @@
 $data modify storage stringlib:input find.String set from block ~ ~ ~ Items[$(slot_id)].components.cobbreeding:pokemon_properties 
 $data modify storage cobblebuddy:ed_temp_data String set from block ~ ~ ~ Items[$(slot_id)].components.cobbreeding:pokemon_properties
 scoreboard players set loop ed_index 0
+scoreboard players set find ed_index 0
+execute store result storage cobblebuddy:ed_temp_data index int 1 run scoreboard players get find ed_index
 $execute if entity @a[tag=egg_data_show,scores={ed_shiny=1}] if data block ~ ~ ~ {Items:[{Slot:$(slot_id)b,id:"cobbreeding:pokemon_egg"}]} unless data block ~ ~ ~ Items[{Slot:$(slot_id)b,}].components.minecraft:custom_data.sh_set run function egg_data:get_data_values with storage cobblebuddy:ed_temp_data
 $execute if entity @a[tag=egg_data_show,scores={ed_ivs=1}] if data block ~ ~ ~ {Items:[{Slot:$(slot_id)b,id:"cobbreeding:pokemon_egg"}]} unless data block ~ ~ ~ Items[{Slot:$(slot_id)b,}].components.minecraft:custom_data.iv_set run function egg_data:get_data_values with storage cobblebuddy:ed_temp_data
 $execute if entity @a[tag=egg_data_show,scores={ed_shiny=1}] if data block ~ ~ ~ {Items:[{Slot:$(slot_id)b,id:"cobbreeding:pokemon_egg"}]} unless data block ~ ~ ~ Items[{Slot:$(slot_id)b,}].components.minecraft:custom_data.sh_set if score ed_shiny ed_success matches 1 run item modify block ~ ~ ~ container.$(slot_id) egg_data:shiny_lore 
