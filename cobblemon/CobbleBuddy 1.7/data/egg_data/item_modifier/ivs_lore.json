@@ -1,0 +1,90 @@
+[
+    {
+        "function": "minecraft:set_lore",
+        "entity": "this",
+        "lore": [
+            {
+                "text": "IVs: ",
+                "color": "#4b3588",
+                "bold": true
+            },
+            {
+                "text": "- HP: ",
+                "extra": [
+                    {
+                        "nbt": "HP_iv",
+                        "storage": "cobblebuddy:ed_temp_data",
+                        "color": "#ba0808"
+                    }
+                ],
+                "color": "#952323",
+                "bold": true
+            },
+            {
+                "text": "- ATK: ",
+                "extra": [
+                    {
+                        "nbt": "ATK_iv",
+                        "storage": "cobblebuddy:ed_temp_data",
+                        "color": "#08ba4c"
+                    }
+                ],
+                "color": "#239525",
+                "bold": true
+            },
+            {
+                "text": "- Sp. ATK: ",
+                "extra": [
+                    {
+                        "nbt": "SATK_iv",
+                        "storage": "cobblebuddy:ed_temp_data",
+                        "color": "#0bba08"
+                    }
+                ],
+                "color": "#369523",
+                "bold": true
+            },
+            {
+                "text": "- DEF: ",
+                "extra": [
+                    {
+                        "nbt": "DEF_iv",
+                        "storage": "cobblebuddy:ed_temp_data",
+                        "color": "#088dba"
+                    }
+                ],
+                "color": "#236395",
+                "bold": true
+            },
+            {
+                "text": "- Sp. DEF: ",
+                "extra": [
+                    {
+                        "nbt": "SDEF_iv",
+                        "storage": "cobblebuddy:ed_temp_data",
+                        "color": "#08aeba"
+                    }
+                ],
+                "color": "#238795",
+                "bold": true
+            },
+            {
+                "text": "- SPEED: ",
+                "extra": [
+                    {
+                        "nbt": "SPD_iv",
+                        "storage": "cobblebuddy:ed_temp_data",
+                        "color": "#ba08b4"
+                    }
+                ],
+                "color": "#95238b",
+                "bold": true
+            }
+        ],
+    "mode": "replace_all"
+    },
+    {
+        "function": "minecraft:set_custom_data",
+        "tag": "{iv_set:1b}"
+    }
+]
