@@ -29,7 +29,11 @@ load/restart or /reload the world.
 
 
 **how to use:**
+to assign owner to yourself type in chat (needs operator permissions): /tag @s add owner
+only owners can uninstall the datapack.
+
 to assign admin to a player type in chat (needs operator permissions): /tag player_name add admin
+admin users can turn on/off each module and change settings.
 
 for admin users:
 - open admin menu: /trigger admin
@@ -38,6 +42,10 @@ for admin users:
 for players:
 - open guides: /trigger guides
 - open settings: /trigger settings
+
+to uninstall the datapack type: "/trigger admin" and navigate to danger zone > uninstalling
+
+
 
 for further information use the ingame guide.
 
