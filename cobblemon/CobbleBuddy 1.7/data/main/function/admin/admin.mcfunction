@@ -14,7 +14,6 @@ tellraw @s ["\n\n\n\n\n\n\n"]
 # Menu if player has rights
 tellraw @s ["\n",{"text":"=== Admin Panel ===","color":"gold","bold":true}]
 tellraw @s ["\n",{"text":"[Entity Management]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger admin set 2"}}]
-tellraw @s ["",{"text":"[Reset System]","color":"red","clickEvent":{"action":"run_command","value":"/trigger admin set 3"}}]
 tellraw @s ["",{"text":"[Danger Zone]","color":"dark_red","clickEvent":{"action":"run_command","value":"/trigger admin set 4"}}]
 
 # Module management

@@ -27,4 +27,4 @@ function pokemon:load
 tellraw @a[tag=admin] ["",{"text":"[Pokémon Library]","color":"dark_green"},{"text":" Database has been completely reset!","color":"green"}]
 
 # Return to admin menu
-tellraw @s ["",{"text":"[Click to return to Admin Menu]","color":"gray","clickEvent":{"action":"run_command","value":"/function main:admin/admin"}}]
+tellraw @s ["\n",{"text":"[Back to Admin Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 1"}}]

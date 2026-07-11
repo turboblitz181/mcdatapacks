@@ -15,29 +15,17 @@ execute if score @s admin matches 21 run function main:admin/cleanup/remove_poke
 execute if score @s admin matches 22 run function main:admin/cleanup/remove_hostiles
 execute if score @s admin matches 23 run function main:admin/cleanup/remove_items
 
-# Reset System (3, 31-34)
-execute if score @s admin matches 3 run function main:admin/reset/reset_menu
-# Reset Individual Player flow
-execute if score @s admin matches 31 run function main:admin/reset/confirm_reset_player
-execute if score @s admin matches 32 run function main:admin/reset/execute_reset_player
-# Reset ALL Players flow
-execute if score @s admin matches 33 run function main:admin/reset/confirm_reset_all_player
-execute if score @s admin matches 34 run function main:admin/reset/execute_reset_all_player
-
 # Danger Zone (4, 41-48)
 execute if score @s admin matches 4 run function main:admin/reset/danger_menu
-# Total Reset flow
-execute if score @s admin matches 41 run function main:admin/reset/confirm_total_reset
-execute if score @s admin matches 42 run function main:admin/reset/execute_total_reset
 # Nuke flow
-execute if score @s admin matches 43 run function main:admin/reset/confirm_nuke
-execute if score @s admin matches 44 run function main:admin/reset/execute_nuke
+execute if score @s admin matches 43 run function main:admin/reset/uninstall/confirm_uninstall
+execute if score @s admin matches 44 run function main:admin/reset/uninstall/execute_uninstall
 # Remove All flow
-execute if score @s admin matches 45 run function main:admin/reset/confirm_remove_all
-execute if score @s admin matches 46 run function main:admin/reset/execute_remove_all
+execute if score @s admin matches 45 run function main:admin/reset/reset_all/confirm_remove_all
+execute if score @s admin matches 46 run function main:admin/reset/reset_all/execute_remove_all
 # Pokemon DB Reset flow
-execute if score @s admin matches 47 run function main:admin/reset/confirm_pokemon_db_reset
-execute if score @s admin matches 48 run function main:admin/reset/reset_database
+execute if score @s admin matches 47 run function main:admin/reset/pokemon_db/confirm_pokemon_db_reset
+execute if score @s admin matches 48 run function main:admin/reset/pokemon_db/reset_database
 
 # Module toggles (5, 51-52/54/56, 61-62/64/66)
 execute if score @s admin matches 5 run function main:admin/core/module_menu
@@ -107,11 +95,6 @@ execute if score @s admin matches 81 run function main:admin/core/revoke_selecti
 # Gym Leader Management (6, 69, 600-699)
 execute if score @s admin matches 6 run function badges:admin/menu
 execute if score @s admin matches 600..699 run function badges:admin/handle_action
-
-# Badge Removal / Full Reset / Give a Badge
-execute if score @s admin matches 950..953 run function badges:admin/handle_action
-execute if score @s admin matches 800..818 run function badges:admin/handle_action
-execute if score @s admin matches 900..918 run function badges:admin/handle_action
 
 # Debug System Status (91-92)
 execute if score @s admin matches 91 run function main:admin/debug/debug_load

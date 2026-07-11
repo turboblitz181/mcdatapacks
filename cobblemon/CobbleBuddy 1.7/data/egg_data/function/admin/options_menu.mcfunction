@@ -1,3 +1,7 @@
+# Clear chat space
+tellraw @s ["\n\n\n\n\n\n\n\n\n\n\n\n\n"]
+
+# Menu
 tellraw @s ["",{"text":"=== Egg Data Admin Options ===","color":"light_purple","bold":true}]
 tellraw @s [""]
 
