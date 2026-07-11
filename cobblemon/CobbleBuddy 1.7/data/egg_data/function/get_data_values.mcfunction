@@ -19,7 +19,7 @@ $execute if score loop ed_index matches 3 unless data block ~ ~ ~ Items[{Slot:$(
 $execute if score loop ed_index matches 3 unless data block ~ ~ ~ Items[{Slot:$(slot_id)b,}].components.minecraft:custom_data.sh_set run execute store result score ed_shiny ed_success run function stringlib:util/replace
 execute if score loop ed_index matches 7 run data modify storage cobblebuddy:ed_temp_data HP_iv set string storage cobblebuddy:ed_temp_data String 0 2
 execute if score loop ed_index matches 8 run data modify storage cobblebuddy:ed_temp_data ATK_iv set string storage cobblebuddy:ed_temp_data String 0 2
-execute if score loop ed_index matches 9 run data modify storage cobblebuddy:ed_temp_data DEf_iv set string storage cobblebuddy:ed_temp_data String 0 2
+execute if score loop ed_index matches 9 run data modify storage cobblebuddy:ed_temp_data DEF_iv set string storage cobblebuddy:ed_temp_data String 0 2
 execute if score loop ed_index matches 10 run data modify storage cobblebuddy:ed_temp_data SATK_iv set string storage cobblebuddy:ed_temp_data String 0 2
 execute if score loop ed_index matches 11 run data modify storage cobblebuddy:ed_temp_data SDEF_iv set string storage cobblebuddy:ed_temp_data String 0 2
 execute if score loop ed_index matches 12 run data modify storage cobblebuddy:ed_temp_data SPD_iv set string storage cobblebuddy:ed_temp_data String 0 2
