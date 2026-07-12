@@ -7,10 +7,11 @@ execute if score loop ed_index matches 1 run function stringlib:util/find
 execute if score loop ed_index matches 1 run execute store result score find ed_index run data get storage stringlib:output find[0]
 execute if score loop ed_index matches 1 run scoreboard players add find ed_index 1
 execute if score loop ed_index matches 1 run execute store result storage cobblebuddy:ed_temp_data index int 1 run scoreboard players get find ed_index
+execute if score loop ed_index matches 1 run execute store result storage cobblebuddy:ed_temp_data length int 1 run data get storage cobblebuddy:ed_temp_data String
 execute if score loop ed_index matches 1 run function egg_data:get_data_values with storage cobblebuddy:ed_temp_data
 
 # remove rest
-$data modify storage cobblebuddy:ed_temp_data String set string storage cobblebuddy:ed_temp_data String $(index) -1
+$data modify storage cobblebuddy:ed_temp_data String set string storage cobblebuddy:ed_temp_data String $(index) $(length)
 
 # get data
 execute if score loop ed_index matches 3 run scoreboard players set ed_shiny ed_success 0
@@ -30,6 +31,7 @@ function stringlib:util/find
 execute store result score find ed_index run data get storage stringlib:output find[0]
 scoreboard players add find ed_index 1
 execute store result storage cobblebuddy:ed_temp_data index int 1 run scoreboard players get find ed_index
+execute store result storage cobblebuddy:ed_temp_data length int 1 run data get storage cobblebuddy:ed_temp_data String
 
 # loop
 execute if score loop ed_index matches ..13 run function egg_data:get_data_values with storage cobblebuddy:ed_temp_data
