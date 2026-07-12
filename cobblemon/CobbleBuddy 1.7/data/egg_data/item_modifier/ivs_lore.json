@@ -26,10 +26,10 @@
                     {
                         "nbt": "ATK_iv",
                         "storage": "cobblebuddy:ed_temp_data",
-                        "color": "#08ba4c"
+                        "color": "#245731"
                     }
                 ],
-                "color": "#239525",
+                "color": "#245731",
                 "bold": true
             },
             {
@@ -38,10 +38,10 @@
                     {
                         "nbt": "SATK_iv",
                         "storage": "cobblebuddy:ed_temp_data",
-                        "color": "#0bba08"
+                        "color": "#55e07a"
                     }
                 ],
-                "color": "#369523",
+                "color": "#55e07a",
                 "bold": true
             },
             {
