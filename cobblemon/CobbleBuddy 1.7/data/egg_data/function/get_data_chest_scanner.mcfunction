@@ -10,3 +10,5 @@ $execute if data block ~ ~ ~ {Items:[{Slot:$(slot_id)b,id:"cobbreeding:pokemon_e
 scoreboard players add chest_loop ed_index 1
 execute store result storage cobblebuddy:ed_temp_data slot_id int 1 run scoreboard players get chest_loop ed_index
 execute if score chest_loop ed_index matches ..26 run function egg_data:get_data_chest_scanner with storage cobblebuddy:ed_temp_data
+tag @s remove scan_my_chest
+tag @s remove scanning_my_chest

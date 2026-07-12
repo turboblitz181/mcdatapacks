@@ -25,6 +25,11 @@ scoreboard players enable @a ed_show_scanners
 function egg_data:show_scanners
 
 # scan the chest
-execute as @e[tag=egg_data_scanner] at @s if score ed_crc enabled matches 1 if score timer ed_timer matches 2 run scoreboard players set chest_loop ed_index 0
 execute as @e[tag=egg_data_scanner] at @s if score ed_crc enabled matches 1 if score timer ed_timer matches 2 run execute store result storage cobblebuddy:ed_temp_data slot_id int 1 run scoreboard players get chest_loop ed_index
-execute as @e[tag=egg_data_scanner] at @s if score ed_crc enabled matches 1 if score timer ed_timer matches 2 run function egg_data:get_data_chest_scanner with storage cobblebuddy:ed_temp_data
+execute as @e[tag=egg_data_scanner] at @s if score ed_crc enabled matches 1 if score timer ed_timer matches 2 run tag @s add scan_my_chest
+execute as @e[tag=egg_data_scanner,tag=scan_my_chest,limit=1] at @s if score ed_crc enabled matches 1 run tag @s add scanning_my_chest
+
+scoreboard players set chest_loop ed_index 0
+execute as @e[tag=egg_data_scanner,tag=scanning_my_chest] at @s if score ed_crc enabled matches 1 run execute store result storage cobblebuddy:ed_temp_data slot_id int 1 run scoreboard players get chest_loop ed_index
+execute as @e[tag=egg_data_scanner,tag=scanning_my_chest] at @s run function egg_data:get_data_chest_scanner with storage cobblebuddy:ed_temp_data
+
