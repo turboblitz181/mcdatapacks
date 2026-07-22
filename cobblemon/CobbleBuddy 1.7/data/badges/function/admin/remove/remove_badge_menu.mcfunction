@@ -20,4 +20,7 @@ tellraw @s ["",{"text":"🌑 ","color":"black"},{"text":"Dark Badge ","color":"b
 tellraw @s ["",{"text":"⚙ ","color":"dark_aqua"},{"text":"Steel Badge ","color":"dark_aqua"},{"text":"[Remove]","color":"red","clickEvent":{"action":"run_command","value":"/trigger admin set 667"},"hoverEvent":{"action":"show_text","contents":"Click to pick a player to remove the Steel Badge from"}}]
 tellraw @s ["",{"text":"🌸 ","color":"light_purple"},{"text":"Fairy Badge ","color":"light_purple"},{"text":"[Remove]","color":"red","clickEvent":{"action":"run_command","value":"/trigger admin set 668"},"hoverEvent":{"action":"show_text","contents":"Click to pick a player to remove the Fairy Badge from"}}]
 tellraw @s ""
+execute if score @s badge_admin_mode_hc matches 1 run tellraw @s ["",{"text":"Mode: ","color":"gray"},{"text":"HARDCORE","color":"dark_red","bold":true},{"text":" [Switch to Casual]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 669"}}]
+execute unless score @s badge_admin_mode_hc matches 1 run tellraw @s ["",{"text":"Mode: ","color":"gray"},{"text":"Casual","color":"green"},{"text":" [Switch to Hardcore]","color":"dark_red","clickEvent":{"action":"run_command","value":"/trigger admin set 669"}}]
+tellraw @s ""
 tellraw @s ["",{"text":"[Back to Gym Leader Menu]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 6"}}]

@@ -267,7 +267,7 @@ scoreboard objectives remove badge_fullreset_pending_id
 scoreboard objectives remove badge_give_target
 scoreboard objectives remove badge_give_ctx
 
-# scoreboard badges
+# scoreboard casual badges
 scoreboard objectives remove badge_normal
 scoreboard objectives remove badge_fire
 scoreboard objectives remove badge_water
@@ -287,8 +287,32 @@ scoreboard objectives remove badge_dark
 scoreboard objectives remove badge_steel
 scoreboard objectives remove badge_fairy
 
+# scoreboard hardcore badges
+scoreboard objectives remove badge_hc_normal
+scoreboard objectives remove badge_hc_fire
+scoreboard objectives remove badge_hc_water
+scoreboard objectives remove badge_hc_electric
+scoreboard objectives remove badge_hc_grass
+scoreboard objectives remove badge_hc_ice
+scoreboard objectives remove badge_hc_fighting
+scoreboard objectives remove badge_hc_poison
+scoreboard objectives remove badge_hc_ground
+scoreboard objectives remove badge_hc_flying
+scoreboard objectives remove badge_hc_psychic
+scoreboard objectives remove badge_hc_bug
+scoreboard objectives remove badge_hc_rock
+scoreboard objectives remove badge_hc_ghost
+scoreboard objectives remove badge_hc_dragon
+scoreboard objectives remove badge_hc_dark
+scoreboard objectives remove badge_hc_steel
+scoreboard objectives remove badge_hc_fairy
+
 # scoreboard badge count
 scoreboard objectives remove badge_count
+scoreboard objectives remove badge_hc_count
+scoreboard objectives remove badge_fullreset_hc
+scoreboard objectives remove badge_admin_mode_hc
+scoreboard objectives remove hardcore_mode
 
 # scoreboard badge teams
 team remove gym_leader_normal_display
@@ -309,6 +333,9 @@ team remove gym_leader_dragon_display
 team remove gym_leader_dark_display
 team remove gym_leader_steel_display
 team remove gym_leader_fairy_display
+
+# scoreboard hardcore toggle
+scoreboard players reset hc_allowed enabled
 
 # scoreboard core init
 scoreboard players reset #badges bg_init

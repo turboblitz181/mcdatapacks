@@ -1,23 +1,60 @@
 # Broadcast badges to all players
-tellraw @a ["",{"text":"=== ","color":"gray"},{"selector":"@s","color":"aqua","bold":true},{"text":"'s Badge Collection ===","color":"gray"}]
+tellraw @a ["\n",{"text":"=== ","color":"gray"},{"selector":"@s","color":"aqua","bold":true},{"text":"'s Badge Collection ===","color":"gray"}]
+tellraw @a ""
 
-execute if score @s badge_normal matches 1 run tellraw @a {"text":"⬜ Normal Badge ✅","color":"gray"}
-execute if score @s badge_fire matches 1 run tellraw @a {"text":"🔴 Fire Badge ✅","color":"red"}
-execute if score @s badge_water matches 1 run tellraw @a {"text":"🔵 Water Badge ✅","color":"blue"}
-execute if score @s badge_electric matches 1 run tellraw @a {"text":"⚡ Electric Badge ✅","color":"yellow"}
-execute if score @s badge_grass matches 1 run tellraw @a {"text":"🌿 Grass Badge ✅","color":"dark_green"}
-execute if score @s badge_ice matches 1 run tellraw @a {"text":"🧊 Ice Badge ✅","color":"aqua"}
-execute if score @s badge_fighting matches 1 run tellraw @a {"text":"👊 Fighting Badge ✅","color":"dark_red"}
-execute if score @s badge_poison matches 1 run tellraw @a {"text":"☠ Poison Badge ✅","color":"dark_purple"}
-execute if score @s badge_ground matches 1 run tellraw @a {"text":"🌍 Ground Badge ✅","color":"gold"}
-execute if score @s badge_flying matches 1 run tellraw @a {"text":"🦅 Flying Badge ✅","color":"dark_aqua"}
-execute if score @s badge_psychic matches 1 run tellraw @a {"text":"🔮 Psychic Badge ✅","color":"light_purple"}
-execute if score @s badge_bug matches 1 run tellraw @a {"text":"🐛 Bug Badge ✅","color":"green"}
-execute if score @s badge_rock matches 1 run tellraw @a {"text":"🪨 Rock Badge ✅","color":"dark_gray"}
-execute if score @s badge_ghost matches 1 run tellraw @a {"text":"👻 Ghost Badge ✅","color":"dark_purple"}
-execute if score @s badge_dragon matches 1 run tellraw @a {"text":"🐉 Dragon Badge ✅","color":"dark_blue"}
-execute if score @s badge_dark matches 1 run tellraw @a {"text":"🌑 Dark Badge ✅","color":"black"}
-execute if score @s badge_steel matches 1 run tellraw @a {"text":"⚙ Steel Badge ✅","color":"dark_aqua"}
-execute if score @s badge_fairy matches 1 run tellraw @a {"text":"🌸 Fairy Badge ✅","color":"light_purple"}
+execute if score @s badge_normal matches 1 if score @s badge_hc_normal matches 1 run tellraw @a ["",{"text":"⬜ Normal: ","color":"gray"},{"text":"✅ Casual  ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_normal matches 1 unless score @s badge_hc_normal matches 1 run tellraw @a ["",{"text":"⬜ Normal: ","color":"gray"},{"text":"✅ Casual","color":"green"}]
+execute unless score @s badge_normal matches 1 if score @s badge_hc_normal matches 1 run tellraw @a ["",{"text":"⬜ Normal: ","color":"gray"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_fire matches 1 if score @s badge_hc_fire matches 1 run tellraw @a ["",{"text":"🔴 Fire: ","color":"red"},{"text":"✅ Casual  ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_fire matches 1 unless score @s badge_hc_fire matches 1 run tellraw @a ["",{"text":"🔴 Fire: ","color":"red"},{"text":"✅ Casual","color":"green"}]
+execute unless score @s badge_fire matches 1 if score @s badge_hc_fire matches 1 run tellraw @a ["",{"text":"🔴 Fire: ","color":"red"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_water matches 1 if score @s badge_hc_water matches 1 run tellraw @a ["",{"text":"🔵 Water: ","color":"blue"},{"text":"✅ Casual  ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_water matches 1 unless score @s badge_hc_water matches 1 run tellraw @a ["",{"text":"🔵 Water: ","color":"blue"},{"text":"✅ Casual","color":"green"}]
+execute unless score @s badge_water matches 1 if score @s badge_hc_water matches 1 run tellraw @a ["",{"text":"🔵 Water: ","color":"blue"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_electric matches 1 if score @s badge_hc_electric matches 1 run tellraw @a ["",{"text":"⚡ Electric: ","color":"yellow"},{"text":"✅ Casual  ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_electric matches 1 unless score @s badge_hc_electric matches 1 run tellraw @a ["",{"text":"⚡ Electric: ","color":"yellow"},{"text":"✅ Casual","color":"green"}]
+execute unless score @s badge_electric matches 1 if score @s badge_hc_electric matches 1 run tellraw @a ["",{"text":"⚡ Electric: ","color":"yellow"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_grass matches 1 if score @s badge_hc_grass matches 1 run tellraw @a ["",{"text":"🌿 Grass: ","color":"dark_green"},{"text":"✅ Casual  ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_grass matches 1 unless score @s badge_hc_grass matches 1 run tellraw @a ["",{"text":"🌿 Grass: ","color":"dark_green"},{"text":"✅ Casual","color":"green"}]
+execute unless score @s badge_grass matches 1 if score @s badge_hc_grass matches 1 run tellraw @a ["",{"text":"🌿 Grass: ","color":"dark_green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_ice matches 1 if score @s badge_hc_ice matches 1 run tellraw @a ["",{"text":"🧊 Ice: ","color":"aqua"},{"text":"✅ Casual  ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_ice matches 1 unless score @s badge_hc_ice matches 1 run tellraw @a ["",{"text":"🧊 Ice: ","color":"aqua"},{"text":"✅ Casual","color":"green"}]
+execute unless score @s badge_ice matches 1 if score @s badge_hc_ice matches 1 run tellraw @a ["",{"text":"🧊 Ice: ","color":"aqua"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_fighting matches 1 if score @s badge_hc_fighting matches 1 run tellraw @a ["",{"text":"👊 Fighting: ","color":"dark_red"},{"text":"✅ Casual  ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_fighting matches 1 unless score @s badge_hc_fighting matches 1 run tellraw @a ["",{"text":"👊 Fighting: ","color":"dark_red"},{"text":"✅ Casual","color":"green"}]
+execute unless score @s badge_fighting matches 1 if score @s badge_hc_fighting matches 1 run tellraw @a ["",{"text":"👊 Fighting: ","color":"dark_red"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_poison matches 1 if score @s badge_hc_poison matches 1 run tellraw @a ["",{"text":"☠ Poison: ","color":"dark_purple"},{"text":"✅ Casual  ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_poison matches 1 unless score @s badge_hc_poison matches 1 run tellraw @a ["",{"text":"☠ Poison: ","color":"dark_purple"},{"text":"✅ Casual","color":"green"}]
+execute unless score @s badge_poison matches 1 if score @s badge_hc_poison matches 1 run tellraw @a ["",{"text":"☠ Poison: ","color":"dark_purple"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_ground matches 1 if score @s badge_hc_ground matches 1 run tellraw @a ["",{"text":"🌍 Ground: ","color":"gold"},{"text":"✅ Casual  ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_ground matches 1 unless score @s badge_hc_ground matches 1 run tellraw @a ["",{"text":"🌍 Ground: ","color":"gold"},{"text":"✅ Casual","color":"green"}]
+execute unless score @s badge_ground matches 1 if score @s badge_hc_ground matches 1 run tellraw @a ["",{"text":"🌍 Ground: ","color":"gold"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_flying matches 1 if score @s badge_hc_flying matches 1 run tellraw @a ["",{"text":"🦅 Flying: ","color":"dark_aqua"},{"text":"✅ Casual  ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_flying matches 1 unless score @s badge_hc_flying matches 1 run tellraw @a ["",{"text":"🦅 Flying: ","color":"dark_aqua"},{"text":"✅ Casual","color":"green"}]
+execute unless score @s badge_flying matches 1 if score @s badge_hc_flying matches 1 run tellraw @a ["",{"text":"🦅 Flying: ","color":"dark_aqua"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_psychic matches 1 if score @s badge_hc_psychic matches 1 run tellraw @a ["",{"text":"🔮 Psychic: ","color":"light_purple"},{"text":"✅ Casual  ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_psychic matches 1 unless score @s badge_hc_psychic matches 1 run tellraw @a ["",{"text":"🔮 Psychic: ","color":"light_purple"},{"text":"✅ Casual","color":"green"}]
+execute unless score @s badge_psychic matches 1 if score @s badge_hc_psychic matches 1 run tellraw @a ["",{"text":"🔮 Psychic: ","color":"light_purple"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_bug matches 1 if score @s badge_hc_bug matches 1 run tellraw @a ["",{"text":"🐛 Bug: ","color":"green"},{"text":"✅ Casual  ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_bug matches 1 unless score @s badge_hc_bug matches 1 run tellraw @a ["",{"text":"🐛 Bug: ","color":"green"},{"text":"✅ Casual","color":"green"}]
+execute unless score @s badge_bug matches 1 if score @s badge_hc_bug matches 1 run tellraw @a ["",{"text":"🐛 Bug: ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_rock matches 1 if score @s badge_hc_rock matches 1 run tellraw @a ["",{"text":"🪨 Rock: ","color":"dark_gray"},{"text":"✅ Casual  ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_rock matches 1 unless score @s badge_hc_rock matches 1 run tellraw @a ["",{"text":"🪨 Rock: ","color":"dark_gray"},{"text":"✅ Casual","color":"green"}]
+execute unless score @s badge_rock matches 1 if score @s badge_hc_rock matches 1 run tellraw @a ["",{"text":"🪨 Rock: ","color":"dark_gray"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_ghost matches 1 if score @s badge_hc_ghost matches 1 run tellraw @a ["",{"text":"👻 Ghost: ","color":"dark_purple"},{"text":"✅ Casual  ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_ghost matches 1 unless score @s badge_hc_ghost matches 1 run tellraw @a ["",{"text":"👻 Ghost: ","color":"dark_purple"},{"text":"✅ Casual","color":"green"}]
+execute unless score @s badge_ghost matches 1 if score @s badge_hc_ghost matches 1 run tellraw @a ["",{"text":"👻 Ghost: ","color":"dark_purple"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_dragon matches 1 if score @s badge_hc_dragon matches 1 run tellraw @a ["",{"text":"🐉 Dragon: ","color":"dark_blue"},{"text":"✅ Casual  ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_dragon matches 1 unless score @s badge_hc_dragon matches 1 run tellraw @a ["",{"text":"🐉 Dragon: ","color":"dark_blue"},{"text":"✅ Casual","color":"green"}]
+execute unless score @s badge_dragon matches 1 if score @s badge_hc_dragon matches 1 run tellraw @a ["",{"text":"🐉 Dragon: ","color":"dark_blue"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_dark matches 1 if score @s badge_hc_dark matches 1 run tellraw @a ["",{"text":"🌑 Dark: ","color":"black"},{"text":"✅ Casual  ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_dark matches 1 unless score @s badge_hc_dark matches 1 run tellraw @a ["",{"text":"🌑 Dark: ","color":"black"},{"text":"✅ Casual","color":"green"}]
+execute unless score @s badge_dark matches 1 if score @s badge_hc_dark matches 1 run tellraw @a ["",{"text":"🌑 Dark: ","color":"black"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_steel matches 1 if score @s badge_hc_steel matches 1 run tellraw @a ["",{"text":"⚙ Steel: ","color":"dark_aqua"},{"text":"✅ Casual  ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_steel matches 1 unless score @s badge_hc_steel matches 1 run tellraw @a ["",{"text":"⚙ Steel: ","color":"dark_aqua"},{"text":"✅ Casual","color":"green"}]
+execute unless score @s badge_steel matches 1 if score @s badge_hc_steel matches 1 run tellraw @a ["",{"text":"⚙ Steel: ","color":"dark_aqua"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_fairy matches 1 if score @s badge_hc_fairy matches 1 run tellraw @a ["",{"text":"🌸 Fairy: ","color":"light_purple"},{"text":"✅ Casual  ","color":"green"},{"text":"✅ Hardcore","color":"dark_red"}]
+execute if score @s badge_fairy matches 1 unless score @s badge_hc_fairy matches 1 run tellraw @a ["",{"text":"🌸 Fairy: ","color":"light_purple"},{"text":"✅ Casual","color":"green"}]
+execute unless score @s badge_fairy matches 1 if score @s badge_hc_fairy matches 1 run tellraw @a ["",{"text":"🌸 Fairy: ","color":"light_purple"},{"text":"✅ Hardcore","color":"dark_red"}]
 
-tellraw @a ["",{"selector":"@s","color":"aqua"},{"text":" has ","color":"white"},{"score":{"name":"@s","objective":"badge_count"},"color":"gold","bold":true},{"text":"/18 Badges!","color":"white"}]
+tellraw @a ["",{"selector":"@s","color":"aqua"},{"text":" has ","color":"white"},{"score":{"name":"@s","objective":"badge_count"},"color":"gold","bold":true},{"text":"/18 Casual","color":"white"},{"text":" & ","color":"white"},{"score":{"name":"@s","objective":"badge_hc_count"},"color":"dark_red","bold":true},{"text":"/18 Hardcore Badges!","color":"white"}]

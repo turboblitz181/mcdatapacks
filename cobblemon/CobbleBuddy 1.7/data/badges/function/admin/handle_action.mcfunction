@@ -17,16 +17,16 @@ execute if score @s admin matches 615 run scoreboard players set @s badge_admin_
 execute if score @s admin matches 616 run scoreboard players set @s badge_admin_ctx 16
 execute if score @s admin matches 617 run scoreboard players set @s badge_admin_ctx 17
 execute if score @s admin matches 618 run scoreboard players set @s badge_admin_ctx 18
-execute if score @s admin matches 601..618 run function badges:admin/select_target
+execute if score @s admin matches 601..618 run function badges:admin/leader/select_target
 
 # Gym Leader overview (read-only)
-execute if score @s admin matches 675 run function badges:admin/leader_list
+execute if score @s admin matches 675 run function badges:admin/leader/leader_list
 
 # Set up Gym Leaders (assign/remove sub-menu)
-execute if score @s admin matches 677 run function badges:admin/leader_setup_menu
+execute if score @s admin matches 677 run function badges:admin/leader/leader_setup_menu
 
 # Give a Badge (678, 626-643) - pick type first, then pick a player
-execute if score @s admin matches 678 run function badges:admin/give_badge_menu
+execute if score @s admin matches 678 run function badges:admin/give/give_badge_menu
 execute if score @s admin matches 626 run scoreboard players set @s badge_give_ctx 1
 execute if score @s admin matches 627 run scoreboard players set @s badge_give_ctx 2
 execute if score @s admin matches 628 run scoreboard players set @s badge_give_ctx 3
@@ -45,10 +45,10 @@ execute if score @s admin matches 640 run scoreboard players set @s badge_give_c
 execute if score @s admin matches 641 run scoreboard players set @s badge_give_ctx 16
 execute if score @s admin matches 642 run scoreboard players set @s badge_give_ctx 17
 execute if score @s admin matches 643 run scoreboard players set @s badge_give_ctx 18
-execute if score @s admin matches 626..643 run function badges:admin/select_give_target
+execute if score @s admin matches 626..643 run function badges:admin/give/select_give_target
 
 # Remove a Badge (676, 651-668) - pick type first, then pick a player
-execute if score @s admin matches 676 run function badges:admin/remove_badge_menu
+execute if score @s admin matches 676 run function badges:admin/remove/remove_badge_menu
 execute if score @s admin matches 651 run scoreboard players set @s badge_remove_ctx 1
 execute if score @s admin matches 652 run scoreboard players set @s badge_remove_ctx 2
 execute if score @s admin matches 653 run scoreboard players set @s badge_remove_ctx 3
@@ -67,8 +67,26 @@ execute if score @s admin matches 665 run scoreboard players set @s badge_remove
 execute if score @s admin matches 666 run scoreboard players set @s badge_remove_ctx 16
 execute if score @s admin matches 667 run scoreboard players set @s badge_remove_ctx 17
 execute if score @s admin matches 668 run scoreboard players set @s badge_remove_ctx 18
-execute if score @s admin matches 651..668 run function badges:admin/select_remove_target
+execute if score @s admin matches 651..668 run function badges:admin/remove/select_remove_target
 
 # Full Badge Reset (679 = pick player, 680 = confirmed execute)
-execute if score @s admin matches 679 run function badges:admin/select_fullreset_target
-execute if score @s admin matches 680 run function badges:admin/execute_full_reset
+execute if score @s admin matches 679 run scoreboard players set @s badge_fullreset_hc 0
+execute if score @s admin matches 679 run function badges:admin/fullreset/select_fullreset_target
+execute if score @s admin matches 681 run scoreboard players set @s badge_fullreset_hc 1
+execute if score @s admin matches 681 run function badges:admin/fullreset/select_fullreset_target
+execute if score @s admin matches 680 run function badges:admin/fullreset/execute_full_reset
+execute if score @s admin matches 682 run scoreboard players operation #temp_hc enabled = hc_allowed enabled
+execute if score @s admin matches 682 if score #temp_hc enabled matches 1 run scoreboard players set hc_allowed enabled 0
+execute if score @s admin matches 682 if score #temp_hc enabled matches 0 run scoreboard players set hc_allowed enabled 1
+execute if score @s admin matches 682 run scoreboard players reset #temp_hc enabled
+execute if score @s admin matches 682 run function badges:admin/menu
+execute if score @s admin matches 644 run scoreboard players operation #temp_gr enabled = @s badge_admin_mode_hc
+execute if score @s admin matches 644 if score #temp_gr enabled matches 1 run scoreboard players set @s badge_admin_mode_hc 0
+execute if score @s admin matches 644 if score #temp_gr enabled matches 0 run scoreboard players set @s badge_admin_mode_hc 1
+execute if score @s admin matches 644 run scoreboard players reset #temp_gr enabled
+execute if score @s admin matches 644 run function badges:admin/give/give_badge_menu
+execute if score @s admin matches 669 run scoreboard players operation #temp_gr enabled = @s badge_admin_mode_hc
+execute if score @s admin matches 669 if score #temp_gr enabled matches 1 run scoreboard players set @s badge_admin_mode_hc 0
+execute if score @s admin matches 669 if score #temp_gr enabled matches 0 run scoreboard players set @s badge_admin_mode_hc 1
+execute if score @s admin matches 669 run scoreboard players reset #temp_gr enabled
+execute if score @s admin matches 669 run function badges:admin/remove/remove_badge_menu

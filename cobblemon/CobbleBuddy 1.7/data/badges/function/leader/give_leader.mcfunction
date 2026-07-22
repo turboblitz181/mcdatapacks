@@ -1,11 +1,12 @@
 # Store target ID before @s changes
 scoreboard players operation #temp badge_leader_target = @s badge_leader_target
+scoreboard players remove #temp badge_leader_target 1
 
 # Find the target player by their persistent player_ID and mark them (no name/string NBT needed)
 execute as @a[scores={player_ID=1..}] if score @s player_ID = #temp badge_leader_target run tag @s add temp.badge_giveto
 
 # If nobody matched, tell the giving leader and stop
-execute unless entity @a[tag=temp.badge_giveto] run tellraw @s ["",{"text":"[Badges] ","color":"gold","bold":true},{"text":"That player is no longer online!","color":"red"}]
+execute if score #temp badge_leader_target matches 1.. unless entity @a[tag=temp.badge_giveto] run tellraw @s ["",{"text":"[Badges] ","color":"gold","bold":true},{"text":"That player is no longer online!","color":"red"}]
 execute unless entity @a[tag=temp.badge_giveto] run return 0
 
 # Dispatch by whichever type(s) this leader holds (@s stays the leader, never switches context)

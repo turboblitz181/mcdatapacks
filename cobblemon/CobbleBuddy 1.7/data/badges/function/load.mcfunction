@@ -42,8 +42,32 @@ scoreboard objectives add badge_dark dummy "Dark Badge"
 scoreboard objectives add badge_steel dummy "Steel Badge"
 scoreboard objectives add badge_fairy dummy "Fairy Badge"
 
+# === HARDCORE BADGE SCOREBOARDS ===
+scoreboard objectives add badge_hc_normal dummy "Hardcore Normal Badge"
+scoreboard objectives add badge_hc_fire dummy "Hardcore Fire Badge"
+scoreboard objectives add badge_hc_water dummy "Hardcore Water Badge"
+scoreboard objectives add badge_hc_electric dummy "Hardcore Electric Badge"
+scoreboard objectives add badge_hc_grass dummy "Hardcore Grass Badge"
+scoreboard objectives add badge_hc_ice dummy "Hardcore Ice Badge"
+scoreboard objectives add badge_hc_fighting dummy "Hardcore Fighting Badge"
+scoreboard objectives add badge_hc_poison dummy "Hardcore Poison Badge"
+scoreboard objectives add badge_hc_ground dummy "Hardcore Ground Badge"
+scoreboard objectives add badge_hc_flying dummy "Hardcore Flying Badge"
+scoreboard objectives add badge_hc_psychic dummy "Hardcore Psychic Badge"
+scoreboard objectives add badge_hc_bug dummy "Hardcore Bug Badge"
+scoreboard objectives add badge_hc_rock dummy "Hardcore Rock Badge"
+scoreboard objectives add badge_hc_ghost dummy "Hardcore Ghost Badge"
+scoreboard objectives add badge_hc_dragon dummy "Hardcore Dragon Badge"
+scoreboard objectives add badge_hc_dark dummy "Hardcore Dark Badge"
+scoreboard objectives add badge_hc_steel dummy "Hardcore Steel Badge"
+scoreboard objectives add badge_hc_fairy dummy "Hardcore Fairy Badge"
+
 # === BADGE COUNT PER PLAYER ===
 scoreboard objectives add badge_count dummy "Badge Count"
+scoreboard objectives add badge_hc_count dummy "Hardcore Badge Count"
+scoreboard objectives add badge_fullreset_hc dummy "Full Reset Mode Flag"
+scoreboard objectives add badge_admin_mode_hc dummy "Give/Remove Mode Flag"
+scoreboard objectives add hardcore_mode dummy "Hardcore Mode"
 
 # === BADGE CREATE TEAM PER PLAYER ===
 team add gym_leader_normal_display
@@ -82,6 +106,9 @@ team add gym_leader_steel_display
 team modify gym_leader_steel_display suffix {"text":" ","color":"white"}
 team add gym_leader_fairy_display
 team modify gym_leader_fairy_display suffix {"text":" ","color":"white"}
+
+# === HARDCORE TOGGLE ===
+execute unless score hc_allowed enabled matches 0..1 run scoreboard players set hc_allowed enabled 1
 
 # Check Core/Module Initialization
 scoreboard players set #badges bg_init 1

@@ -1,3 +1,4 @@
+tellraw @s ""
 tellraw @s ["",{"text":"=== Gym Leader Overview ===","color":"gold","bold":true}]
 
 execute if entity @a[tag=gym_leader_normal] run tellraw @s ["",{"text":"⬜ Normal: ","color":"gray"},{"selector":"@a[tag=gym_leader_normal]","color":"aqua"}]
