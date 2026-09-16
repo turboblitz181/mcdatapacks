@@ -50,4 +50,9 @@ to uninstall the datapack type: "/trigger admin" and navigate to danger zone > u
 for further information use the ingame guide.
 
 
+**related projects:**
+also check out PokemonArena: https://github.com/kehan8/ComputerCraft/tree/main/PokemonArena
+use it on its own, or add CobbleBuddy alongside it as an extra module to enjoy.
+
+
 please credit turboblitz181 and KnightKehan when sharing this datapack.

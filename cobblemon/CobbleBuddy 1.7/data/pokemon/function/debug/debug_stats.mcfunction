@@ -87,10 +87,15 @@ execute at @s as @e[type=cobblemon:pokemon,sort=nearest,limit=1] run function po
 execute if score #temp_paradoxlegendary pokemon.temp matches 1 run tellraw @s ["",{"text":"Paradox Legendary: ","color":"gold"},{"text":"⭐ YES","color":"dark_green","bold":true}]
 execute unless score #temp_paradoxlegendary pokemon.temp matches 1 run tellraw @s ["",{"text":"Paradox Legendary: ","color":"gold"},{"text":"No","color":"gray"}]
 
-# Get wild/owned status test
+# Get wild status test
 execute at @s as @e[type=cobblemon:pokemon,sort=nearest,limit=1] run function pokemon:utils/checks/check_wild
-execute if score #is_wild pokemon.temp matches 1 run tellraw @s ["",{"text":"Owned: ","color":"gold"},{"text":"Wild","color":"red"}]
-execute unless score #is_wild pokemon.temp matches 1 run tellraw @s ["",{"text":"Owned: ","color":"gold"},{"text":"✓ YES","color":"green"}]
+execute if score #is_wild pokemon.temp matches 1 run tellraw @s ["",{"text":"Wild: ","color":"gold"},{"text":"✓ YES","color":"red"}]
+execute unless score #is_wild pokemon.temp matches 1 run tellraw @s ["",{"text":"Wild: ","color":"gold"},{"text":"No","color":"gray"}]
+
+# Get owned status test
+execute at @s as @e[type=cobblemon:pokemon,sort=nearest,limit=1] run function pokemon:utils/checks/check_owned
+execute if score #is_owned pokemon.temp matches 1 run tellraw @s ["",{"text":"Owned: ","color":"gold"},{"text":"✓ YES","color":"green"}]
+execute unless score #is_owned pokemon.temp matches 1 run tellraw @s ["",{"text":"Owned: ","color":"gold"},{"text":"No","color":"gray"}]
 
 tellraw @s ["",{"text":"===========================","color":"yellow"}]
 tellraw @s ["\n",{"text":"[Back to Pokemon Debug]","color":"green","clickEvent":{"action":"run_command","value":"/trigger admin set 73"}}]

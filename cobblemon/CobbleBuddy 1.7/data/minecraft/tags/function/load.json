@@ -5,6 +5,7 @@
 		"pokemon:load",
 		"guides:load",
 		"settings:load",
-		"database:load"
+		"database:load",
+		"pokemonarena:load"
 	]
 }

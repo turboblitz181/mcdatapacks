@@ -152,12 +152,24 @@ scoreboard players reset #iv_sp_defense pokemon.temp
 scoreboard players reset #iv_speed pokemon.temp
 scoreboard players reset #level pokemon.temp
 scoreboard players reset #is_wild pokemon.temp
+scoreboard players reset #is_owned pokemon.temp
 scoreboard players reset #temp_shiny pokemon.temp
 scoreboard players reset #temp_legendary pokemon.temp
 scoreboard players reset #dex_id pokemon.temp
 scoreboard players reset #base_total pokemon.temp
 scoreboard players reset #has_prefix pokemon.temp
 scoreboard players reset #modified pokemon.temp
+
+# ==========================================
+# POKEMONARENA MODULE SCOREBOARDS & TAGS & DATA
+# ==========================================
+# tags
+tag @e remove pa_checked
+tag @e remove pa_owned
+tag @a remove pa_player
+
+# scoreboard core
+scoreboard objectives remove pa_timer
 
 # ==========================================
 # EGG DATA MODULE SCOREBOARDS & TAGS & DATA
